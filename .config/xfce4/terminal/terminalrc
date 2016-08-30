@@ -1,0 +1,23 @@
+[Configuration]
+ColorCursor=#eee8d5
+ColorForeground=#93a1a1
+ColorBackground=#002b36
+ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#fdf6e3;#002b36;#cb4b16;#657b83;#839496;#93a1a1;#6c71c4;#eee8d5;#fdf6e3
+FontName=Consolas for Powerline 14
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBordersDefault=TRUE
+MiscCursorBlinks=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscDefaultGeometry=80x24
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=TRUE
+MiscMouseAutohide=FALSE
+MiscToolbarDefault=FALSE
+MiscConfirmClose=TRUE
+MiscCycleTabs=TRUE
+MiscTabCloseButtons=TRUE
+MiscTabCloseMiddleClick=TRUE
+MiscTabPosition=GTK_POS_TOP
+MiscHighlightUrls=TRUE
+
