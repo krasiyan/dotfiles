@@ -6,14 +6,15 @@ export ZSH=~/.oh-my-zsh
 
 DEFAULT_USER=$USER
 
-# https://github.com/bhilburn/powerlevel9k
+# https://github.com/bhilburn/powerlevel9k + https://github.com/AravSinghal/ConsolasForPowerline
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S %d.%m.%Y}"
 POWERLEVEL9K_TIME_FOREGROUND="black"
 POWERLEVEL9K_TIME_BACKGROUND="249"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time background_jobs root_indicator context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(background_jobs root_indicator context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 
 # _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
@@ -34,7 +35,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins!
-plugins=(git common-aliases debian web-search)
+plugins=(git common-aliases sudo debian web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,4 +55,6 @@ alias emacs="emacs -nw"
 alias emacsconfig="emacs ~/.emacs"
 alias zshconfig="emacs ~/.zshrc"
 alias ohmyzsh="emacs ~/.oh-my-zsh"
+alias sshconfig="emacs ~/.ssh/config"
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
+alias cls="clear"
