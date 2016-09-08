@@ -25,9 +25,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-;; Set up appearance early
-(require 'appearance)
-
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
   (when (file-directory-p project)
@@ -60,10 +57,9 @@
 (defun init--install-packages ()
   (packages-install
    '(
-;;   ergoemacs-mode
      magit
      zoom-frm
-     solarized-dark
+     solarized-theme
      )))
 
 (condition-case nil
@@ -71,6 +67,9 @@
   (error
    (package-refresh-contents)
    (init--install-packages)))
+
+;; Set up appearance
+(require 'appearance)
 
 ;; CUA mode because I'm a noob
 (cua-mode t)
@@ -88,5 +87,4 @@
         (define-key function-key-map
                     (concat prefix (cAr m) (car k))
                     (read-kbd-macro ((cdr m) (cdr k))))))))
-
 
