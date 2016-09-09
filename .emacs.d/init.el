@@ -62,6 +62,7 @@
      solarized-theme
      multiple-cursors
      neotree
+     fiplr
      )))
 
 (condition-case nil
@@ -72,6 +73,7 @@
 
 ;; Setup extensions
 (require 'setup-neotree)
+(require 'setup-fiplr)
 
 ;; Setup key bindings
 (require 'key-bindings)
