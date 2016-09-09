@@ -25,4 +25,7 @@
 (global-unset-key (kbd "C-<down-mouse-1>"))
 (global-set-key (kbd "C-<mouse-1>") 'mc/add-cursor-on-click)
 
+;; C-a select all
+(global-set-key "\C-a" 'mark-whole-buffer)
+
 (provide 'key-bindings)

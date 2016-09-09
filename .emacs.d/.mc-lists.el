@@ -5,6 +5,7 @@
       '(
 	cua-paste
 	keyboard-escape-quit
+	mouse-set-region
 	))
 
 (setq mc/cmds-to-run-once
