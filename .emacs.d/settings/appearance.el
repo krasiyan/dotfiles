@@ -25,4 +25,7 @@
 ;; Use bar cursors
 (setq-default cursor-type 'bar)
 
+;; Display tabs as 2 spaces
+(setq tab-width 2)
+
 (provide 'appearance)
