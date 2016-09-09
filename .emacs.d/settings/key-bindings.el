@@ -38,6 +38,6 @@
   (next-line 1)
   (yank)
 )
-(global-set-key (kbd "C-d") 'duplicate-line)
+(global-set-key (kbd "C-S-d") 'duplicate-line)
 
 (provide 'key-bindings)
