@@ -61,6 +61,7 @@
      zoom-frm
      solarized-theme
      multiple-cursors
+     neotree
      )))
 
 (condition-case nil
@@ -69,6 +70,8 @@
    (package-refresh-contents)
    (init--install-packages)))
 
+;; Setup extensions
+(require 'setup-neotree)
 
 ;; Setup key bindings
 (require 'key-bindings)
