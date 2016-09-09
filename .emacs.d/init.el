@@ -74,6 +74,7 @@
      drag-stuff
      markdown-mode
      highlight-indent-guides
+     js2-mode
      )))
 
 (condition-case nil
@@ -88,6 +89,14 @@
 (require 'setup-drag-stuff)
 (require 'setup-markdown-mode)
 (require 'setup-highlight-indent-guides)
+
+
+;; Map files to modes
+(require 'mode-mappings)
+
+;; Language specific setup files
+(eval-after-load 'js2-mode '(require 'setup-js2-mode))
+
 
 ;; Setup key bindings
 (require 'key-bindings)
