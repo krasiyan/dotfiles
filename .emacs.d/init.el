@@ -63,6 +63,7 @@
      multiple-cursors
      neotree
      fiplr
+     drag-stuff
      )))
 
 (condition-case nil
@@ -74,6 +75,7 @@
 ;; Setup extensions
 (require 'setup-neotree)
 (require 'setup-fiplr)
+(require 'setup-drag-stuff)
 
 ;; Setup key bindings
 (require 'key-bindings)
