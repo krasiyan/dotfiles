@@ -38,6 +38,14 @@
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
 
+
+;; Write auto save files to own directory
+(defconst emacs-autosave-dir (format "%s%s/" user-emacs-directory "autosaves"))
+(setq auto-save-file-name-transforms
+   `((".*" ,emacs-autosave-dir t)))
+(setq auto-save-list-file-prefix
+   emacs-autosave-dir)
+
 ;; Save point position between sessions
 (require 'saveplace)
 (setq-default save-place t)
