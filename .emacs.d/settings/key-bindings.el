@@ -47,6 +47,13 @@
 ;; Page up for isearch-repeat-backward
 (define-key isearch-mode-map [prior] 'isearch-repeat-backward)
 
+;; C-w kill-this-buffer
+(global-set-key "\C-w" 'kill-this-buffer)
+
+;; Page Up/Down for cycling buffers
+(global-set-key [C-prior] 'previous-buffer)
+(global-set-key [C-next] 'next-buffer)
+
 ;; C-d duplicate line
 (defun duplicate-line()
   (interactive)
