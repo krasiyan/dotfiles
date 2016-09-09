@@ -4,7 +4,7 @@
 (setq initial-scratch-message nil)
 
 ;; Turn off mouse interface early in startup to avoid momentary display
-;;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 ;;(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
@@ -38,6 +38,11 @@
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
 
+;; Save point position between sessions
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file (expand-file-name ".places" user-emacs-directory))
+
 ;; Name
 (setq user-full-name "Krasiyan Nedelchev")
 ;; Email address
@@ -49,6 +54,9 @@
 ;; Show line column numbers in mode line
 (line-number-mode t)
 (column-number-mode t)
+
+;; No tabs! Only spaces :)
+(setq-default indent-tabs-mode nil)
 
 ;; Setup packages
 (require 'setup-package)
@@ -65,6 +73,7 @@
      fiplr
      drag-stuff
      markdown-mode
+     highlight-indent-guides
      )))
 
 (condition-case nil
@@ -78,6 +87,7 @@
 (require 'setup-fiplr)
 (require 'setup-drag-stuff)
 (require 'setup-markdown-mode)
+(require 'setup-highlight-indent-guides)
 
 ;; Setup key bindings
 (require 'key-bindings)
