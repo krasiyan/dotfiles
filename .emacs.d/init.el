@@ -76,6 +76,7 @@
      js2-mode
      fringe-helper
      git-gutter-fringe
+     ethan-wspace
      )))
 
 (condition-case nil
@@ -84,6 +85,9 @@
    (package-refresh-contents)
    (init--install-packages)))
 
+;; Set up appearance
+(require 'appearance)
+
 ;; Setup extensions
 (require 'setup-neotree)
 (require 'setup-fiplr)
@@ -91,6 +95,7 @@
 (require 'setup-markdown-mode)
 (require 'setup-highlight-indent-guides)
 (require 'setup-git-gutter-fringe)
+(require 'setup-ethan-wspace)
 
 ;; Map files to modes
 (require 'mode-mappings)
@@ -100,6 +105,3 @@
 
 ;; Setup key bindings
 (require 'key-bindings)
-
-;; Set up appearance
-(require 'appearance)
