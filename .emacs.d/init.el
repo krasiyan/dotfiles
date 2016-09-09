@@ -64,6 +64,7 @@
      neotree
      fiplr
      drag-stuff
+     markdown-mode
      )))
 
 (condition-case nil
@@ -76,6 +77,7 @@
 (require 'setup-neotree)
 (require 'setup-fiplr)
 (require 'setup-drag-stuff)
+(require 'setup-markdown-mode)
 
 ;; Setup key bindings
 (require 'key-bindings)
