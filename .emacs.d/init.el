@@ -65,7 +65,6 @@
 (defun init--install-packages ()
   (packages-install
    '(
-     magit
      zoom-frm
      solarized-theme
      multiple-cursors
@@ -75,6 +74,8 @@
      markdown-mode
      highlight-indent-guides
      js2-mode
+     fringe-helper
+     git-gutter-fringe
      )))
 
 (condition-case nil
@@ -89,14 +90,13 @@
 (require 'setup-drag-stuff)
 (require 'setup-markdown-mode)
 (require 'setup-highlight-indent-guides)
-
+(require 'setup-git-gutter-fringe)
 
 ;; Map files to modes
 (require 'mode-mappings)
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
-
 
 ;; Setup key bindings
 (require 'key-bindings)
