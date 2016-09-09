@@ -1,3 +1,8 @@
+;; I don't need to kill emacs that easily
+;; the mnemonic is C-x REALLY QUIT
+(global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
+(global-set-key (kbd "C-x C-c") 'delete-frame)
+
 ;; CUA mode because I'm a noob
 (cua-mode t)
 (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
@@ -14,7 +19,6 @@
         (define-key function-key-map
                     (concat prefix (cAr m) (car k))
                     (read-kbd-macro ((cdr m) (cdr k))))))))
-
 
 ;; Font size
 (define-key global-map (kbd "C-+") 'zoom-frm-in)
