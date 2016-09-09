@@ -32,6 +32,21 @@
 ;; C-a select all
 (global-set-key "\C-a" 'mark-whole-buffer)
 
+;; C-s save-buffer
+(global-set-key "\C-s" 'save-buffer)
+
+;; C-o find-file
+(global-set-key "\C-o" 'find-file)
+
+;; C-f incremental forward search
+(global-set-key "\C-f" 'isearch-forward)
+
+;; Page down for isearch-repeat-forward
+(define-key isearch-mode-map [next] 'isearch-repeat-forward)
+
+;; Page up for isearch-repeat-backward
+(define-key isearch-mode-map [prior] 'isearch-repeat-backward)
+
 ;; C-d duplicate line
 (defun duplicate-line()
   (interactive)
