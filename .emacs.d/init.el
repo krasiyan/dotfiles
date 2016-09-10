@@ -89,6 +89,9 @@
      comment-dwim-2                     ; better comments
      sublimity                          ; smooth scrolling
      redo+                              ; redo
+     tabbar                             ; tabs
+     tabbar-ruler                       ; tabs
+     hlinum                             ; highligh current line number
      )))
 
 (condition-case nil
@@ -109,6 +112,7 @@
 (require 'setup-git-gutter-fringe)
 (require 'setup-ethan-wspace)
 (require 'setup-sublimity)
+(require 'setup-tabbar)
 
 ;; Map files to modes
 (require 'mode-mappings)
