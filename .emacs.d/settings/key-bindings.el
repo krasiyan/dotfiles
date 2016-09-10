@@ -35,6 +35,10 @@
 ;; C-s save-buffer
 (global-set-key "\C-s" 'save-buffer)
 
+;; C-y redo
+(require 'redo+)
+(global-set-key (kbd "C-y") 'redo)
+
 ;; C-o find-file
 (global-set-key "\C-o" 'find-file)
 
@@ -83,5 +87,8 @@ there's a region, all lines that region covers will be duplicated."
 ;; C-/ comment
 (global-set-key (kbd "C-/") 'comment-dwim-2)
 
+;; M-ARROWS - move around windows
+(require 'windmove)
+(windmove-default-keybindings 'super)
 
 (provide 'key-bindings)

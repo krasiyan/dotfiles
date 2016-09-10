@@ -88,6 +88,7 @@
      mwim                               ; home/end start/end of code then line
      comment-dwim-2                     ; better comments
      sublimity                          ; smooth scrolling
+     redo+                              ; redo
      )))
 
 (condition-case nil
