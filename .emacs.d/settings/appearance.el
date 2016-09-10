@@ -28,4 +28,9 @@
 ;; Display tabs as 2 spaces
 (setq tab-width 2)
 
+;; hlinum - highligh line number
+(require 'hlinum)
+(hlinum-activate)
+(set-face-background 'linum-highlight-face "#859900")
+
 (provide 'appearance)
