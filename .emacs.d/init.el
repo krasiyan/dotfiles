@@ -73,20 +73,21 @@
 (defun init--install-packages ()
   (packages-install
    '(
-     zoom-frm
-     solarized-theme
-     multiple-cursors
-     neotree
-     fiplr
-     drag-stuff
-     markdown-mode
-     highlight-indent-guides
-     js2-mode
-     fringe-helper
-     git-gutter-fringe
-     ethan-wspace
-     mwim
-     comment-dwim-2
+     zoom-frm                           ; zoom
+     solarized-theme                    ; color theme
+     multiple-cursors                   ; multiple cursors
+     neotree                            ; file tree
+     fiplr                              ; fuzzy find up to the nearest .git folder
+     drag-stuff                         ; dragging lines/regions
+     markdown-mode                      ; .md file editing and preview
+     highlight-indent-guides            ; indentation guides
+     js2-mode                           ; javascript mode
+     fringe-helper                      ; neede for git gutter
+     git-gutter-fringe                  ; git gutter
+     ethan-wspace                       ; auto fix trailing whitespaces
+     mwim                               ; home/end start/end of code then line
+     comment-dwim-2                     ; better comments
+     sublimity                          ; smooth scrolling
      )))
 
 (condition-case nil
@@ -106,6 +107,7 @@
 (require 'setup-highlight-indent-guides)
 (require 'setup-git-gutter-fringe)
 (require 'setup-ethan-wspace)
+(require 'setup-sublimity)
 
 ;; Map files to modes
 (require 'mode-mappings)
