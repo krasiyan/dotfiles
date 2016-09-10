@@ -86,6 +86,7 @@
      git-gutter-fringe
      ethan-wspace
      mwim
+     comment-dwim-2
      )))
 
 (condition-case nil

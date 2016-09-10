@@ -70,5 +70,8 @@
 (global-set-key (kbd "<home>") 'mwim-beginning-of-code-or-line)
 (global-set-key (kbd "<end>") 'mwim-end-of-code-or-line)
 
+;; C-/ comment
+(global-set-key (kbd "C-/") 'comment-dwim-2)
+
 
 (provide 'key-bindings)
