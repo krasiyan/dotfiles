@@ -109,4 +109,23 @@ there's a region, all lines that region covers will be duplicated."
 (global-set-key (kbd "C-.") 'er/expand-region)
 (global-set-key (kbd "C-,") 'er/contract-region)
 
+;; C-n new buffer
+(defun create-new-buffer ()
+  "Create a new buffer named *new*[num]."
+  (interactive)
+  (switch-to-buffer (generate-new-buffer-name "*new*")))
+(global-set-key (kbd "C-n") 'create-new-buffer)
+
+;; C-N new emacs window
+(when window-system
+  (defun new-emacs-instance ()
+    "Create a new instance of Emacs."
+    (interactive)
+    (let ((path-to-emacs
+           (locate-file invocation-name
+                        (list invocation-directory) exec-suffixes)))
+      (call-process path-to-emacs nil 0 nil))))
+(global-set-key (kbd "C-S-N") 'new-emacs-instance)
+
+
 (provide 'key-bindings)
