@@ -92,6 +92,7 @@
      tabbar                             ; tabs
      tabbar-ruler                       ; tabs
      hlinum                             ; highligh current line number
+     avy                                ; goto char
      )))
 
 (condition-case nil

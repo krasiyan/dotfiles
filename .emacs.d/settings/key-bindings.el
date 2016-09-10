@@ -97,4 +97,11 @@ there's a region, all lines that region covers will be duplicated."
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
+;; jump to char
+(global-set-key (kbd "C-j") 'avy-goto-char)
+
+;; go to line
+(global-set-key (kbd "C-;") 'goto-line)
+
+
 (provide 'key-bindings)
