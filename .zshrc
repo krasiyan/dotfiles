@@ -47,12 +47,11 @@ export LC_ALL=en_US.UTF-8
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs -nw'
  else
-   export EDITOR='emacs -nw'
+   export EDITOR='emacs'
  fi
 
-# Aliases
-alias emacs="emacs -nw"
-alias emacsconfig="emacs ~/.emacs"
+# Aliases"
+alias emacsconfig="emacs ~/.emacs.d/init.el"
 alias zshconfig="emacs ~/.zshrc"
 alias ohmyzsh="emacs ~/.oh-my-zsh"
 alias sshconfig="emacs ~/.ssh/config"
