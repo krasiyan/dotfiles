@@ -55,8 +55,8 @@
 (global-set-key "\C-w" 'kill-this-buffer)
 
 ;; Page Up/Down for cycling buffers
-(global-set-key [C-prior] 'previous-buffer)
-(global-set-key [C-next] 'next-buffer)
+(global-set-key [C-prior] 'tabbar-ruler-backward)
+(global-set-key [C-next] 'tabbar-ruler-forward)
 
 ;; C-d duplicate line - http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 (defun duplicate-current-line-or-region (arg)
