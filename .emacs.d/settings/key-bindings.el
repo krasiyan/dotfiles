@@ -103,5 +103,9 @@ there's a region, all lines that region covers will be duplicated."
 ;; go to line
 (global-set-key (kbd "C-;") 'goto-line)
 
+;; C-= expand region
+(require 'expand-region)
+(global-set-key (kbd "C-.") 'er/expand-region)
+(global-set-key (kbd "C-,") 'er/contract-region)
 
 (provide 'key-bindings)

@@ -93,6 +93,7 @@
      tabbar-ruler                       ; tabs
      hlinum                             ; highligh current line number
      avy                                ; goto char
+     expand-region                      ; expand region
      )))
 
 (condition-case nil
