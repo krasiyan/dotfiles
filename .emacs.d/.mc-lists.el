@@ -3,11 +3,26 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-	cua-paste
-	keyboard-escape-quit
-	mouse-set-region
-	))
+        cua-paste
+        drag-stuff-left
+        drag-stuff-right
+        duplicate-line
+        keyboard-escape-quit
+        kill-region
+        markdown-exdent-or-delete
+        mouse-set-region
+        mwim-beginning-of-code-or-line
+        mwim-end-of-code-or-line
+        ))
 
 (setq mc/cmds-to-run-once
       '(
-	))
+        beginning-of-buffer
+        cua--prefix-override-handler
+        drag-stuff-down
+        find-file
+        js2-mode-show-node
+        mark-whole-buffer
+        markdown-preview
+        mouse-save-then-kill
+        ))
