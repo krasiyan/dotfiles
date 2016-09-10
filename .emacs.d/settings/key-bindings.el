@@ -21,8 +21,9 @@
                     (read-kbd-macro ((cdr m) (cdr k))))))))
 
 ;; Font size
-(define-key global-map (kbd "C-+") 'zoom-frm-in)
+(define-key global-map (kbd "C-=") 'zoom-frm-in)
 (define-key global-map (kbd "C--") 'zoom-frm-out)
+(define-key global-map (kbd "C-0") 'zoom-frm-unzoom)
 
 ;; Multiple cursors
 (global-set-key (kbd "C-d") 'mc/mark-next-like-this)
