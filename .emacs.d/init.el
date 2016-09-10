@@ -85,6 +85,7 @@
      fringe-helper
      git-gutter-fringe
      ethan-wspace
+     mwim
      )))
 
 (condition-case nil

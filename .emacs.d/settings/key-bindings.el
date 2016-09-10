@@ -66,4 +66,9 @@
 )
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 
+;; Home and End - move to begging and enf of code then line
+(global-set-key (kbd "<home>") 'mwim-beginning-of-code-or-line)
+(global-set-key (kbd "<end>") 'mwim-end-of-code-or-line)
+
+
 (provide 'key-bindings)
