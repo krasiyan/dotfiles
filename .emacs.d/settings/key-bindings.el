@@ -91,4 +91,10 @@ there's a region, all lines that region covers will be duplicated."
 (require 'windmove)
 (windmove-default-keybindings 'super)
 
+;; C-ARROWS - resize windows
+(global-set-key (kbd "<C-up>") 'shrink-window)
+(global-set-key (kbd "<C-down>") 'enlarge-window)
+(global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+
 (provide 'key-bindings)
