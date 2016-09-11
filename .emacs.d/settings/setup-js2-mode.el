@@ -1,6 +1,6 @@
-;;; setup-js2-mode.el
-(require 'js2-mode)
+(require 'flycheck)
 
+;;; setup-js2-mode.el
 (setq-default
   js-indent-level 2
   js2-basic-offset 2
@@ -8,22 +8,45 @@
   js2-mode-show-parse-errors nil
   js2-mode-show-strict-warnings)
 
-;; (setq-default js2-allow-rhino-new-expr-initializer nil)
-;; (setq-default js2-auto-indent-p nil)
-;; (setq-default js2-enter-indents-newline nil)
-;; (setq-default js2-global-externs '("module" "require" "expect" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
-;; (setq-default js2-idle-timer-delay 0.1)
-;; (setq-default js2-indent-on-enter-key nil)
-;; (setq-default js2-mirror-mode nil)
-;; (setq-default js2-strict-inconsistent-return-warning nil)
-;; (setq-default js2-auto-indent-p t)
-;; (setq-default js2-include-rhino-externs nil)
-;; (setq-default js2-include-gears-externs nil)
-;; (setq-default js2-concat-multiline-strings 'eol)
-;; (setq-default js2-rebind-eol-bol-keys nil)
+(setq-default js2-allow-rhino-new-expr-initializer nil)
+(setq-default js2-auto-indent-p nil)
+(setq-default js2-enter-indents-newline nil)
 
-;;(require 'js2-imenu-extras)
-;;(js2-imenu-extras-setup)
+(setq-default js2-idle-timer-delay 0.1)
+(setq-default js2-indent-on-enter-key nil)
+(setq-default js2-mirror-mode nil)
+(setq-default js2-strict-inconsistent-return-warning nil)
+(setq-default js2-auto-indent-p t)
+(setq-default js2-include-rhino-externs nil)
+(setq-default js2-include-gears-externs nil)
+(setq-default js2-concat-multiline-strings 'eol)
+(setq-default js2-rebind-eol-bol-keys nil)
 
+;; Let flycheck handle parse errors
+(setq-default js2-show-parse-errors nil)
+(setq-default js2-strict-missing-semi-warning nil)
+(setq-default js2-strict-trailing-comma-warning t) ;; jshint does not warn about this now for some reason
+
+;; find the locally installed eslint
+(defun my/use-eslint-from-node-modules ()
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                      (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                        root))))
+    (when (and eslint (file-executable-p eslint))
+      (setq-local flycheck-javascript-eslint-executable eslint))))
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
+;; disable the jshint default flycheck checker
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(javascript-jshint)))
+
+(add-hook 'js2-mode-hook (lambda () (flycheck-mode 1)))
+
+;; use the javascript-eslint flycheck checker with js2-mode
+(flycheck-add-mode 'javascript-eslint 'js2-mode)
 
 (provide 'setup-js2-mode)

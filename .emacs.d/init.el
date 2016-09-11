@@ -83,6 +83,9 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+;; Auto close pair brackets, etc. Horay for emacs 24!
+(electric-pair-mode 1)
+
 ;; Setup packages
 (require 'setup-package)
 
@@ -111,6 +114,7 @@
      hlinum                             ; highligh current line number
      avy                                ; goto char
      expand-region                      ; expand region
+     flycheck                           ; syntax checking
      )))
 
 (condition-case nil
