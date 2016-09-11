@@ -6,7 +6,7 @@
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-;;(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; Start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -65,6 +65,23 @@
 
 ;; No tabs! Only spaces :)
 (setq-default indent-tabs-mode nil)
+
+;; Answering only 'y' or 'n' on prompts
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; UTF-8 please
+(setq locale-coding-system 'utf-8) ; pretty
+(set-terminal-coding-system 'utf-8) ; pretty
+(set-keyboard-coding-system 'utf-8) ; pretty
+(set-selection-coding-system 'utf-8) ; please
+(prefer-coding-system 'utf-8) ; with sugar on top
+
+;; Disable word wrap
+(setq-default truncate-lines t)
+
+;; Enable upcase/downcase region
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
 
 ;; Setup packages
 (require 'setup-package)
