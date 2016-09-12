@@ -115,6 +115,7 @@
      avy                                ; goto char
      expand-region                      ; expand region
      flycheck                           ; syntax checking
+     flycheck-pos-tip                   ; flycheck popup under mark
      )))
 
 (condition-case nil
@@ -136,6 +137,7 @@
 (require 'setup-ethan-wspace)
 (require 'setup-sublimity)
 (require 'setup-tabbar)
+(require 'setup-flycheck)
 
 ;; Map files to modes
 (require 'mode-mappings)

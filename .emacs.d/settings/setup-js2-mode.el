@@ -1,6 +1,3 @@
-(require 'flycheck)
-
-;;; setup-js2-mode.el
 (setq-default
   js-indent-level 2
   js2-basic-offset 2
@@ -27,26 +24,7 @@
 (setq-default js2-strict-missing-semi-warning nil)
 (setq-default js2-strict-trailing-comma-warning t) ;; jshint does not warn about this now for some reason
 
-;; find the locally installed eslint
-(defun my/use-eslint-from-node-modules ()
-  (let* ((root (locate-dominating-file
-                (or (buffer-file-name) default-directory)
-                "node_modules"))
-         (eslint (and root
-                      (expand-file-name "node_modules/eslint/bin/eslint.js"
-                                        root))))
-    (when (and eslint (file-executable-p eslint))
-      (setq-local flycheck-javascript-eslint-executable eslint))))
-(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-
-;; disable the jshint default flycheck checker
-(setq-default flycheck-disabled-checkers
-              (append flycheck-disabled-checkers
-                      '(javascript-jshint)))
-
+;; turn on flycheck-mode with js2-mode
 (add-hook 'js2-mode-hook (lambda () (flycheck-mode 1)))
-
-;; use the javascript-eslint flycheck checker with js2-mode
-(flycheck-add-mode 'javascript-eslint 'js2-mode)
 
 (provide 'setup-js2-mode)
