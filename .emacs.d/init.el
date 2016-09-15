@@ -138,6 +138,7 @@
 (require 'setup-sublimity)
 (require 'setup-tabbar)
 (require 'setup-flycheck)
+(require 'setup-zsh)
 
 ;; Map files to modes
 (require 'mode-mappings)
