@@ -1,3 +1,6 @@
+;; Set custom font
+(set-face-attribute 'default nil :font "Consolas for Powerline 14")
+
 ;; Highlight current line
 (global-hl-line-mode 1)
 

@@ -10,10 +10,3 @@
  '(scroll-error-top-bottom nil)
  '(set-mark-command-repeat-pop nil)
  '(shift-select-mode t))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas for Powerline" :foundry "microsoft" :slant normal :weight normal :height 133 :width normal)))))
