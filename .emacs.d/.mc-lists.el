@@ -19,10 +19,12 @@
       '(
         beginning-of-buffer
         cua--prefix-override-handler
+        cua-copy-region
         drag-stuff-down
         find-file
         js2-mode-show-node
         mark-whole-buffer
         markdown-preview
         mouse-save-then-kill
+        tabbar-ruler-backward
         ))
