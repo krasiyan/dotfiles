@@ -18,7 +18,7 @@
 (add-hook 'term-mode-hook (lambda ()
                             (setq show-trailing-whitespace nil)
                             (linum-mode 0)
-                            (highlight-indent-guides-mode nil)
+                            (highlight-indent-guides-mode 0)
                             (hlinum-deactivate)
                             (global-hl-line-mode 0)))
 
