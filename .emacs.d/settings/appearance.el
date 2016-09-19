@@ -3,7 +3,7 @@
 (set-face-attribute 'default nil :font "Consolas 14")
 
 ;; Highlight current line
-(global-hl-line-mode 1)
+(global-hl-line-mode t)
 
 ;; Show the time
 (display-time)
@@ -36,5 +36,9 @@
 (require 'hlinum)
 (hlinum-activate)
 (set-face-background 'linum-highlight-face "#859900")
+
+;; highlight tags mode
+(require 'hl-tags-mode)
+(hl-tags-mode 1)
 
 (provide 'appearance)
