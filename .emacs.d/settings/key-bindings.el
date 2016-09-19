@@ -127,5 +127,7 @@ there's a region, all lines that region covers will be duplicated."
       (call-process path-to-emacs nil 0 nil))))
 (global-set-key (kbd "C-S-N") 'new-emacs-instance)
 
+;;
+(global-set-key [f11] 'toggle-frame-fullscreen)
 
 (provide 'key-bindings)
