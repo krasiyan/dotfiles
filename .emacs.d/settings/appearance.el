@@ -2,6 +2,13 @@
 ;; (set-face-attribute 'default nil :font "Consolas for Powerline 14")
 (set-face-attribute 'default nil :font "Consolas 14")
 
+;; Don't beep!
+(setq visible-bell nil)
+(setq ring-bell-function (lambda ()
+                           (invert-face 'mode-line)
+                           (run-with-timer 0.05 nil 'invert-face 'mode-line)))
+
+
 ;; Highlight current line
 (global-hl-line-mode t)
 

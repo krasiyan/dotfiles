@@ -86,6 +86,9 @@
 ;; Auto close pair brackets, etc. Horay for emacs 24!
 (electric-pair-mode 1)
 
+;; Auto refresh buffers
+(global-auto-revert-mode 1)
+
 ;; Setup packages
 (require 'setup-package)
 
