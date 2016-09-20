@@ -46,6 +46,17 @@
 ;; C-f incremental forward search
 (global-set-key "\C-f" 'isearch-forward)
 
+;; search for the selected region
+(defun jrh-isearch-with-region ()
+  "Use region as the isearch text."
+  (when mark-active
+    (let ((region (funcall region-extract-function nil)))
+      (deactivate-mark)
+      (isearch-push-state)
+      (isearch-yank-string region))))
+
+(add-hook 'isearch-mode-hook #'jrh-isearch-with-region)
+
 ;; Page down for isearch-repeat-forward
 (define-key isearch-mode-map [next] 'isearch-repeat-forward)
 
