@@ -10,6 +10,14 @@
 ;;(setq tabbar-ruler-popup-toolbar t)    ; get popup toolbar
 ;;(setq tabbar-ruler-popup-scrollbar t)  ; show scroll-bar on mouse-move
 
+;; group tabs by buffer
+(tabbar-ruler-group-buffer-groups)
+
+(setq tabbar-buffer-groups-function
+      (lambda ()
+        (list "All")))
+
+
 (defcustom tabbar-hide-header-button t
   "Hide header button at left-up corner.
 Default is t."
