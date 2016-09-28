@@ -38,7 +38,7 @@
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="&lt;Super&gt;k" type="string" value="keepass2"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;space" type="string" value="/home/nitidus/scripts/move-to-next-monitor.sh"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="./.screenlayout/Philips.sh"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="./.screenlayout/PhilipsAndLaptop.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
