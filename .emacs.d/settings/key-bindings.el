@@ -57,6 +57,13 @@
 
 (add-hook 'isearch-mode-hook #'jrh-isearch-with-region)
 
+(require 'ag)
+(setq ag-reuse-window 't)
+(setq ag-highlight-search t)
+
+;; C-S-f ag based search in the project files
+(global-set-key (kbd "C-S-f") 'ag-project-files)
+
 ;; Page down for isearch-repeat-forward
 (define-key isearch-mode-map [next] 'isearch-repeat-forward)
 
@@ -64,6 +71,22 @@
 (define-key isearch-mode-map [prior] 'isearch-repeat-backward)
 
 ;; C-w kill-this-buffer
+;; (defun ask-before-killing-buffer ()
+;;   (let ((buffer (current-buffer)))
+;;     (cond
+;;      ((and buffer-file-name (buffer-modified-p))
+;;       ;; If there's a file associated with the buffer,
+;;       ;; make sure it's saved
+;;       (y-or-n-p (format "Buffer %s modified; kill anyway? "
+;;                     (buffer-name))))
+;;      ((get-buffer-process buffer)
+;;       ;; If there's a process associated with the buffer,
+;;       ;; make sure it's dead
+;;       (y-or-n-p (format "Process %s active; kill anyway? "
+;;                     (process-name (get-buffer-process buffer)))))
+;;      (t t))))
+;; (add-to-list 'kill-buffer-query-functions
+;;              'ask-before-killing-buffer)
 (global-set-key "\C-w" 'kill-this-buffer)
 
 ;; Page Up/Down for cycling buffers

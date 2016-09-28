@@ -119,6 +119,8 @@
      expand-region                      ; expand region
      flycheck                           ; syntax checking
      flycheck-pos-tip                   ; flycheck popup under mark
+     ag                                 ; multi file search
+     multi-web-mode                     ; multiple modes in html
      )))
 
 (condition-case nil

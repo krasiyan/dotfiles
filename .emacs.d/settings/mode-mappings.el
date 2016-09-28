@@ -14,4 +14,12 @@
 (autoload 'nxml-mode "nxml-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 
+(require 'multi-web-mode)
+(setq mweb-default-major-mode 'html-mode)
+(setq mweb-tags
+  '((js-mode  "<script[^>]*>" "</script>")
+    (css-mode "<style[^>]*>" "</style>")))
+(setq mweb-filename-extensions '("htm" "html" "tag" "ejs"))
+(multi-web-global-mode 1)
+
 (provide 'mode-mappings)

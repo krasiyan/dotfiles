@@ -3,7 +3,10 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        comment-dwim-2
         cua-paste
+        cua-scroll-down
+        describe-key
         drag-stuff-left
         drag-stuff-right
         duplicate-line
@@ -21,10 +24,17 @@
         cua--prefix-override-handler
         cua-copy-region
         drag-stuff-down
+        electric-pair-delete-pair
         find-file
+        ignore
         js2-mode-show-node
+        list-buffers
         mark-whole-buffer
         markdown-preview
         mouse-save-then-kill
+        new-emacs-instance
         tabbar-ruler-backward
+        tabbar-ruler-forward
+        tabbar-select-tab-callback
+        undefined
         ))
