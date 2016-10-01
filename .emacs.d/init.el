@@ -110,7 +110,6 @@
      ethan-wspace                       ; auto fix trailing whitespaces
      mwim                               ; home/end start/end of code then line
      comment-dwim-2                     ; better comments
-     sublimity                          ; smooth scrolling
      redo+                              ; redo
      tabbar                             ; tabs
      tabbar-ruler                       ; tabs
@@ -141,7 +140,6 @@
 (require 'setup-highlight-indent-guides)
 (require 'setup-git-gutter-fringe)
 (require 'setup-ethan-wspace)
-(require 'setup-sublimity)
 (require 'setup-tabbar)
 (require 'setup-flycheck)
 (require 'setup-zsh)

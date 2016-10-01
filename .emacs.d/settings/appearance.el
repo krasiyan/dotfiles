@@ -51,4 +51,14 @@
 ; Scroll just one line when hitting bottom of window
 (setq scroll-conservatively 10000)
 
+;; scroll one line at a time (less "jumpy" than defaults)
+
+(setq mouse-wheel-scroll-amount '(2 ((shift) . 2))) ;; two lines at a time
+
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
 (provide 'appearance)
