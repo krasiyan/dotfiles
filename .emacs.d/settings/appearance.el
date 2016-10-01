@@ -48,4 +48,7 @@
 (require 'hl-tags-mode)
 (hl-tags-mode 1)
 
+; Scroll just one line when hitting bottom of window
+(setq scroll-conservatively 10000)
+
 (provide 'appearance)
