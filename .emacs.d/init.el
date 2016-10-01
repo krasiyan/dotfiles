@@ -121,6 +121,7 @@
      flycheck-pos-tip                   ; flycheck popup under mark
      ag                                 ; multi file search
      multi-web-mode                     ; multiple modes in html
+     multi-term                         ; terminal emulator
      )))
 
 (condition-case nil
