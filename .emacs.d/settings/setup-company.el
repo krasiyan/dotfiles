@@ -1,8 +1,12 @@
 (require 'company)
+(require 'company-statistics)
 (require 'company-tern)
 
 ;; company everywhere!
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; auto-ranking of the company completion suggestions
+(add-hook 'after-init-hook 'company-statistics-mode)
 
 ;; quickhelp tooltips
 (company-quickhelp-mode 1)

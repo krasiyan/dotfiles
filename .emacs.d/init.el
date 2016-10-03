@@ -123,7 +123,8 @@
      multi-term                         ; terminal emulator
      company                            ; auto completion
      company-quickhelp                  ; help popups for autocompletions
-     company-tern                       ; auto completion
+     company-tern                       ; tern backed for company-mode
+     company-statistics                 ; auto completion candidates auto-ranking
      )))
 
 (condition-case nil
