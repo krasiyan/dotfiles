@@ -121,6 +121,9 @@
      ag                                 ; multi file search
      multi-web-mode                     ; multiple modes in html
      multi-term                         ; terminal emulator
+     company                            ; auto completion
+     company-quickhelp                  ; help popups for autocompletions
+     company-tern                       ; auto completion
      )))
 
 (condition-case nil
@@ -143,6 +146,7 @@
 (require 'setup-tabbar)
 (require 'setup-flycheck)
 (require 'setup-zsh)
+(require 'setup-company)
 
 ;; Map files to modes
 (require 'mode-mappings)
