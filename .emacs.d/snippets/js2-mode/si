@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: setInterval
+# key: si
+# --
+setInterval(() => {
+  $0
+}, ${1:1000})

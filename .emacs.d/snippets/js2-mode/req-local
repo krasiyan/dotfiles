@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: var $require = require(process.cwd() + '/server/lib/require')
+# key: req$
+# --
+var \$require = require(process.cwd() + '/server/lib/require')
+$0

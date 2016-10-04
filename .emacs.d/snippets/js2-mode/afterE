@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: afterE
+# key: afterE
+# --
+afterEach(function (${3:done}) {
+  $0
+})

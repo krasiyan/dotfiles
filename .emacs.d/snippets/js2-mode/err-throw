@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: if (err) throw err
+# key: err
+# --
+if (err) throw err
+$0

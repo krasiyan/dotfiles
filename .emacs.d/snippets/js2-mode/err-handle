@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: if (err) { return done(err) }
+# key: err
+# --
+if (${1:err}) {
+  $2
+  return ${3:done}(${4:err})
+}
+$5

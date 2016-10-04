@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: setTimeout
+# key: st
+# --
+setTimeout(() => {
+  $0
+}, ${1:1000})

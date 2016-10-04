@@ -125,6 +125,7 @@
      company-quickhelp                  ; help popups for autocompletions
      company-tern                       ; tern backed for company-mode
      company-statistics                 ; auto completion candidates auto-ranking
+     yasnippet                          ; snippets
      )))
 
 (condition-case nil
@@ -132,7 +133,6 @@
   (error
    (package-refresh-contents)
    (init--install-packages)))
-
 ;; Set up appearance
 (require 'appearance)
 
@@ -148,6 +148,7 @@
 (require 'setup-flycheck)
 (require 'setup-zsh)
 (require 'setup-company)
+(require 'setup-yasnippet)
 
 ;; Map files to modes
 (require 'mode-mappings)

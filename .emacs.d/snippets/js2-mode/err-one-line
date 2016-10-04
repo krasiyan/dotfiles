@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: if (err) return done(err)
+# key: err
+# --
+if (err) return ${1:done}(err)
+$0

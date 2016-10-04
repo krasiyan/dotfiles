@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: var $path = require(process.cwd() + '/server/lib/path')
+# key: path$
+# --
+var \$path = require(process.cwd() + '/server/lib/path')
+$0

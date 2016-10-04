@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: beforeE
+# key: beforeE
+# --
+beforeEach(function (${3:done}) {
+  $0
+})

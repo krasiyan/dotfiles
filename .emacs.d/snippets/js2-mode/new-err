@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: new Error(...)
+# key: newe
+# --
+new Error($1)

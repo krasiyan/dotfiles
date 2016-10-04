@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: forEach
+# key: forEach
+# --
+${1:arr}.forEach(function ($2) {
+  $0
+})
