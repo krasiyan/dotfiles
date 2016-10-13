@@ -24,3 +24,26 @@ Most of the configs are borrowed from all over the web and I will try give credi
 # Inspiration
 
 TBA
+
+# Various
+
+- [DuckDuckGo](http://duckduckgo.com) settings
+
+  ```
+  {
+    "kae":"t",
+    "kah":"bg-bg",
+    "kp":"-1",
+    "k1":"-1",
+    "kaj":"m",
+    "kam":"google-maps",
+    "kal":"-1",
+    "kak":"-1",
+    "kw":"s",
+    "km":"l",
+    "kf":"fw",
+    "kai":"1",
+    "kt":"p",
+    "kd":"1"
+  }
+  ```
