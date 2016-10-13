@@ -12,7 +12,7 @@
 (company-quickhelp-mode 1)
 
 ;; no delay
-(setq company-idle-delay 0)
+;;(setq company-idle-delay 0)
 
 ;; visual improvements to the tern autocomplete list
 (setq company-tern-property-marker nil)
@@ -21,6 +21,8 @@
 ;; company-tern
 (add-to-list 'company-backends '(company-tern :separate company-yasnippet))
 
+;; disable tern .tern-port files
+(add-to-list 'tern-command "--no-port-file" 'append)
 
 (defun check-expansion ()
   (save-excursion
