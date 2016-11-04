@@ -127,10 +127,10 @@ there's a region, all lines that region covers will be duplicated."
 (windmove-default-keybindings 'super)
 
 ;; C-ARROWS - resize windows
-(global-set-key (kbd "<C-up>") 'shrink-window)
-(global-set-key (kbd "<C-down>") 'enlarge-window)
-(global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
-(global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "<C-s-up>") 'shrink-window)
+(global-set-key (kbd "<C-s-down>") 'enlarge-window)
+(global-set-key (kbd "<C-s-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-s-right>") 'enlarge-window-horizontally)
 
 ;; jump to char
 (global-set-key (kbd "C-j") 'avy-goto-char)
