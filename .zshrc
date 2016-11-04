@@ -37,7 +37,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins!
-plugins=(git common-aliases sudo debian ssh-agent web-search)
+plugins=(git common-aliases sudo debian ssh-agent web-search extract github)
 
 # ssh agent setup
 zstyle :omz:plugins:ssh-agent identities id_rsa github bitbucket_linux
