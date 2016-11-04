@@ -126,6 +126,7 @@
      company-tern                       ; tern backed for company-mode
      company-statistics                 ; auto completion candidates auto-ranking
      yasnippet                          ; snippets
+     smart-mode-line                    ; smart-mode-line
      )))
 
 (condition-case nil

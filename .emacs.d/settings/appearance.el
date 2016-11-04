@@ -8,12 +8,17 @@
                            (invert-face 'mode-line)
                            (run-with-timer 0.05 nil 'invert-face 'mode-line)))
 
-
 ;; Highlight current line
 (global-hl-line-mode t)
 
-;; Show the time
-(display-time)
+;; Show the time in the modeline
+(display-time-mode 1)
+
+;; Show the battery percentage in the modeline
+(display-battery-mode t)
+
+;; Don't display the buffer size
+(setq size-indication-mode nil)
 
 ;; Don't defer screen updates when performing operations
 (setq redisplay-dont-pause t)
@@ -45,8 +50,8 @@
 (set-face-background 'linum-highlight-face "#859900")
 
 ;; highlight tags mode
-(require 'hl-tags-mode)
-(hl-tags-mode 1)
+;; (require 'hl-tags-mode)
+;; (hl-tags-mode 't)
 
 ; Scroll just one line when hitting bottom of window
 (setq scroll-conservatively 10000)
@@ -61,4 +66,11 @@
 
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+;; smart modeline
+(setq powerline-default-separator-dir '(right . left))
+(setq sml/theme 'respectful)
+(setq sml/name-width 40)
+(setq sml/mode-width 'full)
+(sml/setup)
+(add-to-list 'sml/replacer-regexp-list '("^~/work/" ":work:") t)
 (provide 'appearance)
