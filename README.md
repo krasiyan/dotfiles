@@ -12,6 +12,7 @@ Most of the configs are borrowed from all over the web and I will try give credi
 - [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
 - [`powerlevel9k Oh My Zsh theme`](https://github.com/bhilburn/powerlevel9k)
 - [`The silver searcher AG`](https://github.com/ggreer/the_silver_searcher)
+- [`Github Hub`](https://hub.github.com/)
 
 ## Cloning
 
