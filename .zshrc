@@ -40,7 +40,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git common-aliases sudo debian ssh-agent web-search extract github)
 
 # ssh agent setup
-zstyle :omz:plugins:ssh-agent identities id_rsa github bitbucket_linux
+zstyle :omz:plugins:ssh-agent identities id_rsa github bitbucket_linux e_gitlab
 
 source $ZSH/oh-my-zsh.sh
 
