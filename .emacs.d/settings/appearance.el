@@ -11,8 +11,11 @@
 ;; Highlight current line
 (global-hl-line-mode t)
 
-;; Show the time in the modeline
-(display-time-mode 1)
+;; Show the date and time in the modeline
+(setq display-time-day-and-date t
+  display-time-24hr-format t)
+  (display-time)
+
 
 ;; Show the battery percentage in the modeline
 (display-battery-mode t)
