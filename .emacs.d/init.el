@@ -127,6 +127,7 @@
      company-statistics                 ; auto completion candidates auto-ranking
      yasnippet                          ; snippets
      smart-mode-line                    ; smart-mode-line
+     smex                               ; M-x extension
      )))
 
 (condition-case nil
@@ -150,6 +151,7 @@
 (require 'setup-zsh)
 (require 'setup-company)
 (require 'setup-yasnippet)
+(require 'setup-smex)
 
 ;; Map files to modes
 (require 'mode-mappings)
