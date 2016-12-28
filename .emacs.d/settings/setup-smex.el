@@ -1,6 +1,8 @@
 (require 'smex)
+(require 'ido-grid-mode)
 
 (smex-initialize)
+(ido-grid-mode 1)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)

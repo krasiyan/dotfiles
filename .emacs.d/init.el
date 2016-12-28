@@ -128,6 +128,7 @@
      yasnippet                          ; snippets
      smart-mode-line                    ; smart-mode-line
      smex                               ; M-x extension
+     ido-grid-mode                      ; grid mode for smex
      )))
 
 (condition-case nil
