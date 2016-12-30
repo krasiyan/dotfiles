@@ -4,35 +4,46 @@
 (setq mc/cmds-to-run-for-all
       '(
         comment-dwim-2
+        copy-region-as-kill
         cua-paste
         cua-scroll-down
+        delete-window
         describe-key
         drag-stuff-left
         drag-stuff-right
+        duplicate-current-line-or-region
         duplicate-line
+        end-of-buffer
         keyboard-escape-quit
         kill-region
         markdown-exdent-or-delete
         mouse-set-region
         mwim-beginning-of-code-or-line
         mwim-end-of-code-or-line
+        tab-indent-or-complete
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        ag-project-files
         beginning-of-buffer
+        create-new-buffer
         cua--prefix-override-handler
         cua-copy-region
+        cua-cut-region
         drag-stuff-down
         electric-pair-delete-pair
         find-file
+        fiplr-find-file
         ignore
         js2-mode-show-node
+        kmacro-end-or-call-macro
         list-buffers
         mark-whole-buffer
         markdown-preview
         mouse-save-then-kill
         new-emacs-instance
+        overwrite-mode
         tabbar-ruler-backward
         tabbar-ruler-forward
         tabbar-select-tab-callback
