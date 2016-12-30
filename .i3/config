@@ -163,9 +163,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10%
+# volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +10%; pkill -RTMIN+11 i3blocks"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -10%; pkill -RTMIN+11 i3blocks"
+
+# screen lock
 bindsym $mod+shift+z exec i3lock --color "#002b36"
+
+# brightness
+bindsym XF86MonBrightnessUp exec "xbacklight -inc +5; pkill -RTMIN+12 i3blocks"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec +5; pkill -RTMIN+12 i3blocks"
+
+
 bindsym $mod+x exec keepass2
 
 #bindsym ISO_Next_Group exec pkill -RTMIN+1 i3blocks
