@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Left click
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+   gsimplecal
+fi
+
+date '+%d-%m-%Y w%W %H:%M:%S'
+echo ''
+echo ''
