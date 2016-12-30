@@ -23,4 +23,4 @@ case $BLOCK_BUTTON in
         5) xbacklight -dec 10 ;;
 esac
 
-printf "%.0f" "$(xbacklight -get)"
+printf "%.0f%%" "$(xbacklight -get)"
