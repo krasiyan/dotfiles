@@ -205,5 +205,6 @@ hide_edge_borders both
 
 # startup
 exec_always ~/scripts/keyboardlayouts.sh
+exec nm-applet
 exec --no-startup-id spotify
 exec --no-startup-id chromium
