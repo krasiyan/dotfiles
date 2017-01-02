@@ -12,7 +12,7 @@
 case $BLOCK_BUTTON in
         # right click
         # set to `20
-        3) xbacklight -set 20 ;;
+        3) xbacklight -set 50 ;;
 
         # scroll up
         # raise brightness
