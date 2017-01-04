@@ -111,11 +111,15 @@ there's a region, all lines that region covers will be duplicated."
 ;; C-/ comment
 (global-set-key (kbd "C-/") 'comment-dwim-2)
 
-;; M-ARROWS - move around windows
+;; M-s-ARROWS - move around windows
 (require 'windmove)
-(windmove-default-keybindings 'super)
+;; (windmove-default-keybindings 'meta)
+(global-set-key (kbd "M-s-<left>")  'windmove-left)
+(global-set-key (kbd "M-s-<right>") 'windmove-right)
+(global-set-key (kbd "M-s-<up>")    'windmove-up)
+(global-set-key (kbd "M-s-<down>")  'windmove-down)
 
-;; C-ARROWS - resize windows
+;; C-s-ARROWS - resize windows
 (global-set-key (kbd "<C-s-up>") 'shrink-window)
 (global-set-key (kbd "<C-s-down>") 'enlarge-window)
 (global-set-key (kbd "<C-s-left>") 'shrink-window-horizontally)
