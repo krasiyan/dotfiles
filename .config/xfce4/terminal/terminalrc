@@ -23,4 +23,5 @@ MiscHighlightUrls=TRUE
 ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
 ScrollingSingleLine=FALSE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
 
