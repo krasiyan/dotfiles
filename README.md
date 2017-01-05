@@ -7,12 +7,19 @@ Most of the configs are borrowed from all over the web and I will try give credi
 
 ## Prerequisites
 
-- Debian with XFCE
+- [`Debian`](https://www.debian.org/)
+- [`XFCE`](http://www.xfce.org/)
+- [`i3`](https://github.com/i3/i3)
+- [`i3blocks`](https://github.com/vivien/i3blocks)
+- [`rofi`](https://github.com/DaveDavenport/rofi)
+- [`redshift`](https://github.com/jonls/redshift)
+- [`compton`](https://github.com/chjj/compton)
 - [`Zsh`](http://www.zsh.org/)
 - [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
 - [`powerlevel9k Oh My Zsh theme`](https://github.com/bhilburn/powerlevel9k)
 - [`The silver searcher AG`](https://github.com/ggreer/the_silver_searcher)
 - [`Github Hub`](https://hub.github.com/)
+- [`Emacs`](https://www.gnu.org/software/emacs/)
 
 ## Cloning
 
