@@ -111,19 +111,19 @@ there's a region, all lines that region covers will be duplicated."
 ;; C-/ comment
 (global-set-key (kbd "C-/") 'comment-dwim-2)
 
-;; M-s-ARROWS - move around windows
+;; C-s-ARROWS - move around windows
 (require 'windmove)
 ;; (windmove-default-keybindings 'meta)
-(global-set-key (kbd "M-s-<left>")  'windmove-left)
-(global-set-key (kbd "M-s-<right>") 'windmove-right)
-(global-set-key (kbd "M-s-<up>")    'windmove-up)
-(global-set-key (kbd "M-s-<down>")  'windmove-down)
+(global-set-key (kbd "C-s-<left>")  'windmove-left)
+(global-set-key (kbd "C-s-<right>") 'windmove-right)
+(global-set-key (kbd "C-s-<up>")    'windmove-up)
+(global-set-key (kbd "C-s-<down>")  'windmove-down)
 
-;; C-s-ARROWS - resize windows
-(global-set-key (kbd "<C-s-up>") 'shrink-window)
-(global-set-key (kbd "<C-s-down>") 'enlarge-window)
-(global-set-key (kbd "<C-s-left>") 'shrink-window-horizontally)
-(global-set-key (kbd "<C-s-right>") 'enlarge-window-horizontally)
+;; M-s-ARROWS - resize windows
+(global-set-key (kbd "<M-s-up>") 'shrink-window)
+(global-set-key (kbd "<M-s-down>") 'enlarge-window)
+(global-set-key (kbd "<M-s-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<M-s-right>") 'enlarge-window-horizontally)
 
 ;; jump to char
 (global-set-key (kbd "C-j") 'avy-goto-char)
