@@ -98,6 +98,9 @@ set $workspace8 "8 "
 set $workspace9 "9 "
 set $workspace10 "10 "
 
+# move the whole workspace to the next output
+bindsym $mod+m move workspace to output right
+
 # assign default monitors for workspaces
 workspace $workspace1 output HDMI1
 workspace $workspace2 output DP2
