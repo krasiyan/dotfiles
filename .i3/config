@@ -4,6 +4,7 @@
 # VARIABLES
 
 set $rofi_opts -opacity 80 -lines 10 -width 100 -padding 100 -fuzzy -bw 0 -font "Consolas 21" -eh 1.2 -hide-scrollbar
+set $Locker i3lock --color "#002b36" && sleep 1
 
 set $mod Mod4
 
@@ -87,7 +88,7 @@ bindsym $mod+Shift+space floating toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-set $workspace1 "1 "
+set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3 "
 set $workspace4 "4 "
@@ -189,7 +190,7 @@ bindsym XF86AudioMute        exec --no-startup-id "pactl set-sink-mute 0 toggle;
 bindsym XF86AudioMicMute     exec --no-startup-id "pkill -RTMIN+10 i3blocks"
 
 # screen lock
-bindsym $mod+z exec i3lock --color "#002b36"
+bindsym $mod+z exec $Locker
 
 # brightness
 bindsym XF86MonBrightnessUp exec "xbacklight -inc +5; pkill -RTMIN+12 i3blocks"
@@ -207,13 +208,33 @@ bindsym --release Print exec "xfce4-screenshooter -r"
 bindsym --release $mod+Print exec "xfce4-screenshooter -w"
 bindsym --release $mod+Shift+Print exec "xfce4-screenshooter -f"
 
-#bindsym --release ISO_Next_Group exec pkill -RTMIN+1 i3blocksР
+#bindsym --release ISO_Next_Group exec pkill -RTMIN+1 i3blocks
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+  output HDMI1
   status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/local/libexec/i3blocks /usr/local/bin/i3blocks -c ~/.i3/i3blocks.conf
   position top
+  tray_output primary
+  colors {
+    separator #dc322f
+    background #002b36
+    statusline #268bd2q
+    focused_workspace #fdf6e3 #859900 #fdf6e3
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3
+    inactive_workspace #586e75 #93a1a1 #002b36
+    urgent_workspace #d33682 #d33682 #fdf6e3
+  }
+}
+
+bar {
+  output eDP1
+  output DP2
+  position top
+  tray_output none
+  mode hide
+
   colors {
     separator #dc322f
     background #002b36
@@ -232,6 +253,21 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
 hide_edge_borders both
 
+set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (x) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym x exec --no-startup-id  systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Delete mode "$mode_system"
+
 # startup
 exec_always ~/scripts/keyboardlayouts.sh
 exec nm-applet
@@ -240,4 +276,5 @@ exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spo
 exec --no-startup-id chromium
 exec --no-startup-id emacs24-x
 exec --no-startup-id redshift-gtk
-exec_always compton -f -D 2
+exec compton -f -D 2
+exec --no-startup-id xautolock -time 5 -detectsleep -locker '$Locker'
