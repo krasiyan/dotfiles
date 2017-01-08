@@ -138,7 +138,7 @@ assign [class="Chromium-browser"] $workspace1
 assign [class="Spotify"]  $workspace10
 
 for_window [class="Gsimplecal"] floating enable
-for_window [class="KeePass2"] floating enable
+for_window [class="Keepassx"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -196,8 +196,8 @@ bindsym $mod+z exec $Locker
 bindsym XF86MonBrightnessUp exec "xbacklight -inc +5; pkill -RTMIN+12 i3blocks"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec +5; pkill -RTMIN+12 i3blocks"
 
-# keepass2
-bindsym $mod+x exec keepass2
+# keepassx
+bindsym $mod+x exec keepassx
 
 # arandr
 bindsym $mod+p exec arandr
