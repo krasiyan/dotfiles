@@ -3,7 +3,7 @@
 
 # VARIABLES
 
-set $rofi_opts -opacity 80 -lines 10 -width 100 -padding 100 -fuzzy -bw 0 -font "Consolas 21" -eh 1.2 -hide-scrollbar
+set $rofi_opts -config ~/.config/rofi/config
 set $Locker i3lock --color "#002b36" && sleep 1
 
 set $mod Mod4
