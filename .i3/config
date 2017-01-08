@@ -197,6 +197,7 @@ bindsym $mod+x exec keepass2
 
 # arandr
 bindsym $mod+p exec arandr
+bindsym $mod+Shift+p exec ~/.screenlayout/PhilipsAndLaptop.sh
 
 # screenshots
 bindsym --release Print exec "xfce4-screenshooter -r"
