@@ -84,16 +84,10 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
-set $workspace1 "1 "
+set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3 "
 set $workspace4 "4 "
@@ -103,6 +97,12 @@ set $workspace7 "7 "
 set $workspace8 "8 "
 set $workspace9 "9 "
 set $workspace10 "10 "
+
+# assign default monitors for workspaces
+workspace $workspace1 output HDMI1
+workspace $workspace2 output DP2
+workspace $workspace9 output eDP1
+workspace $workspace10 output eDP1
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
