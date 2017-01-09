@@ -27,6 +27,7 @@
       '(
         ag-project-files
         beginning-of-buffer
+        completion-at-point
         create-new-buffer
         cua--prefix-override-handler
         cua-copy-region
@@ -43,7 +44,9 @@
         markdown-preview
         mouse-save-then-kill
         new-emacs-instance
+        nxml-insert-xml-declaration
         overwrite-mode
+        smex
         tabbar-ruler-backward
         tabbar-ruler-forward
         tabbar-select-tab-callback
