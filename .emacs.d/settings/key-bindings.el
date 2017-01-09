@@ -1,3 +1,7 @@
+(dolist (key '("\C-h" "\C-j" "\C-k" "\C-l"
+               "\M-h" "\M-j" "\M-k" "\M-l"))
+  (global-unset-key key))
+
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
@@ -8,6 +12,21 @@
 (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
 (transient-mark-mode 1) ;; No region when it is not highlighted
 (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+
+;; M-(h-j-k-l) for a Vi like movement
+(global-set-key "\M-h" 'backward-char)
+(global-set-key "\M-j" 'next-line)
+(global-set-key "\M-k" 'previous-line)
+(global-set-key "\M-l" 'forward-char)
+
+(global-set-key "\C-h" 'backward-word)
+(define-key key-translation-map (kbd "C-j") (kbd "<home>"))
+(define-key key-translation-map (kbd "C-k") (kbd "<end>"))
+(global-set-key "\C-l" 'forward-word)
+
+;; rebind displaced movement key bindings
+(global-set-key "\M-v" 'downcase-word)
+(global-set-key "\M-b" 'recenter)
 
 ;; Font size
 (define-key global-map (kbd "C-=") 'zoom-frm-in)
@@ -96,20 +115,32 @@ there's a region, all lines that region covers will be duplicated."
 
 ;; C-s-ARROWS - move around windows
 (require 'windmove)
-;; (windmove-default-keybindings 'meta)
+
 (global-set-key (kbd "C-s-<left>")  'windmove-left)
 (global-set-key (kbd "C-s-<right>") 'windmove-right)
 (global-set-key (kbd "C-s-<up>")    'windmove-up)
 (global-set-key (kbd "C-s-<down>")  'windmove-down)
 
+;; C-s-HJKL - alternative move around windows
+(global-set-key (kbd "C-s-h")  'windmove-left)
+(global-set-key (kbd "C-s-l") 'windmove-right)
+(global-set-key (kbd "C-s-k")    'windmove-up)
+(global-set-key (kbd "C-s-j")  'windmove-down)
+
 ;; M-s-ARROWS - resize windows
-(global-set-key (kbd "<M-s-up>") 'shrink-window)
-(global-set-key (kbd "<M-s-down>") 'enlarge-window)
-(global-set-key (kbd "<M-s-left>") 'shrink-window-horizontally)
-(global-set-key (kbd "<M-s-right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "M-s-<up>") 'shrink-window)
+(global-set-key (kbd "M-s-<down>") 'enlarge-window)
+(global-set-key (kbd "M-s-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "M-s-<right>") 'enlarge-window-horizontally)
+
+;; M-s-HJKL - resize windows
+;; (global-set-key (kbd "<M-s-k>") 'shrink-window)
+;; (global-set-key (kbd "<M-s-j>") 'enlarge-window)
+;; (global-set-key (kbd "<M-s-h>") 'shrink-window-horizontally)
+;; (global-set-key (kbd "<M-s-l>") 'enlarge-window-horizontally)
 
 ;; jump to char
-(global-set-key (kbd "C-j") 'avy-goto-char)
+(global-set-key (kbd "C-p") 'avy-goto-char)
 
 ;; go to line
 (global-set-key (kbd "C-;") 'goto-line)
@@ -124,7 +155,7 @@ there's a region, all lines that region covers will be duplicated."
   "Create a new buffer named *new*[num]."
   (interactive)
   (switch-to-buffer (generate-new-buffer-name "*new*")))
-(global-set-key (kbd "C-n") 'create-new-buffer)
+(global-set-key (kbd "C-x n") 'create-new-buffer)
 
 ;; C-N new emacs window
 (when window-system
@@ -135,7 +166,7 @@ there's a region, all lines that region covers will be duplicated."
            (locate-file invocation-name
                         (list invocation-directory) exec-suffixes)))
       (call-process path-to-emacs nil 0 nil))))
-(global-set-key (kbd "C-S-N") 'new-emacs-instance)
+(global-set-key (kbd "C-x N") 'new-emacs-instance)
 
 ;;
 (global-set-key [f11] 'toggle-frame-fullscreen)
