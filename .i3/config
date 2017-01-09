@@ -253,7 +253,7 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
 hide_edge_borders both
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (x) shutdown
+set $mode_system System (l) lock, (s) suspend, (e) logout, (r) reboot, (x) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
