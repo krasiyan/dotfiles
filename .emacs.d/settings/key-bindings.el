@@ -84,6 +84,11 @@
 (global-set-key [C-prior] 'tabbar-ruler-backward)
 (global-set-key [C-next] 'tabbar-ruler-forward)
 
+;; Alternative cycling buffers
+(global-set-key (kbd "C-S-j") 'tabbar-ruler-backward)
+(global-set-key (kbd "C-S-k") 'tabbar-ruler-forward)
+
+
 ;; C-d duplicate line - http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 (defun duplicate-current-line-or-region (arg)
   "Duplicates the current line or region ARG times.
@@ -140,7 +145,7 @@ there's a region, all lines that region covers will be duplicated."
 ;; (global-set-key (kbd "<M-s-l>") 'enlarge-window-horizontally)
 
 ;; jump to char
-(global-set-key (kbd "C-p") 'avy-goto-char)
+(global-set-key (kbd "M-SPC") 'avy-goto-char)
 
 ;; go to line
 (global-set-key (kbd "C-;") 'goto-line)
