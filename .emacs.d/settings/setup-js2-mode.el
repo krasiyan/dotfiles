@@ -30,4 +30,9 @@
                            (flycheck-mode 1)
                            (tern-mode 1)))
 
+(eval-after-load 'js2-mode
+  '(progn
+     (define-key js2-mode-map (kbd "RET") 'js2-line-break)
+     (define-key js2-mode-map (kbd "M-j") nil)))
+
 (provide 'setup-js2-mode)
