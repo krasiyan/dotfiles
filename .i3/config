@@ -138,7 +138,6 @@ assign [class="Chromium-browser"] $workspace1
 assign [class="Spotify"]  $workspace10
 
 for_window [class="Gsimplecal"] floating enable
-for_window [class="Keepassx"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
