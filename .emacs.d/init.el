@@ -162,3 +162,6 @@
 
 ;; Setup key bindings
 (require 'key-bindings)
+
+;; Default directory
+(setq default-directory "~/work/")
