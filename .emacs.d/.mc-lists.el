@@ -43,6 +43,7 @@
         mark-whole-buffer
         markdown-preview
         mouse-save-then-kill
+        neotree-toggle
         new-emacs-instance
         nxml-insert-xml-declaration
         overwrite-mode
