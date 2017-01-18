@@ -129,6 +129,7 @@
      smart-mode-line                    ; smart-mode-line
      smex                               ; M-x extension
      ido-grid-mode                      ; grid mode for smex
+     recentf                            ; recently opened files
      )))
 
 (condition-case nil
@@ -153,6 +154,7 @@
 (require 'setup-company)
 (require 'setup-yasnippet)
 (require 'setup-smex)
+(require 'setup-recentf)
 
 ;; Map files to modes
 (require 'mode-mappings)
