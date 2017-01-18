@@ -15,7 +15,6 @@
 ;;(setq company-idle-delay 0)
 
 ;; visual improvements to the tern autocomplete list
-(setq company-tern-property-marker nil)
 (setq company-tooltip-align-annotations t)
 
 ;; company-tern

@@ -123,6 +123,7 @@
      multi-term                         ; terminal emulator
      company                            ; auto completion
      company-quickhelp                  ; help popups for autocompletions
+     pos-tip                            ; neede by company-quickhelp
      company-tern                       ; tern backed for company-mode
      company-statistics                 ; auto completion candidates auto-ranking
      yasnippet                          ; snippets
