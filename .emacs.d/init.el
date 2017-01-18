@@ -130,6 +130,9 @@
      smex                               ; M-x extension
      ido-grid-mode                      ; grid mode for smex
      recentf                            ; recently opened files
+     ido                                ; ido
+     flx-ido                            ; ido fuzzy matching
+     ido-vertical-mode                  ; ido vertical mode
      )))
 
 (condition-case nil
@@ -155,6 +158,7 @@
 (require 'setup-yasnippet)
 (require 'setup-smex)
 (require 'setup-recentf)
+(require 'setup-ido)
 
 ;; Map files to modes
 (require 'mode-mappings)
