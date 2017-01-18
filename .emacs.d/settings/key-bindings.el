@@ -111,6 +111,8 @@ there's a region, all lines that region covers will be duplicated."
       (goto-char (+ origin (* (length region) arg) arg)))))
 (global-set-key (kbd "C-S-d") 'duplicate-current-line-or-region)
 
+(global-set-key (kbd "<M-return>") 'newline)
+
 ;; Home and End - move to begging and enf of code then line
 (global-set-key (kbd "<home>") 'mwim-beginning-of-code-or-line)
 (global-set-key (kbd "<end>") 'mwim-end-of-code-or-line)
