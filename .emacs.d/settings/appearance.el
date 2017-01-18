@@ -1,6 +1,6 @@
 ;; Set custom font
 ;; (set-face-attribute 'default nil :font "Consolas for Powerline 14")
-(set-face-attribute 'default nil :font "Consolas 14")
+(setq default-frame-alist '((font . "Consolas-14")))
 
 ;; Don't beep!
 (setq visible-bell nil)
