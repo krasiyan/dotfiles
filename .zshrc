@@ -53,7 +53,8 @@ export LC_CTYPE="en_US.UTF-8"
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs -nw'
  else
-   export EDITOR='emacs'
+   export EDITOR='emacsclient -c -a emacs'
+   export VISUAL='emacsclient -c -a emacs'
  fi
 
 # Allow emacs to track the current directory
@@ -81,9 +82,10 @@ fi
 
 
 # Aliases"
-alias emacsconfig="emacs ~/.emacs.d/init.el"
-alias zshconfig="emacs ~/.zshrc"
-alias ohmyzsh="emacs ~/.oh-my-zsh"
-alias sshconfig="emacs ~/.ssh/config"
+alias e="emacsclient -n -a emacs"
+alias emacsconfig="e ~/.emacs.d/init.el"
+alias zshconfig="e ~/.zshrc"
+alias ohmyzsh="e ~/.oh-my-zsh"
+alias sshconfig="e ~/.ssh/config"
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
 alias cls="clear"

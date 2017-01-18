@@ -274,7 +274,8 @@ exec nm-applet
 exec blueman-applet
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
 exec --no-startup-id chromium
-exec --no-startup-id emacs24-x
+exec --no-startup-id emacs --daemon
+exec --no-startup-id emacsclient -c
 exec --no-startup-id /opt/franz/Franz
 exec --no-startup-id redshift-gtk
 exec --no-startup-id compton -f -D 2
