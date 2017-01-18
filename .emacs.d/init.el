@@ -1,3 +1,7 @@
+;; https://www.reddit.com/r/emacs/comments/3kqt6e/2_easy_little_known_steps_to_speed_up_emacs_start/
+(setq gc-cons-threshold--orig gc-cons-threshold)
+(setq gc-cons-threshold (* 100 1024 1024)) ; 100 MB before garbage collection
+
 ;; Disabe the startup screen
 (setq inhibit-startup-screen t)
 ;; No splash scratch message
@@ -141,6 +145,8 @@
   (error
    (package-refresh-contents)
    (init--install-packages)))
+
+
 ;; Set up appearance
 (require 'appearance)
 
@@ -159,13 +165,13 @@
 (require 'setup-yasnippet)
 (require 'setup-smex)
 (require 'setup-recentf)
-(require 'setup-ido)
-
-;; Map files to modes
-(require 'mode-mappings)
+(eval-after-load 'ido '(require 'setup-ido))
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
+
+;; Map files to modes
+(require 'mode-mappings)
 
 ;; Setup key bindings
 (require 'key-bindings)
