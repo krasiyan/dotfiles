@@ -18,6 +18,29 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(background_jobs root_indicator context dir vc
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status node_version time)
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(icons_test)
 
+# Allow emacs to track the current directory
+if [ -n "$INSIDE_EMACS" ]; then
+  chpwd() { print -P "\033AnSiTc %d" }
+  print -P "\033AnSiTu %n"
+  print -P "\033AnSiTc %d"
+
+    POWERLEVEL9K_MODE='flat'
+  POWERLEVEL9K_TIME_FOREGROUND="black"
+  POWERLEVEL9K_TIME_BACKGROUND="white"
+  POWERLEVEL9K_STATUS_ERROR_FOREGROUND="white"
+  POWERLEVEL9K_STATUS_ERROR_BACKGROUND="red"
+  POWERLEVEL9K_STATUS_OK_FOREGROUND="white"
+  POWERLEVEL9K_STATUS_OK_BACKGROUND="green"
+  POWERLEVEL9K_NODE_VERSION_FOREGROUND="white"
+  POWERLEVEL9K_NODE_VERSION_BACKGROUND="blue"
+
+  POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+  POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+
+  POWERLEVEL9K_CUSTOM_FIX_EMACS_BACKGROUND="green"
+  POWERLEVEL9K_CUSTOM_FIX_EMACS_FOREGROUND="white"
+fi
+
 # _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
@@ -53,39 +76,16 @@ export LC_CTYPE="en_US.UTF-8"
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs -nw'
  else
-   export EDITOR='emacsclient -c -a emacs'
-   export VISUAL='emacsclient -c -a emacs'
+   export EDITOR='/usr/bin/emacsclient --alternate-editor emacs'
+   export VISUAL='/usr/bin/emacsclient --alternate-editor emacs'
  fi
 
-# Allow emacs to track the current directory
-if [ -n "$INSIDE_EMACS" ]; then
-  chpwd() { print -P "\033AnSiTc %d" }
-  print -P "\033AnSiTu %n"
-  print -P "\033AnSiTc %d"
-
-  POWERLEVEL9K_MODE='flat'
-  POWERLEVEL9K_TIME_FOREGROUND="black"
-  POWERLEVEL9K_TIME_BACKGROUND="white"
-  POWERLEVEL9K_STATUS_ERROR_FOREGROUND="white"
-  POWERLEVEL9K_STATUS_ERROR_BACKGROUND="red"
-  POWERLEVEL9K_STATUS_OK_FOREGROUND="white"
-  POWERLEVEL9K_STATUS_OK_BACKGROUND="green"
-  POWERLEVEL9K_NODE_VERSION_FOREGROUND="white"
-  POWERLEVEL9K_NODE_VERSION_BACKGROUND="blue"
-
-  POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
-  POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
-
-  POWERLEVEL9K_CUSTOM_FIX_EMACS_BACKGROUND="green"
-  POWERLEVEL9K_CUSTOM_FIX_EMACS_FOREGROUND="white"
-fi
-
-
 # Aliases"
-alias e="emacsclient -n -a emacs"
-alias emacsconfig="e ~/.emacs.d/init.el"
-alias zshconfig="e ~/.zshrc"
-alias ohmyzsh="e ~/.oh-my-zsh"
-alias sshconfig="e ~/.ssh/config"
+alias e="/usr/bin/emacsclient -n --alternate-editor emacs"
+alias configemacs="e ~/.emacs.d/init.el"
+alias configzsh="e ~/.zshrc"
+alias configohmyzsh="e ~/.oh-my-zsh"
+alias configi3="e ~/.i3"
+alias configssh="e ~/.ssh/config"
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
 alias cls="clear"
