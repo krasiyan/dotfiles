@@ -138,6 +138,7 @@
      ido                                ; ido
      flx-ido                            ; ido fuzzy matching
      ido-vertical-mode                  ; ido vertical mode
+     keyfreq                            ; shortcut frequency tracker
      )))
 
 (condition-case nil
@@ -166,6 +167,7 @@
 (require 'setup-smex)
 (require 'setup-recentf)
 (eval-after-load 'ido '(require 'setup-ido))
+(require 'setup-keyfreq)
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
