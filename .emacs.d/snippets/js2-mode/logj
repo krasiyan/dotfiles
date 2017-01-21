@@ -2,4 +2,4 @@
 # name: logj
 # key: logj
 # --
-console.${1:log}(JSON.stringify($0))
+console.${1:log}(JSON.stringify($0, null, 2))
