@@ -30,8 +30,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi (as a program launcher)
-bindsym $mod+space exec --no-startup-id rofi $rofi_opts -show drun
+# start rofi (as a program launcher/window switcher in combi mode)
+bindsym $mod+space exec --no-startup-id rofi $rofi_opts -show combi -modi combi
 
 # start rofi (as a window selector)
 bindsym $mod+Tab exec --no-startup-id rofi $rofi_opts -show window
