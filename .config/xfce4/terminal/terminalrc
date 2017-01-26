@@ -1,8 +1,4 @@
 [Configuration]
-ColorCursor=#eee8d5
-ColorForeground=#93a1a1
-ColorBackground=#002b36
-ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#fdf6e3;#002b36;#cb4b16;#657b83;#839496;#93a1a1;#6c71c4;#eee8d5;#fdf6e3
 FontName=Consolas for Powerline 14
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
@@ -24,4 +20,10 @@ ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
 ScrollingSingleLine=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-
+ColorCursor=#eee8d5
+ColorForeground=#93a1a1
+ColorBackground=#002b36
+ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#fdf6e3;#ffffff;#cb4b16;#657b83;#839496;#93a1a1;#6c71c4;#eee8d5;#fdf6e3
+ColorBold=#93a1a1
+ColorBoldUseDefault=FALSE
+TabActivityColor=#dc322f
