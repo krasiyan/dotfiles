@@ -139,6 +139,7 @@
      flx-ido                            ; ido fuzzy matching
      ido-vertical-mode                  ; ido vertical mode
      keyfreq                            ; shortcut frequency tracker
+     wgrep-ag                           ; global replace in the ag search results
      )))
 
 (condition-case nil

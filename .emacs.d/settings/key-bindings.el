@@ -84,8 +84,9 @@
 (add-hook 'isearch-mode-hook #'jrh-isearch-with-region)
 
 (require 'ag)
-(setq ag-reuse-window 't)
+;; (setq ag-reuse-window 't)
 (setq ag-highlight-search t)
+(setq wgrep-auto-save-buffer t)
 
 ;; C-S-f ag based search in the project files
 (global-set-key (kbd "C-S-f") 'ag-project-files)
