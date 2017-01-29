@@ -16,11 +16,11 @@ case $BLOCK_BUTTON in
 
         # scroll up
         # raise brightness
-        4) xbacklight -inc 10 ;;
+        4) xbacklight -inc 5 ;;
 
         # scroll down
         # lower brightness
-        5) xbacklight -dec 10 ;;
+        5) xbacklight -dec 5 ;;
 esac
 
 printf "%.0f%%" "$(xbacklight -get)"

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Left click
+# Left click - toggle mute
 if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
-  amixer -q sset Capture 5%+
-# Middle click
-elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
   amixer -q sset Capture toggle
-# Right click
-elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+# Scroll up - increase
+elif [[ "${BLOCK_BUTTON}" -eq 4 ]]; then
+  amixer -q sset Capture 5%+
+# Scroll down - decrease
+elif [[ "${BLOCK_BUTTON}" -eq 5 ]]; then
   amixer -q sset Capture 5%-
 fi
 
