@@ -157,10 +157,22 @@
 (require 'setup-fiplr)
 (require 'setup-drag-stuff)
 (require 'setup-markdown-mode)
-(require 'setup-highlight-indent-guides)
+
+(if (daemonp)
+  (add-hook 'after-make-frame-functions
+    (lambda (&optional frame)
+      (message ">> Daemon mode")
+      (require 'setup-highlight-indent-guides)
+      (require 'setup-tabbar)))
+  (progn
+    (message ">> Non daemon mode")
+    (require 'setup-highlight-indent-guides)
+    (require 'setup-tabbar)))
+
+;;(require 'setup-highlight-indent-guides)
 (require 'setup-git-gutter-fringe)
 (require 'setup-ethan-wspace)
-;; (require 'setup-tabbar)
+;;(require 'setup-tabbar)
 (require 'setup-flycheck)
 (require 'setup-zsh)
 (require 'setup-company)

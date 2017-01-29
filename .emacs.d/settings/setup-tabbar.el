@@ -1,22 +1,8 @@
-;; Tabbar custom config
-(require 'tabbar-ruler)
+(setq tabbar-ruler-global-tabbar t)
 
-;; Turn off icons
-;;(mode-icons-mode -1)
-
-(setq tabbar-ruler-global-tabbar t)    ; get tabbar
-;;(setq tabbar-ruler-global-ruler t)     ; get global ruler
-;;(setq tabbar-ruler-popup-menu t)       ; get popup menu.
-;;(setq tabbar-ruler-popup-toolbar t)    ; get popup toolbar
-;;(setq tabbar-ruler-popup-scrollbar t)  ; show scroll-bar on mouse-move
-
-;; group tabs by buffer
-(tabbar-ruler-group-buffer-groups)
-
-(setq tabbar-buffer-groups-function
-      (lambda ()
-        (list "All")))
-
+(defun tabbar-buffer-groups-function ()
+      (list "All"))
+(setq tabbar-buffer-groups-function 'tabbar-buffer-groups-function)
 
 (defcustom tabbar-hide-header-button t
   "Hide header button at left-up corner.
@@ -34,6 +20,7 @@ Default is t."
               tabbar-scroll-left-button (quote (("") ""))
               tabbar-scroll-right-button (quote (("") "")))))
   :group 'tabbar)
-(setq mode-icons-desaturate-active t)
+
+(require 'tabbar-ruler)
 
 (provide 'setup-tabbar)
