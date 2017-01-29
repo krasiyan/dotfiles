@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Left click - toggle mute
-if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+# Right click - toggle mute
+if [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
   amixer -q sset Capture toggle
 # Scroll up - increase
 elif [[ "${BLOCK_BUTTON}" -eq 4 ]]; then
