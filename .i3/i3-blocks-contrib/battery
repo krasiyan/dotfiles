@@ -38,11 +38,16 @@ percentColor(){
         color="#b58900"
     elif [ $1 -lt 80 ]
     then
-        # green
-        color="#859900"
-    else
+        # cyan
+        color="#2aa198"
+    elif [ $1 -lt 101 ]
+    then
         # blue
         color="#268bd2"
+    # >= 101 - charging
+    else
+        # green
+        color="#859900"
     fi
 
     eval "$2='$color'";
@@ -57,14 +62,15 @@ avgLabel=""
 prettyPrintPercent $avgPercent avgLabel
 
 labelColor=""
-percentColor $avgPercent avgLabelColor
-
 statusLabel=""
+
 if [ $ac == "on-line" ]
 then
     statusLabel=""
+    percentColor 101 avgLabelColor
 else
     statusLabel=""
+    percentColor $avgPercent avgLabelColor
 fi
 
 case $BLOCK_BUTTON in
