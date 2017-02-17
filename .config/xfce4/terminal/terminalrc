@@ -18,7 +18,6 @@ MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
-ScrollingSingleLine=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ColorCursor=#eee8d5
 ColorForeground=#93a1a1
@@ -27,3 +26,5 @@ ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#fdf6e3;#ff
 ColorBold=#93a1a1
 ColorBoldUseDefault=FALSE
 TabActivityColor=#dc322f
+ScrollingLines=10000
+
