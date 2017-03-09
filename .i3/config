@@ -137,7 +137,7 @@ assign [class="Emacs"] $workspace1
 assign [class="Chromium-browser"] $workspace1
 assign [class="Spotify"]  $workspace10
 assign [class="Skype"]  $workspace9
-assign [class="Franz"]  $workspace9
+assign [class="Rambox"]  $workspace9
 
 for_window [class="Gsimplecal"] floating enable
 
@@ -279,7 +279,7 @@ exec blueman-applet
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
 exec --no-startup-id chromium
 exec --no-startup-id emacs --daemon && emacsclient -nc
-exec --no-startup-id /opt/franz/Franz
+exec --no-startup-id /usr/local/bin/rambox
 exec --no-startup-id redshift-gtk
 exec --no-startup-id compton -f -D 2
 exec --no-startup-id xautolock -time 5 -detectsleep -locker '$Locker'
