@@ -139,7 +139,7 @@ assign [class="Spotify"]  $workspace10
 assign [class="Skype"]  $workspace9
 assign [class="Rambox"]  $workspace9
 
-f\or_window [class="Gsimplecal"] floating enable
+for_window [class="Gsimplecal"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
