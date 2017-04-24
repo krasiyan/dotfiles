@@ -1,7 +1,11 @@
 # Krasiyan's doftiles
 
-Dotfiles configuration for XFCE, ZSH (with Oh My Zsh) and Emacs (dummy friendly setup with CUA).
+Dotfiles configuration for [i3](https://github.com/i3/i3) (with [i3blocks](https://github.com/vivien/i3blocks)), [Zsh](http://www.zsh.org/) (with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)) and [Emacs](https://www.gnu.org/software/emacs/) (dummy friendly setup with [CUA](https://www.emacswiki.org/emacs/CuaMode)).
 Most of the configs are borrowed from all over the web and I will try give credits to everyone in the near future. :)
+
+# Screenshots
+
+![](http://i.imgur.com/LFm0sFz.png)
 
 # Setup
 
