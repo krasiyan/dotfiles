@@ -12,7 +12,6 @@ Most of the configs are borrowed from all over the web and I will try give credi
 ## Prerequisites
 
 - [`Debian`](https://www.debian.org/)
-- [`XFCE`](http://www.xfce.org/)
 - [`i3`](https://github.com/i3/i3)
 - [`i3blocks`](https://github.com/vivien/i3blocks)
 - [`rofi`](https://github.com/DaveDavenport/rofi)
@@ -24,14 +23,23 @@ Most of the configs are borrowed from all over the web and I will try give credi
 - [`The silver searcher AG`](https://github.com/ggreer/the_silver_searcher)
 - [`Github Hub`](https://hub.github.com/)
 - [`Emacs`](https://www.gnu.org/software/emacs/)
+- [`arandr`](https://christian.amsuess.com/tools/arandr/)
+- [`xkblayout-state`](https://github.com/nonpop/xkblayout-state)
+- [`xfce4-screenshooter](http://goodies.xfce.org/projects/applications/xfce4-screenshooter)
+- [`keepassx`](https://www.keepassx.org/)
+- [`feh`](https://feh.finalrewind.org/)
+- [`xautolock`](https://linux.die.net/man/1/xautolock)
 
 ## Cloning
 
-1. `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
-2. `echo "dotfiles" >> ~/.gitignore`
-3. `git clone --bare <git-repo-url> ~/dotfiles`
-4. `config checkout`
-5. `config config --local status.showUntrackedFiles no`
+1. `alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'`
+3. `git clone --bare https://github.com/krasiyan/dotfiles.git ~/dotfiles`
+4. `dotfiles checkout`
+5. `dotfiles config --local status.showUntrackedFiles no`
+
+## Installation
+
+TBA
 
 # Inspiration
 
