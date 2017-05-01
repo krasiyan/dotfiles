@@ -8,7 +8,7 @@ export ZSH=~/.oh-my-zsh
 DEFAULT_USER=$USER
 
 # https://github.com/bhilburn/powerlevel9k + https://github.com/AravSinghal/ConsolasForPowerline
-ZSH_THEME="powerlevel9knext/powerlevel9k"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S %d.%m.%Y}"
 POWERLEVEL9K_TIME_FOREGROUND="black"
