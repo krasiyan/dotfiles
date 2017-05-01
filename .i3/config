@@ -103,10 +103,10 @@ set $workspace10 "10 "
 bindsym $mod+m move workspace to output right
 
 # assign default monitors for workspaces
-workspace $workspace1 output HDMI1
-workspace $workspace2 output DP2
-workspace $workspace9 output eDP1
-workspace $workspace10 output eDP1
+workspace $workspace1 output HDMI-1
+workspace $workspace2 output DP-2
+workspace $workspace9 output eDP-1
+workspace $workspace10 output eDP-1
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -216,7 +216,7 @@ bindsym --release $mod+Shift+Print exec "xfce4-screenshooter -f"
 # finds out, if available)
 bar {
   output eDP-1
-  output HDMI1
+  output HDMI-1
   status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
   position top
   tray_output primary
@@ -233,7 +233,7 @@ bar {
 
 bar {
   output eDP-1
-  output DP2
+  output DP-2
   position top
   tray_output none
   mode hide
