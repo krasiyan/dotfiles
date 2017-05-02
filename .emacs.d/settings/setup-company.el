@@ -1,6 +1,6 @@
 (require 'company)
 (require 'company-statistics)
-(require 'company-tern)
+;; (require 'company-tern)
 
 ;; company everywhere!
 (add-hook 'after-init-hook 'global-company-mode)
@@ -18,10 +18,11 @@
 (setq company-tooltip-align-annotations t)
 
 ;; company-tern
-(add-to-list 'company-backends '(company-tern :separate company-yasnippet))
+;; (add-to-list 'company-backends '(company-tern :separate company-yasnippet))
+(add-to-list 'company-backends '(company-yasnippet))
 
 ;; disable tern .tern-port files
-(add-to-list 'tern-command "--no-port-file" 'append)
+;; (add-to-list 'tern-command "--no-port-file" 'append)
 
 (defun check-expansion ()
   (save-excursion
