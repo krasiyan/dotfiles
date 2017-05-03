@@ -12,8 +12,8 @@ use utf8;
 use Getopt::Long;
 
 # default values
-my $t_warn = 50;
-my $t_crit = 80;
+my $t_warn = 70;
+my $t_crit = 90;
 my $cpu_usage = -1;
 my $decimals = 2;
 
@@ -51,7 +51,6 @@ printf "%.${decimals}f%%\n", $cpu_usage;
 # Print color, if needed
 if ($cpu_usage >= $t_crit) {
     print "#FF0000\n";
-    exit 33;
 } elsif ($cpu_usage >= $t_warn) {
     print "#FFFC00\n";
 }
