@@ -31,15 +31,53 @@
 (define-key key-translation-map (kbd "C-M-h") (kbd "<home>"))
 (define-key key-translation-map (kbd "C-M-l") (kbd "<end>"))
 
+(defun my-delete-word (arg)
+  "Delete characters forward until encountering the end of a word.
+With argument, do this that many times.
+This command does not push erased text to kill-ring."
+  (interactive "p")
+  (delete-region (point) (progn (forward-word arg) (point))))
+
+(defun my-backward-delete-word (arg)
+  "Delete characters backward until encountering the beginning of a word.
+With argument, do this that many times.
+This command does not push erased text to kill-ring."
+  (interactive "p")
+  (my-delete-word (- arg)))
+
+(defun my-delete-line ()
+  "Delete text from current position to end of line char."
+  (interactive)
+  (delete-region
+   (point)
+   (save-excursion (move-end-of-line 1) (point)))
+  (delete-char 1)
+)
+
+(defun my-delete-line-backward ()
+  "Delete text between the beginning of the line to the cursor position."
+  (interactive)
+  (let (x1 x2)
+    (setq x1 (point))
+    (move-beginning-of-line 1)
+    (setq x2 (point))
+    (delete-region x1 x2)))
+
+
 ;; M-u - "backspace" like - char
 (global-set-key "\M-u" 'backward-delete-char-untabify)
 ;; C-u - "backspace" like - word
-(global-set-key "\C-u" 'backward-kill-word)
+(global-set-key "\C-u" 'my-backward-delete-word)
+;; C-backspace
+(global-set-key (kbd "<C-backspace>") 'my-backward-delete-word)
 
 ;; M-i - "delete" like - char
 (global-set-key "\M-i" 'delete-forward-char)
 ;; C-i - "delete" like - word
-(global-set-key "\C-i" 'kill-word)
+(global-set-key "\C-i" 'my-delete-word)
+;; C-delete
+(global-set-key (kbd "<C-delete>") 'my-delete-word)
+
 
 ;; rebind displaced movement key bindings
 (global-set-key "\M-p" 'recenter)
