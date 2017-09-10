@@ -1,9 +1,5 @@
 (setq tabbar-ruler-global-tabbar t)
 
-(defun tabbar-buffer-groups-function ()
-      (list "All"))
-(setq tabbar-buffer-groups-function 'tabbar-buffer-groups-function)
-
 (defcustom tabbar-hide-header-button t
   "Hide header button at left-up corner.
 Default is t."
@@ -22,5 +18,11 @@ Default is t."
   :group 'tabbar)
 
 (require 'tabbar-ruler)
+
+
+(defun tabbar-buffer-groups-function ()
+  "All buffers into one group."
+  (list "All"))
+(setq tabbar-buffer-groups-function 'tabbar-buffer-groups-function)
 
 (provide 'setup-tabbar)
