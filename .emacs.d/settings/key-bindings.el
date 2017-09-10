@@ -45,38 +45,32 @@ This command does not push erased text to kill-ring."
   (interactive "p")
   (my-delete-word (- arg)))
 
-(defun my-delete-line ()
-  "Delete text from current position to end of line char."
-  (interactive)
-  (delete-region
-   (point)
-   (save-excursion (move-end-of-line 1) (point)))
-  (delete-char 1)
-)
-
-(defun my-delete-line-backward ()
+(defun my-delete-current-line ()
   "Delete text between the beginning of the line to the cursor position."
   (interactive)
   (let (x1 x2)
-    (setq x1 (point))
     (move-beginning-of-line 1)
+    (setq x1 (point))
+    (move-end-of-line 1)
     (setq x2 (point))
     (delete-region x1 x2)))
 
-
-;; M-u - "backspace" like - char
+;; M-u - backwards delete char
 (global-set-key "\M-u" 'backward-delete-char-untabify)
-;; C-u - "backspace" like - word
+;; C-u - backwards delete word
 (global-set-key "\C-u" 'my-backward-delete-word)
-;; C-backspace
+;; C-backspace - backwards delete word
 (global-set-key (kbd "<C-backspace>") 'my-backward-delete-word)
 
-;; M-i - "delete" like - char
+;; M-i - delete char
 (global-set-key "\M-i" 'delete-forward-char)
-;; C-i - "delete" like - word
+;; C-i - delete word
 (global-set-key "\C-i" 'my-delete-word)
-;; C-delete
+;; C-delete - delete word
 (global-set-key (kbd "<C-delete>") 'my-delete-word)
+
+;; C-S-backspace - delete line
+(global-set-key (kbd "<C-S-backspace>") 'my-delete-current-line)
 
 ;; rebind displaced movement key bindings
 (global-set-key "\M-p" 'recenter)
