@@ -5,6 +5,7 @@
       '(
         comment-dwim-2
         copy-region-as-kill
+        cua--prefix-copy-handler
         cua-paste
         cua-scroll-down
         delete-window
@@ -16,6 +17,7 @@
         end-of-buffer
         keyboard-escape-quit
         kill-region
+        kill-this-buffer
         markdown-exdent-or-delete
         mouse-set-region
         mwim-beginning-of-code-or-line
@@ -35,6 +37,7 @@
         drag-stuff-down
         electric-pair-delete-pair
         find-file
+        find-tag
         fiplr-find-file
         ignore
         js2-mode-show-node
@@ -42,11 +45,16 @@
         list-buffers
         mark-whole-buffer
         markdown-preview
+        mouse-drag-header-line
         mouse-save-then-kill
+        mouse-select-window
+        neotree-previous-line
         neotree-toggle
         new-emacs-instance
+        next-error
         nxml-insert-xml-declaration
         overwrite-mode
+        recentf-open-files
         smex
         tabbar-ruler-backward
         tabbar-ruler-forward
