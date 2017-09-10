@@ -78,7 +78,6 @@ This command does not push erased text to kill-ring."
 ;; C-delete
 (global-set-key (kbd "<C-delete>") 'my-delete-word)
 
-
 ;; rebind displaced movement key bindings
 (global-set-key "\M-p" 'recenter)
 (global-set-key "\M-v" 'downcase-word)
@@ -151,7 +150,7 @@ This command does not push erased text to kill-ring."
 (define-key drag-stuff-mode-map (kbd "C-S-k") 'drag-stuff-up)
 (define-key drag-stuff-mode-map (kbd "C-S-l") 'drag-stuff-right)
 
-;; C-d duplicate line - http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
+;; C-S-d duplicate line - http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 (defun duplicate-current-line-or-region (arg)
   "Duplicates the current line or region ARG times.
 If there's no region, the current line will be duplicated. However, if
