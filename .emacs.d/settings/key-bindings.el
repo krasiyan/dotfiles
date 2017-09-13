@@ -48,12 +48,10 @@ This command does not push erased text to kill-ring."
 (defun my-delete-current-line ()
   "Delete text between the beginning of the line to the cursor position."
   (interactive)
-  (let (x1 x2)
-    (move-beginning-of-line 1)
-    (setq x1 (point))
-    (move-end-of-line 1)
-    (setq x2 (point))
-    (delete-region x1 x2)))
+  (save-excursion
+    (delete-region
+     (progn (forward-visible-line 0) (point))
+     (progn (forward-visible-line 1) (point)))))
 
 ;; M-u - backwards delete char
 (global-set-key "\M-u" 'backward-delete-char-untabify)
