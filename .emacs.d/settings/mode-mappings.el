@@ -24,4 +24,7 @@
 (setq web-mode-engines-alist
       '(("riot" . "\\.tag\\'")))
 
+;; Less css mode
+(add-to-list 'auto-mode-alist '("\\.less\\'" . less-css-mode))
+
 (provide 'mode-mappings)

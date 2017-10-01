@@ -141,6 +141,7 @@
      wgrep-ag                           ; global replace in the ag search results
      magit                              ; git
      web-mode                           ; web mode
+     less-css-mode                      ; less css mode
      )))
 
 (condition-case nil
@@ -187,6 +188,7 @@
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'web-mode '(require 'setup-web-mode))
+(eval-after-load 'less-css-mode '(require 'setup-less-css-mode))
 
 ;; Map files to modes
 (require 'mode-mappings)
