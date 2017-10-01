@@ -18,11 +18,11 @@
 (setq company-tooltip-align-annotations t)
 
 ;; company-tern
-;; (add-to-list 'company-backends '(company-tern :separate company-yasnippet))
-(add-to-list 'company-backends '(company-yasnippet))
+(add-to-list 'company-backends '(company-tern :separate company-yasnippet))
+;; (add-to-list 'company-backends '(company-yasnippet))
 
 ;; disable tern .tern-port files
-;; (add-to-list 'tern-command "--no-port-file" 'append)
+(setq tern-command '("/usr/local/bin/tern" "--strip-crs --no-port-file"))
 
 (defun check-expansion ()
   (save-excursion
