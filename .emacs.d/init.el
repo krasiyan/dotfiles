@@ -140,6 +140,7 @@
      ido-vertical-mode                  ; ido vertical mode
      keyfreq                            ; shortcut frequency tracker
      wgrep-ag                           ; global replace in the ag search results
+     magit                              ; git
      )))
 
 (condition-case nil
@@ -181,6 +182,7 @@
 (require 'setup-recentf)
 (eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-keyfreq)
+(eval-after-load 'magit '(require 'setup-magit))
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))

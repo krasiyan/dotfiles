@@ -231,4 +231,7 @@ there's a region, all lines that region covers will be duplicated."
 ;;
 (global-set-key [f11] 'toggle-frame-fullscreen)
 
+;; magit status
+(global-set-key (kbd "C-x g") 'magit-status)
+
 (provide 'key-bindings)
