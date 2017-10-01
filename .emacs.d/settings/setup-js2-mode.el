@@ -25,7 +25,6 @@
 (setq-default js2-strict-trailing-comma-warning t) ;; jshint does not warn about this now for some reason
 
 ;; turn on flycheck-mode and tern-mode with js2-mode
-;; turn on tern-mode with js2-mode
 (add-hook 'js2-mode-hook (lambda ()
                            (flycheck-mode 1)
                            ;; (tern-mode 1)

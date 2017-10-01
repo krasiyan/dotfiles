@@ -123,7 +123,6 @@
      flycheck                           ; syntax checking
      flycheck-pos-tip                   ; flycheck popup under mark
      ag                                 ; multi file search
-     multi-web-mode                     ; multiple modes in html
      multi-term                         ; terminal emulator
      company                            ; auto completion
      company-quickhelp                  ; help popups for autocompletions
@@ -141,6 +140,7 @@
      keyfreq                            ; shortcut frequency tracker
      wgrep-ag                           ; global replace in the ag search results
      magit                              ; git
+     web-mode                           ; web mode
      )))
 
 (condition-case nil
@@ -186,6 +186,7 @@
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
+(eval-after-load 'web-mode '(require 'setup-web-mode))
 
 ;; Map files to modes
 (require 'mode-mappings)
