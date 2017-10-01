@@ -142,6 +142,7 @@
      magit                              ; git
      web-mode                           ; web mode
      less-css-mode                      ; less css mode
+     restclient                         ; http REST client
      )))
 
 (condition-case nil

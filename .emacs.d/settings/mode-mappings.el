@@ -27,4 +27,7 @@
 ;; Less css mode
 (add-to-list 'auto-mode-alist '("\\.less\\'" . less-css-mode))
 
+;; Restclient
+(add-to-list 'auto-mode-alist '("\\.restclient$" . restclient-mode))
+
 (provide 'mode-mappings)
