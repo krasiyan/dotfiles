@@ -22,11 +22,14 @@
         mouse-set-region
         mwim-beginning-of-code-or-line
         mwim-end-of-code-or-line
+        my-backward-delete-word
+        my-delete-word
         tab-indent-or-complete
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        ag-project
         ag-project-files
         beginning-of-buffer
         completion-at-point
