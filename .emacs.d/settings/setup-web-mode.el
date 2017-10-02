@@ -16,5 +16,6 @@
   web-mode-script-padding 2
   web-mode-enable-current-element-highlight t
   web-mode-enable-current-column-highlight t)
+(add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
 
 (provide 'setup-web-mode)
