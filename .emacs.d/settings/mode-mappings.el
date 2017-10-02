@@ -17,7 +17,6 @@
 
 ;; Web mode
 (add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.htm\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
