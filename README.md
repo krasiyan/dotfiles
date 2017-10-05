@@ -30,6 +30,7 @@ Most of the configs are borrowed from all over the web and I will try give credi
 - [`keepassx`](https://www.keepassx.org/)
 - [`feh`](https://feh.finalrewind.org/)
 - [`xautolock`](https://linux.die.net/man/1/xautolock)
+- [`footswitch`](https://github.com/rgerganov/footswitch)
 
 ## Cloning
 
