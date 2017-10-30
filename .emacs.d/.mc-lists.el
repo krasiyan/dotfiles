@@ -12,6 +12,7 @@
         describe-key
         drag-stuff-left
         drag-stuff-right
+        drag-stuff-up
         duplicate-current-line-or-region
         duplicate-line
         end-of-buffer
@@ -23,6 +24,7 @@
         mwim-beginning-of-code-or-line
         mwim-end-of-code-or-line
         my-backward-delete-word
+        my-delete-current-line
         my-delete-word
         tab-indent-or-complete
         ))
