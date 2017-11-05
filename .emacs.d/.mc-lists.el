@@ -8,6 +8,7 @@
         cua--prefix-copy-handler
         cua-paste
         cua-scroll-down
+        cua-scroll-up
         delete-window
         describe-key
         drag-stuff-left
@@ -19,6 +20,7 @@
         keyboard-escape-quit
         kill-region
         kill-this-buffer
+        markdown-enter-key
         markdown-exdent-or-delete
         mouse-set-region
         mwim-beginning-of-code-or-line

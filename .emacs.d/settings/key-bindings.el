@@ -81,9 +81,12 @@ This command does not push erased text to kill-ring."
 (define-key global-map (kbd "C-0") 'zoom-frm-unzoom)
 
 ;; Multiple cursors
+(require 'multiple-cursors)
 (global-set-key (kbd "C-d") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-M-d") 'mc/mark-all-like-this)
 (global-unset-key (kbd "C-<down-mouse-1>"))
 (global-set-key (kbd "C-<mouse-1>") 'mc/add-cursor-on-click)
+(define-key mc/keymap (kbd "<return>") nil)
 
 ;; C-a select all
 (global-set-key "\C-a" 'mark-whole-buffer)
