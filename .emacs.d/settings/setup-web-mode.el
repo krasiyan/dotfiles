@@ -15,7 +15,8 @@
   web-mode-attr-indent-offset 2
   web-mode-script-padding 2
   web-mode-enable-current-element-highlight t
-  web-mode-enable-current-column-highlight t)
+  web-mode-enable-current-column-highlight t
+  web-mode-enable-auto-indentation nil)
 (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
 
 (provide 'setup-web-mode)
