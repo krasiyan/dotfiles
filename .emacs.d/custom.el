@@ -13,7 +13,6 @@
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(git-gutter:update-interval 2)
  '(initial-scratch-message nil)
- '(neo-autorefresh t)
  '(neo-create-file-auto-open t)
  '(neo-show-hidden-files t)
  '(neo-window-width 30)
