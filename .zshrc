@@ -80,7 +80,7 @@ export LC_CTYPE="en_US.UTF-8"
    export VISUAL='/usr/bin/emacsclient --alternate-editor emacs'
  fi
 
-# Aliases"
+# Aliases
 alias e="/usr/bin/emacsclient -n --alternate-editor emacs"
 alias configemacs="e ~/.emacs.d/init.el"
 alias configzsh="e ~/.zshrc"
@@ -89,3 +89,4 @@ alias configi3="e ~/.i3"
 alias configssh="e ~/.ssh/config"
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
 alias cls="clear"
+alias at="angel test"
