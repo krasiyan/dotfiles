@@ -90,3 +90,4 @@ alias configssh="e ~/.ssh/config"
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
 alias cls="clear"
 alias at="angel test"
+alias ducks="du -hcks * | sort -rn | head"
