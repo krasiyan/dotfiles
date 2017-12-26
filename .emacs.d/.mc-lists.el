@@ -17,6 +17,7 @@
         duplicate-current-line-or-region
         duplicate-line
         end-of-buffer
+        js2-line-break
         keyboard-escape-quit
         kill-region
         kill-this-buffer
