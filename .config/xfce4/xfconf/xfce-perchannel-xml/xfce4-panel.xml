@@ -8,17 +8,18 @@
       <property name="position" type="string" value="p=6;x=800;y=15"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="49"/>
+      <property name="size" type="uint" value="58"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="5"/>
-        <value type="int" value="22"/>
+        <value type="int" value="9"/>
         <value type="int" value="23"/>
         <value type="int" value="4"/>
         <value type="int" value="6"/>
+        <value type="int" value="8"/>
         <value type="int" value="1"/>
         <value type="int" value="14"/>
+        <value type="int" value="3"/>
         <value type="int" value="2"/>
-        <value type="int" value="8"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
       <property name="background-color" type="array">
@@ -81,27 +82,8 @@
       </property>
       <property name="size-max" type="uint" value="64"/>
     </property>
-    <property name="plugin-8" type="string" value="showdesktop"/>
-    <property name="plugin-9" type="string" value="mixer">
-      <property name="sound-card" type="string" value="HDAIntelPCHAlsamixer"/>
-      <property name="track" type="string" value="Master"/>
-      <property name="command" type="string" value="xfce4-mixer"/>
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-    </property>
-    <property name="plugin-7" type="string" value="datetime"/>
     <property name="plugin-14" type="string" value="xkb-plugin"/>
     <property name="plugin-12" type="string" value="diskperf"/>
-    <property name="plugin-22" type="string" value="tasklist">
-      <property name="flat-buttons" type="bool" value="false"/>
-      <property name="sort-order" type="uint" value="4"/>
-      <property name="grouping" type="uint" value="0"/>
-      <property name="show-wireframes" type="bool" value="false"/>
-      <property name="window-scrolling" type="bool" value="false"/>
-      <property name="show-labels" type="bool" value="true"/>
-      <property name="show-handle" type="bool" value="true"/>
-      <property name="include-all-monitors" type="bool" value="false"/>
-      <property name="show-only-minimized" type="bool" value="false"/>
-    </property>
     <property name="plugin-23" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
@@ -130,5 +112,20 @@
       </property>
     </property>
     <property name="plugin-1" type="string" value="power-manager-plugin"/>
+    <property name="plugin-3" type="string" value="clock">
+      <property name="digital-format" type="string" value="%T"/>
+    </property>
+    <property name="plugin-8" type="string" value="indicator">
+      <property name="known-indicators" type="array">
+        <value type="string" value="libapplication.so"/>
+        <value type="string" value="com.canonical.indicator.messages"/>
+        <value type="string" value="com.canonical.indicator.sound"/>
+      </property>
+      <property name="single-row" type="bool" value="true"/>
+    </property>
+    <property name="plugin-9" type="string" value="tasklist">
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="true"/>
+    </property>
   </property>
 </channel>
