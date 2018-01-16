@@ -37,6 +37,7 @@
       <property name="&lt;Super&gt;x" type="string" value="keepass2"/>
       <property name="&lt;Super&gt;Return" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Super&gt;m" type="string" value="/home/nitidus/scripts/move-to-next-monitor.sh"/>
+      <property name="XF86AudioMicMute" type="string" value="amixer set Capture toggle"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
