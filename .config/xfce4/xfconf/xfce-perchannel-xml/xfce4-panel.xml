@@ -4,22 +4,18 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="1"/>
-    <value type="int" value="2"/>
-    <value type="int" value="3"/>
     <property name="panel-1" type="empty">
       <property name="position" type="string" value="p=6;x=800;y=15"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="30"/>
+      <property name="size" type="uint" value="49"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="5"/>
         <value type="int" value="22"/>
         <value type="int" value="23"/>
-        <value type="int" value="7"/>
         <value type="int" value="4"/>
         <value type="int" value="6"/>
-        <value type="int" value="12"/>
-        <value type="int" value="9"/>
+        <value type="int" value="1"/>
         <value type="int" value="14"/>
         <value type="int" value="2"/>
         <value type="int" value="8"/>
@@ -36,29 +32,6 @@
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="output-name" type="string" value="eDP1"/>
       <property name="mode" type="uint" value="0"/>
-      <property name="autohide" type="bool" value="false"/>
-    </property>
-    <property name="panel-2" type="empty">
-      <property name="position" type="string" value="p=6;x=800;y=15"/>
-      <property name="output-name" type="string" value="eDP1"/>
-      <property name="size" type="uint" value="30"/>
-      <property name="length" type="uint" value="100"/>
-      <property name="position-locked" type="bool" value="false"/>
-      <property name="plugin-ids" type="array">
-        <value type="int" value="3"/>
-      </property>
-      <property name="autohide" type="bool" value="true"/>
-    </property>
-    <property name="panel-3" type="empty">
-      <property name="position" type="string" value="p=5;x=4480;y=207"/>
-      <property name="size" type="uint" value="30"/>
-      <property name="length" type="uint" value="100"/>
-      <property name="position-locked" type="bool" value="false"/>
-      <property name="output-name" type="string" value="DP2"/>
-      <property name="plugin-ids" type="array">
-        <value type="int" value="10"/>
-      </property>
-      <property name="autohide" type="bool" value="true"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -98,6 +71,7 @@
         <value type="string" value="slack"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="blueman-applet"/>
+        <value type="string" value="update-notifier"/>
         <value type="string" value="qjoypad"/>
         <value type="string" value="kazam"/>
         <value type="string" value="notifications"/>
@@ -105,6 +79,7 @@
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-hidden" type="array">
       </property>
+      <property name="size-max" type="uint" value="64"/>
     </property>
     <property name="plugin-8" type="string" value="showdesktop"/>
     <property name="plugin-9" type="string" value="mixer">
@@ -146,14 +121,6 @@
       </property>
     </property>
     <property name="plugin-5" type="string" value="whiskermenu"/>
-    <property name="plugin-3" type="string" value="tasklist">
-      <property name="show-only-minimized" type="bool" value="false"/>
-      <property name="include-all-workspaces" type="bool" value="false"/>
-      <property name="include-all-monitors" type="bool" value="false"/>
-    </property>
-    <property name="plugin-10" type="string" value="tasklist">
-      <property name="include-all-monitors" type="bool" value="false"/>
-    </property>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="never-confirm-history-clear" type="bool" value="true"/>
@@ -162,5 +129,6 @@
         <property name="max-texts-in-history" type="uint" value="20"/>
       </property>
     </property>
+    <property name="plugin-1" type="string" value="power-manager-plugin"/>
   </property>
 </channel>
