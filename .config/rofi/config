@@ -17,4 +17,4 @@ rofi.eh: 1.2
 rofi.hide-scrollbar: true
 rofi.fuzzy: true
 rofi.combi-modi: window,drun,ssh
-rofi.dpi: 282
+rofi.dpi: 192
