@@ -222,6 +222,7 @@ bindsym --release $mod+Shift+Print exec "xfce4-screenshooter -f"
 bar {
   output eDP-1-1
   output DP-1
+  output DP-0
   status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
   position top
   tray_output primary
@@ -239,6 +240,7 @@ bar {
 bar {
   output eDP-1-1
   output DP-2
+  output DP-0
   position top
   tray_output none
   mode hide
