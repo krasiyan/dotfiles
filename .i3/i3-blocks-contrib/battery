@@ -71,3 +71,5 @@ else
 fi
 
 echo "$statusLabel $fullLabel"; echo ""; echo "$labelColor";
+## TODO: on click trigger a full charge via
+## tlp fullcharge 0
