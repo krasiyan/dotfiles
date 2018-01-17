@@ -91,3 +91,10 @@ alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$
 alias cls="clear"
 alias at="angel test"
 alias ducks="du -hcs * | sort -rn | head"
+# bc - An arbitrary precision calculator language
+# Ripped off from https://github.com/arzzen/calc.plugin.zsh
+function = 
+{
+  echo "$@" | bc -l
+}
+alias calc="="
