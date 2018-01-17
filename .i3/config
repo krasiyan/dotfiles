@@ -199,8 +199,8 @@ bindsym XF86AudioMicMute     exec --no-startup-id "pactl set-source-mute 1 toggl
 bindsym $mod+z exec $Locker
 
 # brightness
-bindsym XF86MonBrightnessUp exec "xbacklight -inc +5; pkill -RTMIN+12 i3blocks"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec +5; pkill -RTMIN+12 i3blocks"
+bindsym XF86MonBrightnessUp exec "brightlight -p -i 5 > /dev/null; pkill -RTMIN+12 i3blocks"
+bindsym XF86MonBrightnessDown exec "brightlight -p -d 5 > /dev/null; pkill -RTMIN+12 i3blocks"
 
 # keepassx
 bindsym $mod+x exec keepassx
