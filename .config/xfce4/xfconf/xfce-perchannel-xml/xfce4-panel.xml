@@ -66,6 +66,7 @@
         <value type="string" value="franz"/>
         <value type="string" value="gtk-recordmydesktop"/>
         <value type="string" value="chromium"/>
+        <value type="string" value="kerneloops-applet"/>
         <value type="string" value="redshift-gtk"/>
         <value type="string" value="uget-gtk"/>
         <value type="string" value="vmware-tray"/>
