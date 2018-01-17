@@ -4,23 +4,26 @@
 # Shows current brightness
 #
 # dependencies:
-# - xbacklight
+# - brightlight @ https://github.com/multiplexd/brightlight
 #
-# @return {Number}: Current brightness
 ################################
 
 case $BLOCK_BUTTON in
         # right click
-        # set to `20
-        3) xbacklight -set 50 ;;
+        # set to 50%
+        3) brightlight -p -w 50 > /dev/null ;;
 
         # scroll up
         # raise brightness
-        4) xbacklight -inc 5 ;;
+        4) brightlight -p -i 5 > /dev/null ;;
 
         # scroll down
         # lower brightness
-        5) xbacklight -dec 5 ;;
+        5) brightlight -p -d 5 > /dev/null ;;
 esac
 
-printf "%.0f%%" "$(xbacklight -get)"
+brightness=`brightlight -p -r | awk '{print $5}' | cut -d % -f 1`
+
+echo "$brightness%"
+echo "$brightness%"
+echo ""
