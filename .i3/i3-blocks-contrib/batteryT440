@@ -1,6 +1,8 @@
 #!/bin/bash
-batteryStatus=`acpi -b | awk '{print $3}' | tr -d ,`
-batteryPercent=`acpi -b | awk '{print $4}' | cut -d % -f 1`
+ac=`acpi -a | awk '{print $3}' | tr -d ,`
+percent1=`acpi -b | acpi -b | awk '{print $4}' | cut -d % -f 1 | sed -n 1p`
+percent2=`acpi -b | acpi -b | awk '{print $4}' | cut -d % -f 1 | sed -n 2p`
+avgPercent=$(((percent1+percent2)/2))
 
 prettyPrintPercent(){
     if [ $1 -lt 20 ]
@@ -52,22 +54,26 @@ percentColor(){
 }
 
 fullLabel=""
-prettyPrintPercent $batteryPercent fullLabel
+prettyPrintPercent $percent1 fullLabel
+fullLabel+=" "
+prettyPrintPercent $percent2 fullLabel
+
+avgLabel=""
+prettyPrintPercent $avgPercent avgLabel
 
 labelColor=""
 statusLabel=""
 
-if [ $batteryStatus == "Charging" ]
+if [ $ac == "on-line" ]
 then
     statusLabel=""
-    percentColor 101 labelColor
-elif [ $batteryStatus == "Discharging" ]
-then
-    statusLabel=""
-    percentColor $batteryPercent labelColor
+    percentColor 101 avgLabelColor
 else
-    statusLabel=""
-    percentColor $batteryPercent labelColor
+    statusLabel=""
+    percentColor $avgPercent avgLabelColor
 fi
 
-echo "$statusLabel $fullLabel"; echo ""; echo "$labelColor";
+case $BLOCK_BUTTON in
+    1) echo "$statusLabel  $avgLabel"; echo ""; echo "$avgLabelColor";;
+    *) echo "$statusLabel  $fullLabel"; echo ""; echo "$avgLabelColor";;
+esac
