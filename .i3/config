@@ -193,7 +193,7 @@ bindsym $mod+u [urgent=latest] focus
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +10%; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -10%; pkill -RTMIN+11 i3blocks"
 bindsym XF86AudioMute        exec --no-startup-id "pactl set-sink-mute 0 toggle; pkill -RTMIN+11 i3blocks"
-bindsym XF86AudioMicMute     exec --no-startup-id "pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioMicMute     exec --no-startup-id "pactl set-source-mute 1 toggle; pkill -RTMIN+10 i3blocks"
 
 # screen lock
 bindsym $mod+z exec $Locker
@@ -220,7 +220,7 @@ bindsym --release $mod+Shift+Print exec "xfce4-screenshooter -f"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  output eDP-1
+  output eDP-1-1
   output DP-1
   status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
   position top
@@ -237,7 +237,7 @@ bar {
 }
 
 bar {
-  output eDP-1
+  output eDP-1-1
   output DP-2
   position top
   tray_output none
