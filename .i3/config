@@ -107,10 +107,10 @@ set $workspace10 "10 "
 bindsym $mod+m move workspace to output right
 
 # assign default monitors for workspaces
-workspace $workspace1 output HDMI-1
-workspace $workspace2 output DP-2
-workspace $workspace9 output eDP-1
-workspace $workspace10 output eDP-1
+workspace $workspace1 output eDP-1-1
+workspace $workspace2 output eDP-1-1
+workspace $workspace9 output eDP-1-1
+workspace $workspace10 output eDP-1-1
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -283,7 +283,7 @@ exec nm-applet
 exec blueman-applet
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
-exec --no-startup-id chromium
+exec --no-startup-id chromium-browser --force-device-scale-factor=2
 exec --no-startup-id i3-sensible-terminal
 # exec --no-startup-id emacs --daemon && emacsclient -nc
 exec --no-startup-id /usr/local/bin/rambox
