@@ -4,7 +4,7 @@
   <property name="Net" type="empty">
     <property name="ThemeName" type="string" value="Greybird"/>
     <property name="IconThemeName" type="string" value="Adwaita"/>
-    <property name="DoubleClickTime" type="empty"/>
+    <property name="DoubleClickTime" type="int" value="301"/>
     <property name="DoubleClickDistance" type="empty"/>
     <property name="DndDragThreshold" type="empty"/>
     <property name="CursorBlink" type="empty"/>
