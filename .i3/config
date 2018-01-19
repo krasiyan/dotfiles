@@ -296,3 +296,4 @@ exec_always --no-startup-id  feh --no-fehbg --image-bg black --bg-center ~/wallp
 exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
+exec --no-startup-id ~/scripts/store_synclient_settings.sh
