@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cat ~/.synpadSettings | xargs synclient
+cat ~/.synclientSettings | xargs synclient
