@@ -97,7 +97,7 @@ set $workspace2 "2 "
 set $workspace3 "3 "
 set $workspace4 "4 "
 set $workspace5 "5 "
-set $workspace6 "6 "
+set $workspace6 "6 "
 set $workspace7 "7 "
 set $workspace8 "8 "
 set $workspace9 "9 "
@@ -142,6 +142,7 @@ assign [class="Emacs"] $workspace2
 assign [class="Xfce4-terminal"] $workspace3
 assign [class="robo3t"] $workspace4
 assign [class="thunar"] $workspace5
+assign [class="VirtualBox Manager"] $workspace6
 assign [class="Spotify"]  $workspace10
 assign [class="Skype"]  $workspace9
 assign [class="Rambox"]  $workspace9
@@ -302,4 +303,5 @@ exec --no-startup-id emacs
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id /opt/robo3t/bin/robo3t
 exec --no startup-id thunar
+exec --no startup-id virtualbox
 exec --no-startup-id /usr/local/bin/rambox
