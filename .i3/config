@@ -4,7 +4,7 @@
 # VARIABLES
 
 set $rofi_opts -config ~/.config/rofi/config
-set $Locker xkblayout-state set 0 && i3lock --color "#002b36" -e -f -n && sleep 1
+set $Locker xkblayout-state set 0 && i3lock --color "#002b36" -e -f && sleep 1
 
 set $mod Mod4
 
