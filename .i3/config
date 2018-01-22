@@ -282,7 +282,6 @@ mode "$mode_system" {
 bindsym $mod+Delete mode "$mode_system"
 
 # startup
-exec --no-startup-id ~/scripts/setresolutions.sh
 exec --no-startup-id ~/scripts/keyboardlayouts.sh
 exec nm-applet
 exec blueman-applet
