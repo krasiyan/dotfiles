@@ -92,25 +92,25 @@ bindsym $mod+Shift+space floating toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-set $workspace1 "1 "
-set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4 "
-set $workspace5 "5 "
+set $workspace1 "1 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4 "
+set $workspace5 "5 "
 set $workspace6 "6 "
 set $workspace7 "7 "
 set $workspace8 "8 "
 set $workspace9 "9 "
-set $workspace10 "10 "
+set $workspace10 "10  "
 
 # move the whole workspace to the next output
 bindsym $mod+m move workspace to output right
 
 # assign default monitors for workspaces
-workspace $workspace1 output eDP-1-1
-workspace $workspace2 output eDP-1-1
-workspace $workspace9 output eDP-1-1
-workspace $workspace10 output eDP-1-1
+#workspace $workspace1 output eDP-1-1
+#workspace $workspace2 output eDP-1-1
+#workspace $workspace9 output eDP-1-1
+#workspace $workspace10 output eDP-1-1
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -137,9 +137,11 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # default workspaces
-assign [class="Emacs"] $workspace1
 assign [class="Chromium"] $workspace1
-assign [class="Xfce4-terminal"] $workspace2
+assign [class="Emacs"] $workspace2
+assign [class="Xfce4-terminal"] $workspace3
+assign [class="robo3t"] $workspace4
+assign [class="thunar"] $workspace5
 assign [class="Spotify"]  $workspace10
 assign [class="Skype"]  $workspace9
 assign [class="Rambox"]  $workspace9
@@ -207,7 +209,7 @@ bindsym $mod+x exec keepassx
 
 # arandr
 bindsym $mod+p exec arandr
-bindsym $mod+Shift+p exec ~/.screenlayout/SamsungPhilipsAndLaptop.sh
+# bindsym $mod+Shift+p exec ~/.screenlayout/SamsungPhilipsAndLaptop.sh
 bindsym $mod+Control+p exec ~/.screenlayout/laptop.sh
 
 # screenshots
@@ -285,10 +287,6 @@ exec nm-applet
 exec blueman-applet
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
-exec --no-startup-id chromium-browser --force-device-scale-factor=2
-exec --no-startup-id i3-sensible-terminal
-# exec --no-startup-id emacs --daemon && emacsclient -nc
-exec --no-startup-id /usr/local/bin/rambox
 exec --no-startup-id redshift-gtk
 exec --no-startup-id compton -f -D 2
 exec --no-startup-id xautolock -time 10 -detectsleep -locker '$Locker'
@@ -296,4 +294,12 @@ exec_always --no-startup-id  feh --no-fehbg --image-bg black --bg-center ~/wallp
 exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
-exec --no-startup-id ~/scripts/apply_synclient_settings.sh
+exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
+
+# startup applications
+exec --no-startup-id chromium-browser
+exec --no-startup-id emacs
+exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id /opt/robo3t/bin/robo3t
+exec --no startup-id thunar
+exec --no-startup-id /usr/local/bin/rambox
