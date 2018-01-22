@@ -74,6 +74,7 @@
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="update-notifier"/>
+        <value type="string" value="rambox"/>
         <value type="string" value="qjoypad"/>
         <value type="string" value="kazam"/>
         <value type="string" value="notifications"/>
