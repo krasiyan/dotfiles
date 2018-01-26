@@ -4,7 +4,7 @@
 # VARIABLES
 
 set $rofi_opts -config ~/.config/rofi/config
-set $Locker xkblayout-state set 0 && i3lock --color "#002b36" -e -f && sleep 1
+set $Locker . ~/scripts/locker.sh
 
 set $mod Mod4
 
@@ -273,7 +273,7 @@ set $mode_system System (l) lock, (s) suspend, (e) logout, (r) reboot, (x) shutd
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend -i, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend -i, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym x exec --no-startup-id  systemctl poweroff -i, mode "default"
 
@@ -298,6 +298,7 @@ exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
 exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
+exec --no-startup-id xss-lock -- "$HOME/scripts/locker.sh"&
 
 # startup applications
 exec --no-startup-id chromium-browser
