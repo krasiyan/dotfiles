@@ -37,6 +37,7 @@
         ag-project
         ag-project-files
         beginning-of-buffer
+        compile-goto-error
         completion-at-point
         create-new-buffer
         cua--prefix-override-handler
