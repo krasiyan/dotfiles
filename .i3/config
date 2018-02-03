@@ -144,7 +144,7 @@ assign [class="Chromium"] $workspace1
 assign [class="Emacs"] $workspace2
 assign [class="Xfce4-terminal"] $workspace3
 assign [class="robo3t"] $workspace4
-assign [class="Thunar"] $workspace5
+assign [class="Nautilus"] $workspace5
 assign [class="VirtualBox Manager"] $workspace6
 assign [class="Spotify"]  $workspace10
 assign [class="Skype"]  $workspace9
@@ -305,6 +305,6 @@ exec --no-startup-id chromium-browser
 exec --no-startup-id emacs
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id /opt/robo3t/bin/robo3t
-exec --no-startup-id /usr/bin/thunar
+exec --no-startup-id /usr/bin/nautilus
 exec --no-startup-id /usr/bin/virtualbox
 exec --no-startup-id /usr/local/bin/rambox
