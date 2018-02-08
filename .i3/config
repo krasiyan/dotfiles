@@ -231,7 +231,7 @@ bar {
   # output DP-0
   status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
   position top
-  # tray_output primary
+  tray_output primary
   colors {
     separator #dc322f
     background #002b36
