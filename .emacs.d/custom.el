@@ -21,7 +21,6 @@
    (quote
     (restclient less-css-mode web-mode magit wgrep-ag keyfreq ido-vertical-mode flx-ido ido-grid-mode smex smart-mode-line yasnippet company-statistics company-tern company-quickhelp company multi-term ag flycheck-pos-tip flycheck expand-region avy hlinum tabbar-ruler tabbar redo+ comment-dwim-2 mwim ethan-wspace git-gutter-fringe fringe-helper js2-mode highlight-indent-guides markdown-mode drag-stuff fiplr neotree multiple-cursors solarized-theme zoom-frm dash)))
  '(scroll-error-top-bottom nil)
- '(select-enable-clipboard nil)
  '(set-mark-command-repeat-pop nil)
  '(shift-select-mode t))
 (custom-set-faces

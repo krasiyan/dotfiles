@@ -53,6 +53,7 @@
         kmacro-end-or-call-macro
         list-buffers
         mark-whole-buffer
+        markdown-outdent-or-delete
         markdown-preview
         mouse-drag-header-line
         mouse-save-then-kill
