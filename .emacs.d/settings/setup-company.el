@@ -1,6 +1,6 @@
 (require 'company)
 (require 'company-statistics)
-;; (require 'company-tern)
+(require 'company-tern)
 
 ;; company everywhere!
 (add-hook 'after-init-hook 'global-company-mode)
