@@ -70,4 +70,5 @@
         tabbar-ruler-forward
         tabbar-select-tab-callback
         undefined
+        zoom-frm-in
         ))
