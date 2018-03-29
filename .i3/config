@@ -110,7 +110,7 @@ set $workspace10 "10  "
 bindsym $mod+m move workspace to output right
 
 # assign default monitors for workspaces
-workspace $workspace2 output DP-3
+workspace $workspace3 output DP-3
 workspace $workspace9 output eDP-1-1
 workspace $workspace10 output eDP-1-1
 
