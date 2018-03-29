@@ -5,7 +5,8 @@
   (flycheck-mode 1)
   (tern-mode 1)
   (yas-activate-extra-mode 'html-mode)
-  (yas-activate-extra-mode 'js2-mode)))
+  (yas-activate-extra-mode 'js2-mode)
+  (add-node-modules-path)))
 
 (setq
   web-mode-code-indent-offset 2

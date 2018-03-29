@@ -149,6 +149,8 @@
      web-mode                           ; web mode
      less-css-mode                      ; less css mode
      restclient                         ; http REST client
+     add-node-modules-path              ; add the closest node-modules path to exec-path
+     exec-path-from-shell               ; include the env variables from to user shell in Emacs
      )))
 
 (condition-case nil
@@ -157,6 +159,9 @@
    (package-refresh-contents)
    (init--install-packages)))
 
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;; Set up appearance
 (require 'appearance)
