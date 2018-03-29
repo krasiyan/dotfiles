@@ -33,6 +33,7 @@ clean buffer we're an order of magnitude laxer about checking."
                       '(javascript-jshint)))
 
 ;; use the javascript-eslint flycheck checker with the js2-mode
-(flycheck-add-mode 'javascript-eslint 'js2-mode)
+;; (flycheck-add-mode 'javascript-eslint 'js2-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 (provide 'setup-flycheck)

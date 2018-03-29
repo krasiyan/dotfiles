@@ -115,7 +115,6 @@
      drag-stuff                         ; dragging lines/regions
      markdown-mode                      ; .md file editing and preview
      highlight-indent-guides            ; indentation guides
-     js2-mode                           ; javascript mode
      fringe-helper                      ; neede for git gutter
      git-gutter-fringe                  ; git gutter
      ethan-wspace                       ; auto fix trailing whitespaces
@@ -194,7 +193,6 @@
 (eval-after-load 'magit '(require 'setup-magit))
 
 ;; Language specific setup files
-(eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'web-mode '(require 'setup-web-mode))
 (eval-after-load 'less-css-mode '(require 'setup-less-css-mode))
 
