@@ -212,8 +212,6 @@ bindsym $mod+x exec keepassx
 
 # arandr
 bindsym $mod+p exec arandr
-# bindsym $mod+Shift+p exec ~/.screenlayout/SamsungPhilipsAndLaptop.sh
-bindsym $mod+Control+p exec ~/.screenlayout/laptop.sh
 
 # screenshots
 bindsym --release Print exec "xfce4-screenshooter -r"
@@ -262,6 +260,19 @@ mode "$mode_system" {
 }
 
 bindsym $mod+Delete mode "$mode_system"
+
+set $mode_displays Displays: (h) laptop [4k] (j) laptop + Samsung + 2xPhilips [4k,4k,1080p] (k) laptop + 2xPhilips [1080p] (l) laptop + Samsung [4k]
+mode "$mode_displays" {
+    bindsym h exec --no-startup-id exec ~/.screenlayout/laptop.sh
+    bindsym j exec --no-startup-id exec ~/.screenlayout/laptopSamsungAndPhilips.sh
+    bindsym k exec --no-startup-id exec ~/.screenlayout/laptopAndPhilips_1080p.sh
+    bindsym l exec --no-startup-id exec ~/.screenlayout/laptopAndSamsung.sh
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+p mode "$mode_displays"
 
 # startup
 exec --no-startup-id ~/scripts/keyboardlayouts.sh
