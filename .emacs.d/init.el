@@ -206,3 +206,6 @@
 
 ;; Default directory
 (setq default-directory "~/work/")
+
+;; Default web browser
+(setq browse-url-browser-function 'browse-url-chromium)
