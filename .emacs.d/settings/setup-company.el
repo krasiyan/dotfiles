@@ -22,7 +22,7 @@
 ;; (add-to-list 'company-backends '(company-yasnippet))
 
 ;; disable tern .tern-port files
-(setq tern-command '("/usr/local/bin/tern" "--no-port-file"))
+(setq tern-command '("tern" "--no-port-file"))
 
 (defun check-expansion ()
   (save-excursion
