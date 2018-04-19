@@ -151,6 +151,7 @@
      restclient                         ; http REST client
      add-node-modules-path              ; add the closest node-modules path to exec-path
      exec-path-from-shell               ; include the env variables from to user shell in Emacs
+     editorconfig                       ; read .editorconfig files to automatically adjust the codestlye
      )))
 
 (condition-case nil
@@ -186,6 +187,7 @@
 ;;(require 'setup-highlight-indent-guides)
 (require 'setup-git-gutter-fringe)
 (require 'setup-ethan-wspace)
+(require 'setup-editorconfig)
 ;;(require 'setup-tabbar)
 (require 'setup-flycheck)
 (require 'setup-zsh)
