@@ -184,11 +184,9 @@
     (require 'setup-highlight-indent-guides)
     (require 'setup-tabbar)))
 
-;;(require 'setup-highlight-indent-guides)
 (require 'setup-git-gutter-fringe)
 (require 'setup-ethan-wspace)
 (require 'setup-editorconfig)
-;;(require 'setup-tabbar)
 (require 'setup-flycheck)
 (require 'setup-zsh)
 (require 'setup-company)
