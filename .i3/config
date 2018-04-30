@@ -224,6 +224,7 @@ bar {
   output primary
   output DP-0
   output eDP-1-1
+  output eDP-1
 
   status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
   position top
