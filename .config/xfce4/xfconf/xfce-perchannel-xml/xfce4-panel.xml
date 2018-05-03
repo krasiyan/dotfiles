@@ -45,6 +45,7 @@
       <property name="names-visible" type="array">
         <value type="string" value="skype"/>
         <value type="string" value="task manager"/>
+        <value type="string" value="clipman"/>
         <value type="string" value="scudcloud"/>
         <value type="string" value="steam"/>
         <value type="string" value="icedove"/>
