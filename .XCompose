@@ -1,7 +1,18 @@
+# Arrows
 <Multi_key> <Up>    : "↑" U2191
 <Multi_key> <Down>  : "↓" U2193
 <Multi_key> <Left>  : "←" U2190
 <Multi_key> <Right> : "→" U2192
 
+# Checkmarks
 <Multi_key> <0> : "✘" U2718
 <Multi_key> <1> : "✔" U2714
+
+# Germanic umlaut / Eszett
+<Multi_key> <a> : "ä" U00E4
+<Multi_key> <A> : "Ä" U00C4
+<Multi_key> <o> : "ö" U00F6
+<Multi_key> <O> : "Ö" U00D6
+<Multi_key> <u> : "ü" U00FC
+<Multi_key> <U> : "Ü" U00DC
+<Multi_key> <s> : "ß" U00DF
