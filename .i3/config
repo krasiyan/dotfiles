@@ -283,13 +283,12 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
 exec --no-startup-id redshift-gtk
 exec --no-startup-id compton -f -D 2
-exec --no-startup-id xautolock -time 10 -detectsleep -locker '$Locker'
 exec_always --no-startup-id  feh --no-fehbg --image-bg black --bg-center ~/wallpaper.png
 exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
 exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
-exec --no-startup-id xss-lock -- "$HOME/scripts/locker.sh"&
+exec --no-startup-id ~/scripts/xss-lock.sh start
 
 # startup applications
 exec --no-startup-id chromium-browser
