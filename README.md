@@ -29,9 +29,9 @@ Most of the configs are borrowed from all over the web and I will try give credi
 - [`xfce4-screenshooter`](http://goodies.xfce.org/projects/applications/xfce4-screenshooter)
 - [`keepassx`](https://www.keepassx.org/)
 - [`feh`](https://feh.finalrewind.org/)
-- [`xautolock`](https://linux.die.net/man/1/xautolock)
 - [`footswitch`](https://github.com/rgerganov/footswitch)
 - [`editorconfig`](https://github.com/editorconfig/editorconfig-core-c)
+- [`xdotool`](https://www.semicomplete.com/projects/xdotool/)
 
 ## Cloning
 
