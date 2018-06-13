@@ -294,7 +294,7 @@ exec --no-startup-id ~/scripts/xss-lock.sh start
 exec --no-startup-id chromium-browser
 exec --no-startup-id emacs
 exec --no-startup-id i3-sensible-terminal
-exec --no-startup-id /opt/robo3t/bin/robo3t
+#exec --no-startup-id /opt/robo3t/bin/robo3t
 exec --no-startup-id /usr/bin/nautilus
-exec --no-startup-id /usr/bin/virtualbox
+#exec --no-startup-id /usr/bin/virtualbox
 exec --no-startup-id /usr/local/bin/rambox
