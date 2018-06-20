@@ -32,6 +32,7 @@ Most of the configs are borrowed from all over the web and I will try give credi
 - [`footswitch`](https://github.com/rgerganov/footswitch)
 - [`editorconfig`](https://github.com/editorconfig/editorconfig-core-c)
 - [`xdotool`](https://www.semicomplete.com/projects/xdotool/)
+- [`hsetroot`](https://github.com/himdel/hsetroot)
 
 ## Cloning
 
