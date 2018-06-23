@@ -22,3 +22,6 @@
 ## Currency
 <Multi_key> <e> : "€" U20AC
 <Multi_key> <c> : "¢" U00A2
+
+## Generic symbols
+<Multi_key> <n> : "№" U2116
