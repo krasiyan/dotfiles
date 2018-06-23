@@ -16,3 +16,9 @@
 <Multi_key> <u> : "ü" U00FC
 <Multi_key> <U> : "Ü" U00DC
 <Multi_key> <s> : "ß" U00DF
+
+# Other
+
+## Currency
+<Multi_key> <e> : "€" U20AC
+<Multi_key> <c> : "¢" U00A2
