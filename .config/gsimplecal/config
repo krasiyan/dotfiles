@@ -1,7 +1,16 @@
 mark_today = 1
 show_week_numbers = 1
-# close_on_unfocus = 1
 force_lang = en_GB.utf8
 mainwindow_decorated = 1
 mainwindow_sticky = 1
 mainwindow_position = center
+mainwindow_keepabove =  1
+show_timezones=1
+clock_format = %d.%m.%Y %H:%M
+clock_label = Germany
+clock_tz = :Europe/Berlin
+clock_label = Sofia
+clock_tz = :Europe/Sofia
+clock_label = UTC
+clock_tz = :UTC
+
