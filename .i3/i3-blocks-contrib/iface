@@ -50,6 +50,7 @@ esac
 
 # if no interface is found, use the first device with a global scope
 IPADDR=$(ip addr show $IF | perl -n -e "/$AF ([^\/]+).* scope global/ && print \$1 and exit")
+IPADDR_SHORT=${IPADDR: (-7)}
 
 case $BLOCK_BUTTON in
   3) echo -n "$IPADDR" | xclip -q -se c ;;
@@ -57,5 +58,5 @@ esac
 
 #------------------------------------------------------------------------
 
-echo "$IPADDR" # full text
-echo "$IPADDR" # short text
+echo "*$IPADDR_SHORT"
+echo "*$IPADDR_SHORT"
