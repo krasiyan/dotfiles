@@ -46,7 +46,7 @@ percentColor(){
         color="#2aa198"
     elif [ $1 -lt 101 ]
     then
-        # blue
+        # blue (neutral)
         color="#268bd2"
     # >= 101 - charging
     else
@@ -63,17 +63,17 @@ prettyPrintPercent $batteryPercent fullLabel
 labelColor=""
 statusLabel=""
 
-if [ $batteryStatus == "Charging" ]
+if [ $batteryStatus == "Charging" ] # charging
 then
     statusLabel=""
     percentColor 101 labelColor
-elif [ $batteryStatus == "Discharging" ]
+elif [ $batteryStatus == "Discharging" ] # on battery power
 then
     statusLabel=""
     percentColor $batteryPercent labelColor
-else
+else # paused - using only ac power
     statusLabel=""
-    percentColor $batteryPercent labelColor
+    percentColor 100 labelColor
 fi
 
 echo "$statusLabel $fullLabel"; echo ""; echo "$labelColor";
