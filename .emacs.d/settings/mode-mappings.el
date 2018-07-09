@@ -14,7 +14,6 @@
 (autoload 'nxml-mode "nxml-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 
-
 ;; Web mode
 (add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
@@ -25,6 +24,10 @@
 (add-to-list 'auto-mode-alist '("\\.ts$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jshintrc$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.vue$" . web-mode))
+
+;; python
+(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 
 ;; Less css mode
 (add-to-list 'auto-mode-alist '("\\.less\\'" . less-css-mode))
