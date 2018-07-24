@@ -152,6 +152,7 @@
      add-node-modules-path              ; add the closest node-modules path to exec-path
      exec-path-from-shell               ; include the env variables from to user shell in Emacs
      editorconfig                       ; read .editorconfig files to automatically adjust the codestlye
+     yaml-mode                          ; yaml editing mode
      )))
 
 (condition-case nil
