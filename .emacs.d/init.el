@@ -120,7 +120,6 @@
      ethan-wspace                       ; auto fix trailing whitespaces
      mwim                               ; home/end start/end of code then line
      comment-dwim-2                     ; better comments
-     redo+                              ; redo
      tabbar                             ; tabs
      tabbar-ruler                       ; tabs
      hlinum                             ; highligh current line number
