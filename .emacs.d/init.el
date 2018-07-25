@@ -107,7 +107,6 @@
 (defun init--install-packages ()
   (packages-install
    '(
-     zoom-frm                           ; zoom
      solarized-theme                    ; color theme
      multiple-cursors                   ; multiple cursors
      neotree                            ; file tree
