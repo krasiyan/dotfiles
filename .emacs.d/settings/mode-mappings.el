@@ -28,6 +28,8 @@
 
 ;; python
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(require 'add-python-venv-path)
+(add-hook 'python-mode-hook #'add-python-venv-path)
 
 ;; Less css mode
 (add-to-list 'auto-mode-alist '("\\.less\\'" . less-css-mode))
