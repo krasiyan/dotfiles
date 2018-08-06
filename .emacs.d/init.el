@@ -199,6 +199,7 @@
 ;; Language specific setup files
 (eval-after-load 'web-mode '(require 'setup-web-mode))
 (eval-after-load 'less-css-mode '(require 'setup-less-css-mode))
+(require 'setup-python-mode)
 
 ;; Map files to modes
 (require 'mode-mappings)

@@ -32,8 +32,10 @@ clean buffer we're an order of magnitude laxer about checking."
               (append flycheck-disabled-checkers
                       '(javascript-jshint)))
 
-;; use the javascript-eslint flycheck checker with the js2-mode
+;; legacy: use the javascript-eslint flycheck checker with the js2-mode
 ;; (flycheck-add-mode 'javascript-eslint 'js2-mode)
+
 (flycheck-add-mode 'javascript-eslint 'web-mode)
+(flycheck-add-mode 'python-pylint 'python-mode)
 
 (provide 'setup-flycheck)
