@@ -60,7 +60,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins!
-plugins=(git common-aliases sudo debian ssh-agent web-search extract github zsh-nvm npm)
+plugins=(git common-aliases sudo debian ssh-agent web-search extract github zsh-nvm npm docker)
 
 # ssh agent setup
 zstyle :omz:plugins:ssh-agent identities ~/.ssh/*.pub
@@ -91,6 +91,8 @@ alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$
 alias cls="clear"
 alias at="angel test"
 alias ducks="du -hcs * | sort -rn | head"
+alias grbim='git rebase -i origin/master'
+
 # bc - An arbitrary precision calculator language
 # Ripped off from https://github.com/arzzen/calc.plugin.zsh
 function = 
