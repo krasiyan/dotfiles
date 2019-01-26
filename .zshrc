@@ -54,7 +54,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE="true"
 
 # Enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -92,6 +92,7 @@ alias cls="clear"
 alias at="angel test"
 alias ducks="du -hcs * | sort -rn | head"
 alias grbim='git rebase -i origin/master'
+alias qrcode='qrencode -o - -t UTF8'
 
 # bc - An arbitrary precision calculator language
 # Ripped off from https://github.com/arzzen/calc.plugin.zsh
