@@ -63,7 +63,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git common-aliases sudo debian ssh-agent web-search extract github zsh-nvm npm docker)
 
 # ssh agent setup
-zstyle :omz:plugins:ssh-agent identities ~/.ssh/*.pub
+zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" ! -name "known_hosts" ! -name "config" ! -name "*.ppk" ! -name "environment-laptop" -printf "%f\n"`
 
 source $ZSH/oh-my-zsh.sh
 
