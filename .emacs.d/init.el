@@ -119,8 +119,6 @@
      ethan-wspace                       ; auto fix trailing whitespaces
      mwim                               ; home/end start/end of code then line
      comment-dwim-2                     ; better comments
-     tabbar                             ; tabs
-     tabbar-ruler                       ; tabs
      hlinum                             ; highligh current line number
      avy                                ; goto char
      expand-region                      ; expand region
@@ -177,11 +175,11 @@
     (lambda (&optional frame)
       (message ">> Daemon mode")
       (require 'setup-highlight-indent-guides)
-      (require 'setup-tabbar)))
+      (require 'setup-awesome-tab)))
   (progn
     (message ">> Non daemon mode")
     (require 'setup-highlight-indent-guides)
-    (require 'setup-tabbar)))
+    (require 'setup-awesome-tab)))
 
 (require 'setup-git-gutter-fringe)
 (require 'setup-ethan-wspace)

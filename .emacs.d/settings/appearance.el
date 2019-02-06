@@ -39,7 +39,13 @@
 (require 'zoom-frm)
 
 ;; Set the title bar to show file name if available, buffer name otherwise
-(setq frame-title-format '(buffer-file-name "%f" ("%b")))
+(setq frame-title-format
+  '(
+    (:eval (if (buffer-file-name)
+      (abbreviate-file-name (buffer-file-name))
+      "%b"))
+    (:eval (if (buffer-modified-p)
+      " •"))))
 
 ;; Use bar cursors
 (setq-default cursor-type 'bar)
@@ -76,4 +82,8 @@
 (setq sml/mode-width 'full)
 (sml/setup)
 (add-to-list 'sml/replacer-regexp-list '("^~/work/" ":work:") t)
+
+;; disable scrollbars
+(customize-set-variable 'scroll-bar-mode nil)
+(customize-set-variable 'horizontal-scroll-bar-mode nil)
 (provide 'appearance)

@@ -133,13 +133,17 @@ This command does not push erased text to kill-ring."
 
 (global-set-key "\C-w" 'kill-this-buffer)
 
-;; Page Up/Down for cycling buffers
-(global-set-key [C-prior] 'tabbar-ruler-backward)
-(global-set-key [C-next] 'tabbar-ruler-forward)
+;; Control - Page Up/Down for cycling buffer tabs
+(global-set-key [C-prior] 'awesome-tab-backward-tab)
+(global-set-key [C-next] 'awesome-tab-forward-tab)
+
+;; Control - Shift - Page Up/Down for re-arranging buffer tabs
+(global-set-key [C-S-prior] 'awesome-tab-move-current-tab-to-left)
+(global-set-key [C-S-next] 'awesome-tab-move-current-tab-to-right)
 
 ;; Alternative cycling buffers
-(global-set-key (kbd "C-M-j") 'tabbar-ruler-backward)
-(global-set-key (kbd "C-M-k") 'tabbar-ruler-forward)
+(global-set-key (kbd "C-M-j") 'awesome-tab-backward-tab)
+(global-set-key (kbd "C-M-k") 'awesome-tab-forward-tab)
 
 ;; C-S-(hjkl) draggging stuff
 (define-key drag-stuff-mode-map (kbd "C-S-h") 'drag-stuff-left)
