@@ -11,6 +11,7 @@
         cua-scroll-up
         delete-window
         describe-key
+        drag-stuff-down
         drag-stuff-left
         drag-stuff-right
         drag-stuff-up
@@ -23,6 +24,8 @@
         kill-this-buffer
         markdown-enter-key
         markdown-exdent-or-delete
+        markdown-insert-list-item
+        markdown-outdent-or-delete
         mouse-set-region
         mwim-beginning-of-code-or-line
         mwim-end-of-code-or-line
@@ -43,7 +46,6 @@
         cua--prefix-override-handler
         cua-copy-region
         cua-cut-region
-        drag-stuff-down
         electric-pair-delete-pair
         find-file
         find-tag
@@ -53,7 +55,6 @@
         kmacro-end-or-call-macro
         list-buffers
         mark-whole-buffer
-        markdown-outdent-or-delete
         markdown-preview
         mouse-drag-header-line
         mouse-save-then-kill
