@@ -149,6 +149,7 @@
      exec-path-from-shell               ; include the env variables from to user shell in Emacs
      editorconfig                       ; read .editorconfig files to automatically adjust the codestlye
      yaml-mode                          ; yaml editing mode
+     json-mode                          ; json editing mode
      )))
 
 (condition-case nil
