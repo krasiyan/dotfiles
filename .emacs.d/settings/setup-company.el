@@ -12,7 +12,7 @@
 (company-quickhelp-mode 1)
 
 ;; no delay
-;;(setq company-idle-delay 0)
+(setq company-idle-delay 0)
 
 ;; visual improvements to the tern autocomplete list
 (setq company-tooltip-align-annotations t)
