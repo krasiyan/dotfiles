@@ -15,11 +15,11 @@ case $BLOCK_BUTTON in
 
         # scroll up
         # raise brightness
-        4) brightlight -p -i 5 > /dev/null ;;
+        4) brightlight -p -i 1 > /dev/null ;;
 
         # scroll down
         # lower brightness
-        5) brightlight -p -d 5 > /dev/null ;;
+        5) brightlight -p -d 1 > /dev/null ;;
 esac
 
 brightness=`brightlight -p -r | awk '{print $5}' | cut -d % -f 1`
