@@ -29,7 +29,7 @@
 (global-set-key "\C-k" 'forward-paragraph)
 (global-set-key "\C-l" 'forward-word)
 
-;; M-S-(h-l) home/end word
+;; C-M-(h-l) home/end word
 (define-key key-translation-map (kbd "C-M-h") (kbd "<home>"))
 (define-key key-translation-map (kbd "C-M-l") (kbd "<end>"))
 
@@ -73,7 +73,7 @@ This command does not push erased text to kill-ring."
 (global-set-key (kbd "<C-S-backspace>") 'my-delete-current-line)
 
 ;; rebind displaced movement key bindings
-(global-set-key "\M-p" 'recenter)
+(global-set-key "\M-p" 'recenter-top-bottom)
 (global-set-key "\M-v" 'downcase-word)
 (global-set-key "\M-b" 'recenter)
 
@@ -214,19 +214,19 @@ there's a region, all lines that region covers will be duplicated."
 ;; go to line
 (global-set-key (kbd "C-;") 'goto-line)
 
-;; C-= expand region
+;; C-=. expand region
 (require 'expand-region)
 (global-set-key (kbd "C-.") 'er/expand-region)
 (global-set-key (kbd "C-,") 'er/contract-region)
 
-;; C-n new buffer
+;; C-x n new buffer
 (defun create-new-buffer ()
   "Create a new buffer named *new*[num]."
   (interactive)
   (switch-to-buffer (generate-new-buffer-name "*new*")))
 (global-set-key (kbd "C-x n") 'create-new-buffer)
 
-;; C-N new emacs window
+;; C-x N new emacs window
 (when window-system
   (defun new-emacs-instance ()
     "Create a new instance of Emacs."
