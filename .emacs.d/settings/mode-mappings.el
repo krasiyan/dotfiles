@@ -42,4 +42,7 @@
 ;; Restclient
 (add-to-list 'auto-mode-alist '("\\.restclient$" . restclient-mode))
 
+;; go
+(add-to-list 'auto-mode-alist '("\\.go$" . go-mode))
+
 (provide 'mode-mappings)

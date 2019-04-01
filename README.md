@@ -33,6 +33,7 @@ Most of the configs are borrowed from all over the web and I will try give credi
 - [`editorconfig`](https://github.com/editorconfig/editorconfig-core-c)
 - [`xdotool`](https://www.semicomplete.com/projects/xdotool/)
 - [`hsetroot`](https://github.com/himdel/hsetroot)
+- [`gvm`](https://github.com/moovweb/gvm)
 
 ## Cloning
 

@@ -150,6 +150,7 @@
      editorconfig                       ; read .editorconfig files to automatically adjust the codestlye
      yaml-mode                          ; yaml editing mode
      json-mode                          ; json editing mode
+     go-mode                            ; go editing mode
      )))
 
 (condition-case nil
@@ -199,6 +200,7 @@
 (eval-after-load 'web-mode '(require 'setup-web-mode))
 (eval-after-load 'less-css-mode '(require 'setup-less-css-mode))
 (require 'setup-python-mode)
+(require 'setup-go-mode)
 
 ;; Map files to modes
 (require 'mode-mappings)

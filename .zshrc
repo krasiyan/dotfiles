@@ -60,7 +60,7 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins!
-plugins=(git common-aliases sudo debian ssh-agent web-search extract github zsh-nvm npm docker)
+plugins=(git common-aliases sudo debian ssh-agent web-search extract github zsh-nvm npm docker golang)
 
 # ssh agent setup
 zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" ! -name "known_hosts" ! -name "config" ! -name "*.ppk" ! -name "environment-laptop" -printf "%f\n"`
@@ -101,3 +101,5 @@ function =
   echo "$@" | bc -l
 }
 alias calc="="
+
+[[ -s "/home/krasiyan/.gvm/scripts/gvm" ]] && source "/home/krasiyan/.gvm/scripts/gvm"
