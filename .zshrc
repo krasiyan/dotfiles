@@ -89,8 +89,7 @@ alias configi3="e ~/.i3"
 alias configssh="e ~/.ssh/config"
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
 alias cls="clear"
-alias at="angel test"
-alias ducks="du -hcs * | sort -rn | head"
+alias ducks="du -hcs -BM * | sort -rn | head"
 alias grbim='git rebase -i origin/master'
 alias qrcode='qrencode -o - -t UTF8'
 
