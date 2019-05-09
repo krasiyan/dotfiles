@@ -1,11 +1,6 @@
 (require 'awesome-tab)
 (awesome-tab-mode t)
 
-;; awesome-tab-background-color
-;; awesome-tab-selected
-;; awesome-tab-unselected
-
-
 (set-face-attribute
   'awesome-tab-default nil
   :height 1.1)
@@ -21,9 +16,8 @@
   :background "#839496"
   :overline "#839496")
 
-
 (defun awesome-tab-changed (tab)
-  "..."
+  "Indicate unsaved changes in the tab names"
   (if (buffer-modified-p  (car tab))
       "•"
     ""))
