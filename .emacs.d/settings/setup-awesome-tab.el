@@ -1,9 +1,4 @@
 (require 'awesome-tab)
-(awesome-tab-mode t)
-
-(set-face-attribute
-  'awesome-tab-default nil
-  :height 1.1)
 
 (set-face-attribute
   'awesome-tab-selected nil
@@ -16,6 +11,18 @@
   :background "#839496"
   :overline "#839496")
 
+(set-face-attribute
+  'awesome-tab-default nil
+  :background "#002b36")
+
+(set-face-attribute 'header-line nil :height 125)
+
+(setq awesome-tab-background-color "#002b36")
+(setq awesome-tab-style "slant")
+(setq awesome-tab-height 50)
+
+(awesome-tab-mode t)
+
 (defun awesome-tab-changed (tab)
   "Indicate unsaved changes in the tab names"
   (if (buffer-modified-p  (car tab))
@@ -25,17 +32,19 @@
 (defun awesome-tab-buffer-tab-label (tab)
   "Return a label for TAB.
 That is, a string used to represent it on the tab bar."
-  (let ((label  (if awesome-tab--buffer-show-groups
-                    (format " [%s]%s " (awesome-tab-tab-tabset tab) (awesome-tab-changed tab))
-                  (format " %s%s " (awesome-tab-tab-value tab) (awesome-tab-changed tab)))))
-    ;; Unless the tab bar auto scrolls to keep the selected tab
-    ;; visible, shorten the tab label to keep as many tabs as possible
-    ;; in the visible area of the tab bar.
-    (if awesome-tab-auto-scroll-flag
-        label
-      (awesome-tab-shorten
-       label (max 1 (/ (window-width)
-                       (length (awesome-tab-view
-                                (awesome-tab-current-tabset)))))))))
+  ;; Init tab style.
+  (when (or (not awesome-tab-style-left)
+            (not awesome-tab-style-right))
+    (awesome-tab-select-separator-style awesome-tab-style))
+  ;; Render tab.
+  (awesome-tab-render-separator
+   (list awesome-tab-style-left
+         (format " %s%s "
+                 (let ((bufname (awesome-tab-buffer-name (car tab))))
+                   (if (> awesome-tab-label-fixed-length 0)
+                       (awesome-tab-truncate-string  awesome-tab-label-fixed-length bufname)
+                     bufname))
+                 (awesome-tab-changed tab))
+         awesome-tab-style-right)))
 
 (provide 'setup-awesome-tab)
