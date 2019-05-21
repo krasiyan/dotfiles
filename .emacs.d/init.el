@@ -110,7 +110,6 @@
      solarized-theme                    ; color theme
      multiple-cursors                   ; multiple cursors
      neotree                            ; file tree
-     fiplr                              ; fuzzy find up to the nearest .git folder
      drag-stuff                         ; dragging lines/regions
      markdown-mode                      ; .md file editing and preview
      highlight-indent-guides            ; indentation guides
@@ -151,6 +150,7 @@
      yaml-mode                          ; yaml editing mode
      json-mode                          ; json editing mode
      go-mode                            ; go editing mode
+     projectile                         ; project navigation / fuzzy search
      )))
 
 (condition-case nil
@@ -168,7 +168,7 @@
 
 ;; Setup extensions
 (require 'setup-neotree)
-(require 'setup-fiplr)
+(require 'setup-projectile)
 (require 'setup-drag-stuff)
 (require 'setup-markdown-mode)
 
