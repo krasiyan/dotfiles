@@ -36,6 +36,7 @@ clean buffer we're an order of magnitude laxer about checking."
 ;; (flycheck-add-mode 'javascript-eslint 'js2-mode)
 
 (flycheck-add-mode 'javascript-eslint 'web-mode)
+(flycheck-add-mode 'typescript-tslint 'web-mode)
 (flycheck-add-mode 'python-pylint 'python-mode)
 
 (provide 'setup-flycheck)

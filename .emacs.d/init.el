@@ -201,6 +201,7 @@
 (eval-after-load 'less-css-mode '(require 'setup-less-css-mode))
 (require 'setup-python-mode)
 (require 'setup-go-mode)
+(require 'setup-tide)
 
 ;; Map files to modes
 (require 'mode-mappings)
