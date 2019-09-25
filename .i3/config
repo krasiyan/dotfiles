@@ -147,8 +147,6 @@ assign [class="Nautilus"] $workspace5
 assign [class="VirtualBox Manager"] $workspace6
 assign [class="Spotify"]  $workspace10
 assign [class="Skype"]  $workspace9
-assign [class="Rambox"]  $workspace9
-assign [class="TogglDesktop"] $workspace7
 
 for_window [class="Gsimplecal"] floating enable
 
@@ -205,8 +203,8 @@ bindsym XF86AudioMicMute     exec --no-startup-id "amixer -q sset Capture toggle
 bindsym $mod+z exec $Locker
 
 # brightness
-bindsym XF86MonBrightnessUp exec "brightlight -p -i 1 > /dev/null; pkill -RTMIN+12 i3blocks"
-bindsym XF86MonBrightnessDown exec "brightlight -p -d 1 > /dev/null; pkill -RTMIN+12 i3blocks"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5 > /dev/null; pkill -RTMIN+12 i3blocks"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5 > /dev/null; pkill -RTMIN+12 i3blocks"
 
 # keepassx
 bindsym $mod+x exec keepassx
@@ -222,14 +220,8 @@ bindsym --release $mod+Shift+Print exec "xfce4-screenshooter -f"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  output primary
-  output DP-0
-  output eDP-1-1
-  output eDP-1
-
   status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
   position top
-  tray_output primary
   colors {
     separator #dc322f
     background #002b36
@@ -292,11 +284,7 @@ exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
 exec --no-startup-id ~/scripts/xss-lock.sh start
 
 # startup applications
-exec --no-startup-id chromium-browser
+exec --no-startup-id chromium
 exec --no-startup-id emacs --daemon && emacsclient -nc
 exec --no-startup-id i3-sensible-terminal
-#exec --no-startup-id /opt/robo3t/bin/robo3t
 exec --no-startup-id /usr/bin/nautilus
-#exec --no-startup-id /usr/bin/virtualbox
-exec --no-startup-id /usr/local/bin/rambox
-exec --no-startup-id /opt/toggldesktop/TogglDesktop.sh

@@ -11,18 +11,18 @@
 case $BLOCK_BUTTON in
         # right click
         # set to 50%
-        3) brightlight -p -w 50 > /dev/null ;;
+        3) xbacklight -set 50 > /dev/null ;;
 
         # scroll up
         # raise brightness
-        4) brightlight -p -i 1 > /dev/null ;;
+        4) xbacklight -inc 5 > /dev/null ;;
 
         # scroll down
         # lower brightness
-        5) brightlight -p -d 1 > /dev/null ;;
+        5) xbacklight -dec 5 > /dev/null ;;
 esac
 
-brightness=`brightlight -p -r | awk '{print $5}' | cut -d % -f 1`
+brightness=`xbacklight -get | cut -d . -f 1`
 
 echo "$brightness%"
 echo "$brightness%"
