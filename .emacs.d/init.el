@@ -151,6 +151,7 @@
      json-mode                          ; json editing mode
      go-mode                            ; go editing mode
      projectile                         ; project navigation / fuzzy search
+     prettier-js                        ; prettier code formatting
      )))
 
 (condition-case nil
@@ -202,6 +203,7 @@
 (require 'setup-python-mode)
 (require 'setup-go-mode)
 (require 'setup-tide)
+(require 'setup-prettier)
 
 ;; Map files to modes
 (require 'mode-mappings)
