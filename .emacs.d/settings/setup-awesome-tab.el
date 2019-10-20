@@ -15,11 +15,11 @@
   'awesome-tab-default nil
   :background "#002b36")
 
-(set-face-attribute 'header-line nil :height 125)
+(set-face-attribute 'header-line nil :height 100)
 
 (setq awesome-tab-background-color "#002b36")
 (setq awesome-tab-style "slant")
-(setq awesome-tab-height 50)
+(setq awesome-tab-height 40)
 
 (awesome-tab-mode t)
 
