@@ -3,6 +3,8 @@
   (tide-setup)
   (flycheck-mode +1)
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (flycheck-add-mode 'typescript-tide 'web-mode)
+  (flycheck-add-mode 'typescript-tslint 'web-mode)
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (company-mode +1))
