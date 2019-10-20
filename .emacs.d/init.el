@@ -150,6 +150,8 @@
      yaml-mode                          ; yaml editing mode
      json-mode                          ; json editing mode
      go-mode                            ; go editing mode
+     golint                             ; go linter
+     company-go                         ; go completion
      projectile                         ; project navigation / fuzzy search
      prettier-js                        ; prettier code formatting
      )))
