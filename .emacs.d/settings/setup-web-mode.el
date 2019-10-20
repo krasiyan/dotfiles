@@ -1,12 +1,11 @@
 (require 'web-mode)
 
 (add-hook 'web-mode-hook  #'(lambda ()
+  (add-node-modules-path)
   (setq web-mode-markup-indent-offset 2)
   (flycheck-mode 1)
-  (tern-mode 1)
   (yas-activate-extra-mode 'html-mode)
-  (yas-activate-extra-mode 'js2-mode)
-  (add-node-modules-path)))
+  (yas-activate-extra-mode 'js2-mode)))
 
 (setq
   web-mode-code-indent-offset 2

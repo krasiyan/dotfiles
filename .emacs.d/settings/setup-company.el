@@ -11,15 +11,22 @@
 ;; quickhelp tooltips
 (company-quickhelp-mode 1)
 
+;; run tern-mode/company-tern for all *.js files
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (string-equal "js" (file-name-extension buffer-file-name))
+              (tern-mode 1)
+              ;; company-tern
+              (add-to-list 'company-backends '(company-tern :separate company-yasnippet))
+              )))
+
 ;; no delay
 (setq company-idle-delay 0)
 
 ;; visual improvements to the tern autocomplete list
 (setq company-tooltip-align-annotations t)
 
-;; company-tern
-(add-to-list 'company-backends '(company-tern :separate company-yasnippet))
-;; (add-to-list 'company-backends '(company-yasnippet))
+(add-to-list 'company-backends '(company-yasnippet))
 
 ;; disable tern .tern-port files
 (setq tern-command '("tern" "--no-port-file"))
