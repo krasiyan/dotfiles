@@ -67,6 +67,11 @@ zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" !
 
 source $ZSH/oh-my-zsh.sh
 
+# ctrl + backspace = delete word (backward)
+bindkey '^H' backward-kill-word
+# ctrl + delete = delete word (forward)
+bindkey '^[[3;5~' kill-word
+
 # language environment
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
