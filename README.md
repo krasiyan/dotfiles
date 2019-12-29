@@ -27,7 +27,7 @@ Most of the configs are borrowed from all over the web and I will try give credi
 - [`arandr`](https://christian.amsuess.com/tools/arandr/)
 - [`xkblayout-state`](https://github.com/nonpop/xkblayout-state)
 - [`xfce4-screenshooter`](http://goodies.xfce.org/projects/applications/xfce4-screenshooter)
-- [`keepassx`](https://www.keepassx.org/)
+- [`keepassxc`](https://keepassxc.org/)
 - [`feh`](https://feh.finalrewind.org/)
 - [`footswitch`](https://github.com/rgerganov/footswitch)
 - [`editorconfig`](https://github.com/editorconfig/editorconfig-core-c)

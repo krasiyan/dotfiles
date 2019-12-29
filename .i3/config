@@ -206,8 +206,8 @@ bindsym $mod+z exec $Locker
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5 > /dev/null; pkill -RTMIN+12 i3blocks"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5 > /dev/null; pkill -RTMIN+12 i3blocks"
 
-# keepassx
-bindsym $mod+x exec keepassx
+# keepassxc
+bindsym $mod+x exec keepassxc
 
 # arandr
 bindsym $mod+p exec arandr
@@ -272,10 +272,9 @@ bindsym $mod+Shift+p mode "$mode_displays"
 exec --no-startup-id ~/scripts/keyboardlayouts.sh
 exec nm-applet
 exec blueman-applet
-exec --no-startup-id xfce4-clipman
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
 exec --no-startup-id redshift-gtk
-exec --no-startup-id compton -f -D 2
+exec --no-startup-id compton -b --config ~/.config/compton.conf
 exec_always --no-startup-id hsetroot -solid "#073642"
 exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
