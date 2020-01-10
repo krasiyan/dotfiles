@@ -20,6 +20,6 @@ else
   color="#268bd2"
 fi
 
-echo "<span color=\"$color\">$icon</span> $(date '+%H:%M:%S  %d-%m-%Y wk%W')"
+echo "<span color=\"$color\">$icon</span> $(date '+%H:%M:%S  %d-%m-%Y wk%V')"
 echo ""
 echo ""
