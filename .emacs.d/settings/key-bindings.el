@@ -25,8 +25,8 @@
 
 ;; C-(h-l) backward/forward word
 (global-set-key "\C-h" 'backward-word)
-(global-set-key "\C-j" 'backward-paragraph)
-(global-set-key "\C-k" 'forward-paragraph)
+(global-set-key "\C-j" 'forward-paragraph)
+(global-set-key "\C-k" 'backward-paragraph)
 (global-set-key "\C-l" 'forward-word)
 
 ;; C-M-(h-l) home/end word
