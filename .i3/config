@@ -274,7 +274,7 @@ exec nm-applet
 exec blueman-applet
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
 exec --no-startup-id redshift-gtk
-exec --no-startup-id compton -b --config ~/.config/compton.conf
+exec --no-startup-id compton --config ~/.config/compton.conf
 exec_always --no-startup-id hsetroot -solid "#073642"
 exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
