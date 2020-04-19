@@ -29,10 +29,14 @@ TabActivityColor=#dc322f
 ScrollingLines=10000
 MiscBellUrgent=FALSE
 MiscMouseWheelZoom=TRUE
-MiscMiddleClickOpensUri=FALSE
+MiscMiddleClickOpensUri=TRUE
 MiscCopyOnSelect=FALSE
 MiscDefaultWorkingDir=
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
+MiscShowRelaunchDialog=TRUE
+MiscNewTabAdjacent=FALSE
+MiscSearchDialogOpacity=100
+MiscShowUnsafePasteDialog=TRUE
 
