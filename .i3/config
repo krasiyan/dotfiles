@@ -107,7 +107,7 @@ set $workspace9 "9 "
 set $workspace10 "10  "
 
 # move the whole workspace to the next output
-bindsym $mod+m move workspace to output right
+bindsym $mod+m move workspace to output up
 
 # assign default monitors for workspaces
 workspace $workspace3 output DP-3
@@ -255,11 +255,9 @@ mode "$mode_system" {
 
 bindsym $mod+Delete mode "$mode_system"
 
-set $mode_displays Displays: (h) laptop [4k] (j) laptop + Samsung + 2xPhilips [4k,4k,1080p] (k) laptop + 2xPhilips [1080p] (l) laptop + Samsung [4k]
+set $mode_displays Displays: (h) laptop [4k] (l) laptop [4k, 60hz] + Samsung [4k, 30hz :(]
 mode "$mode_displays" {
     bindsym h exec --no-startup-id exec ~/.screenlayout/laptop.sh
-    bindsym j exec --no-startup-id exec ~/.screenlayout/laptopSamsungAndPhilips.sh
-    bindsym k exec --no-startup-id exec ~/.screenlayout/laptopAndPhilips_1080p.sh
     bindsym l exec --no-startup-id exec ~/.screenlayout/laptopAndSamsung.sh
 
     bindsym Return mode "default"
