@@ -279,6 +279,7 @@ exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
 exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
 exec --no-startup-id ~/scripts/xss-lock.sh start
+exec --no-startup-id ~/scripts/kensington_trackball.sh
 
 # startup applications
 exec --no-startup-id chromium
