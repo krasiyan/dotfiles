@@ -207,6 +207,7 @@
 (require 'setup-go-mode)
 (require 'setup-tide)
 (require 'setup-prettier)
+(require 'setup-spelling)
 
 ;; Map files to modes
 (require 'mode-mappings)
