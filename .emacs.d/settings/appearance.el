@@ -86,4 +86,11 @@
 ;; disable scrollbars
 (customize-set-variable 'scroll-bar-mode nil)
 (customize-set-variable 'horizontal-scroll-bar-mode nil)
+
+
+;; Highlight certain high importance code keywords
+(add-hook 'find-file-hook
+                  (lambda()
+                        (highlight-phrase "\\(BUG\\|FIXME\\|TODO\\|NOTE\\|HACK\\):")))
+
 (provide 'appearance)
