@@ -255,7 +255,7 @@ mode "$mode_system" {
 
 bindsym $mod+Delete mode "$mode_system"
 
-set $mode_displays Displays: (h) laptop [4k] (l) laptop [4k, 60hz] + Samsung [4k, 30hz :(]
+set $mode_displays Displays: (h) laptop [4k] (l) laptop [4k] + Samsung [4k]
 mode "$mode_displays" {
     bindsym h exec --no-startup-id exec ~/.screenlayout/laptop.sh
     bindsym l exec --no-startup-id exec ~/.screenlayout/laptopAndSamsung.sh
