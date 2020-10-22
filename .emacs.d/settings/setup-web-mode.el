@@ -24,4 +24,9 @@
 
 (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
 
+
+(eval-after-load 'web-mode
+  '(progn
+    (add-hook 'web-mode-hook #'add-node-modules-path)))
+
 (provide 'setup-web-mode)
