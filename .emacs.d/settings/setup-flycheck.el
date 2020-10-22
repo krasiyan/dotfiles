@@ -30,13 +30,12 @@ clean buffer we're an order of magnitude laxer about checking."
 ;; disable the jshint default flycheck checker
 (setq-default flycheck-disabled-checkers
               (append flycheck-disabled-checkers
-                      '(javascript-jshint)))
+                      '(javascript-jshint javascript-tslint typescript-tslint)))
 
 ;; legacy: use the javascript-eslint flycheck checker with the js2-mode
 ;; (flycheck-add-mode 'javascript-eslint 'js2-mode)
 
 (flycheck-add-mode 'javascript-eslint 'web-mode)
-(flycheck-add-mode 'typescript-tslint 'web-mode)
 (flycheck-add-mode 'python-pylint 'python-mode)
 
 (provide 'setup-flycheck)
