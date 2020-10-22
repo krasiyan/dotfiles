@@ -53,10 +53,6 @@
 ;; Display tabs as 2 spaces
 (setq tab-width 2)
 
-;; hlinum - highligh line number
-(require 'hlinum)
-(hlinum-activate)
-(set-face-background 'linum-highlight-face "#859900")
 
 ;; highlight tags mode
 ;; (require 'hl-tags-mode)
@@ -92,5 +88,7 @@
 (add-hook 'find-file-hook
                   (lambda()
                         (highlight-phrase "\\(BUG\\|FIXME\\|TODO\\|NOTE\\|HACK\\):")))
+
+(setq auto-window-vscroll nil)
 
 (provide 'appearance)

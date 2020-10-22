@@ -71,7 +71,7 @@
 (setq user-mail-address "hello@krasiyan.com")
 
 ;; Always show line numbers
-(global-linum-mode 1) 
+(global-display-line-numbers-mode)
 
 ;; Show line column numbers in mode line
 (line-number-mode t)
@@ -121,7 +121,6 @@
      ethan-wspace                       ; auto fix trailing whitespaces
      mwim                               ; home/end start/end of code then line
      comment-dwim-2                     ; better comments
-     hlinum                             ; highligh current line number
      avy                                ; goto char
      expand-region                      ; expand region
      flycheck                           ; syntax checking

@@ -27,11 +27,6 @@
                             (company-mode 0)
                             (setq yas-dont-activate t)
                             (setq show-trailing-whitespace nil)
-                            (linum-mode 0)
                             (setq-local global-hl-line-mode nil)))
-
-(add-hook 'after-change-major-mode-hook
-            '(lambda ()
-               (if (equal major-mode 'term-mode) (hlinum-deactivate) (hlinum-activate))))
 
 (provide 'setup-zsh)
