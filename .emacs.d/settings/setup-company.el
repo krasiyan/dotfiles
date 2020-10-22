@@ -1,6 +1,6 @@
 (require 'company)
 (require 'company-statistics)
-(require 'company-tern)
+;; (require 'company-tern)
 
 ;; company everywhere!
 (add-hook 'after-init-hook 'global-company-mode)
@@ -17,7 +17,7 @@
             (when (string-equal "js" (file-name-extension buffer-file-name))
               (tern-mode 1)
               ;; company-tern
-              (add-to-list 'company-backends '(company-tern :separate company-yasnippet))
+              ;; (add-to-list 'company-backends '(company-tern :separate company-yasnippet))
               )))
 
 ;; no delay
@@ -29,7 +29,7 @@
 (add-to-list 'company-backends '(company-yasnippet))
 
 ;; disable tern .tern-port files
-(setq tern-command '("tern" "--no-port-file"))
+;; (setq tern-command '("tern" "--no-port-file"))
 
 (defun check-expansion ()
   (save-excursion

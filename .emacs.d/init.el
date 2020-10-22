@@ -57,6 +57,9 @@
 (setq auto-save-list-file-prefix
    emacs-autosave-dir)
 
+;; do not create .#prefixed lockfiles
+(setq create-lockfiles nil)
+
 ;; Save point position between sessions
 (require 'saveplace)
 (setq-default save-place t)
@@ -128,7 +131,7 @@
      company                            ; auto completion
      company-quickhelp                  ; help popups for autocompletions
      pos-tip                            ; neede by company-quickhelp
-     company-tern                       ; tern backed for company-mode
+     ;; company-tern                       ; tern backed for company-mode
      company-statistics                 ; auto completion candidates auto-ranking
      yasnippet                          ; snippets
      smart-mode-line                    ; smart-mode-line

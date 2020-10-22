@@ -4,6 +4,7 @@
   (add-node-modules-path)
   (setq web-mode-markup-indent-offset 2)
   (flycheck-mode 1)
+  ;; (tern-mode 1)
   (yas-activate-extra-mode 'html-mode)
   (yas-activate-extra-mode 'js2-mode)))
 
