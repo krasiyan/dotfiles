@@ -32,7 +32,9 @@
         my-backward-delete-word
         my-delete-current-line
         my-delete-word
+        sh-assignment
         tab-indent-or-complete
+        tide-jump-to-definition
         ))
 
 (setq mc/cmds-to-run-once
