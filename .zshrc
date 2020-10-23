@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Colors!
 export TERM="xterm-256color"
 export LANG='en_US.UTF-8'
@@ -7,16 +14,12 @@ export ZSH=~/.oh-my-zsh
 
 DEFAULT_USER=$USER
 
-# https://github.com/bhilburn/powerlevel9k + https://github.com/AravSinghal/ConsolasForPowerline
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# https://github.com/romkatv/powerlevel10k + https://github.com/AravSinghal/ConsolasForPowerline
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S %d.%m.%Y}"
-POWERLEVEL9K_TIME_FOREGROUND="black"
-POWERLEVEL9K_TIME_BACKGROUND="249"
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(background_jobs root_indicator context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status node_version time)
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(icons_test)
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+ZLE_RPROMPT_INDENT=0
+POWERLEVEL9K_LEGACY_ICON_SPACING=true
 
 # Allow emacs to track the current directory
 if [ -n "$INSIDE_EMACS" ]; then
