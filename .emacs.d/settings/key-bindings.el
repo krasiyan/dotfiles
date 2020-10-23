@@ -89,6 +89,10 @@ This command does not push erased text to kill-ring."
 (global-unset-key (kbd "C-<down-mouse-1>"))
 (global-set-key (kbd "C-<mouse-1>") 'mc/add-cursor-on-click)
 (define-key mc/keymap (kbd "<return>") nil)
+(add-to-list 'mc/unsupported-minor-modes 'flyspell-mode)
+(add-to-list 'mc/unsupported-minor-modes 'electric-pair-mode)
+(add-to-list 'mc/unsupported-minor-modes 'global-hl-line-mode)
+(add-to-list 'mc/unsupported-minor-modes 'global-hl-lock-mode)
 
 ;; C-a select all
 (global-set-key "\C-a" 'mark-whole-buffer)
