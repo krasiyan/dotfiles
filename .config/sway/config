@@ -1,0 +1,267 @@
+set $Locker . ~/scripts/locker.sh
+set $mod Mod4
+
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+font pango:Consolas 12
+
+input "type:keyboard" {
+    xkb_model pc105
+    xkb_layout us,bg
+    xkb_variant ,bas_phonetic
+    xkb_options grp:caps_toggle,composite:ralt
+}
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start wofi (as a program launcher)
+bindsym $mod+space exec --no-startup-id wofi
+
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+b split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+popup_during_fullscreen leave_fullscreen
+
+focus_on_window_activation smart
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# toggle focus between the tiling / floating windows
+bindsym $mod+Control+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+set $workspace1 "1 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4 "
+set $workspace5 "5 "
+set $workspace6 "6 "
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
+set $workspace10 "10  "
+
+# move the whole workspace to the next output
+bindsym $mod+m move workspace to output up
+
+# assign default monitors for workspaces
+workspace $workspace3 output DP-3
+workspace $workspace9 output eDP-1-1
+workspace $workspace10 output eDP-1-1
+
+# switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# default workspaces
+assign [instance="chromium"] $workspace1
+assign [instance="emacs"] $workspace2
+assign [app_id="org.gnome.Nautilus"] $workspace5
+assign [instance="spotify"]  $workspace10
+assign [instance="skype"]  $workspace9
+
+for_window [class="Gsimplecal"] floating enable
+
+bindsym $mod+Shift+r reload
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "swaynag -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+s exec "swaynag -t warning -m 'Do you really want to suspend?' -b 'Suspend!' 'systemctl suspend'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Switch between active workspaces
+workspace_auto_back_and_forth yes
+
+# toggle between all layouts
+bindsym $mod+t layout toggle all
+
+# Switch to the latest urgent window
+bindsym $mod+u [urgent=latest] focus
+
+# volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +5%; pkill -RTMIN+11 i3blocks"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5%; pkill -RTMIN+11 i3blocks"
+bindsym XF86AudioMute        exec --no-startup-id "pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle; pkill -RTMIN+11 i3blocks"
+bindsym XF86AudioMicMute     exec --no-startup-id "amixer -q sset Capture toggle; pkill -RTMIN+10 i3blocks"
+
+# screen lock
+bindsym $mod+z exec $Locker
+
+# brightness
+bindsym XF86MonBrightnessUp exec "brightnessctl s +5% > /dev/null; pkill -RTMIN+12 i3blocks"
+bindsym XF86MonBrightnessDown exec "brightnessctl s 5%- > /dev/null; pkill -RTMIN+12 i3blocks"
+
+# keepassxc
+bindsym $mod+x exec keepassxc
+
+# arandr
+bindsym $mod+p exec arandr
+
+# screenshots
+bindsym --release Print exec "xfce4-screenshooter -r"
+bindsym --release $mod+Print exec "xfce4-screenshooter -w"
+bindsym --release $mod+Shift+Print exec "xfce4-screenshooter -f"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+  status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
+  position top
+  colors {
+      separator #dc322f
+      background #002b36
+      statusline #268bd2
+      focused_workspace #fdf6e3 #859900 #fdf6e3
+      active_workspace #fdf6e3 #6c71c4 #fdf6e3
+      inactive_workspace #586e75 #93a1a1 #002b36
+      urgent_workspace #d33682 #d33682 #fdf6e3
+  }
+}
+
+client.focused #859900 #859900 #fdf6e3 #6c71c4
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+
+hide_edge_borders both
+
+set $mode_system System (l) lock, (s) suspend, (e) logout, (r) reboot, (x) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend -i, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym x exec --no-startup-id  systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Delete mode "$mode_system"
+
+set $mode_displays Displays: (h) laptop [4k] (l) laptop [4k] + Samsung [4k]
+mode "$mode_displays" {
+    bindsym h exec --no-startup-id exec ~/.screenlayout/laptop.sh
+    bindsym l exec --no-startup-id exec ~/.screenlayout/laptopAndSamsung.sh
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+p mode "$mode_displays"
+
+# startup
+exec --no-startup-id ~/scripts/keyboardlayouts.sh
+exec nm-applet
+exec blueman-applet
+exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
+exec --no-startup-id redshift-gtk
+exec --no-startup-id compton --config ~/.config/compton.conf
+exec_always --no-startup-id hsetroot -solid "#073642"
+exec_always killall -q notify-osd
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
+exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
+exec --no-startup-id ~/scripts/xss-lock.sh start
+exec --no-startup-id ~/scripts/kensington_trackball.sh
+
+# startup applications
+exec --no-startup-id chromium
+exec --no-startup-id emacs --daemon && emacsclient -nc
+exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id /usr/bin/nautilus
