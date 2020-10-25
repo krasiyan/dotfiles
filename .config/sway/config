@@ -192,9 +192,8 @@ bindsym $mod+x exec keepassxc
 bindsym $mod+p exec arandr
 
 # screenshots
-bindsym --release Print exec "xfce4-screenshooter -r"
-bindsym --release $mod+Print exec "xfce4-screenshooter -w"
-bindsym --release $mod+Shift+Print exec "xfce4-screenshooter -f"
+bindsym --release Print exec "slurp | grim -g - - | wl-copy"
+bindsym --release $mod+Print exec "grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
