@@ -230,23 +230,13 @@ mode "$mode_system" {
 
 bindsym $mod+Delete mode "$mode_system"
 
-set $mode_displays Displays: (h) laptop [4k] (l) laptop [4k] + Samsung [4k]
-mode "$mode_displays" {
-    bindsym h exec --no-startup-id exec ~/.screenlayout/laptop.sh
-    bindsym l exec --no-startup-id exec ~/.screenlayout/laptopAndSamsung.sh
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+Shift+p mode "$mode_displays"
-
 # startup
+exec_always pkill kanshi
+exec_always kanshi
 exec nm-applet
 exec blueman-applet
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
 exec --no-startup-id redshift-gtk
-exec_always --no-startup-id hsetroot -solid "#073642"
 exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
