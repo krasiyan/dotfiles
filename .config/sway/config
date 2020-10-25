@@ -18,7 +18,7 @@ input * xkb_numlock enable
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -128,6 +128,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # default workspaces
 assign [instance="chromium"] $workspace1
 assign [instance="emacs"] $workspace2
+assign [app_id="termite"] $workspace3
 assign [app_id="org.gnome.Nautilus"] $workspace5
 assign [instance="spotify"]  $workspace10
 assign [instance="skype"]  $workspace9
@@ -248,5 +249,5 @@ exec --no-startup-id ~/scripts/kensington_trackball.sh
 # startup applications
 exec --no-startup-id chromium
 exec --no-startup-id emacs --daemon && emacsclient -nc
-exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id termite
 exec --no-startup-id /usr/bin/nautilus
