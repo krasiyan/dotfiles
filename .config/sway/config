@@ -1,4 +1,4 @@
-set $Locker . ~/scripts/locker.sh
+set $Locker swaylock --color "#002b36" -e -f
 set $mod Mod4
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
