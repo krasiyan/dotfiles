@@ -235,7 +235,7 @@ bindsym $mod+Delete mode "$mode_system"
 # startup
 exec_always pkill kanshi
 exec_always kanshi
-exec nm-applet
+exec nm-applet --indicator
 exec blueman-applet
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
 exec --no-startup-id redshift-gtk
