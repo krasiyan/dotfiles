@@ -12,6 +12,8 @@ input "type:keyboard" {
     xkb_options grp:caps_toggle,compose:ralt
 }
 
+input * xkb_numlock enable
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
