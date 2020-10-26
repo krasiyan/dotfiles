@@ -51,3 +51,4 @@ color21 = #eee8d5
 [options]
 
 font = Consolas for Powerline 14
+scrollback_lines = -1
