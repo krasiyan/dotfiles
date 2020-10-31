@@ -135,6 +135,12 @@ assign [instance="skype"]  $workspace9
 
 for_window [class="Gsimplecal"] floating enable
 
+for_window [app_id="waybar" floating] {
+    move position cursor
+    move down 150px
+    move left 100px
+}
+
 bindsym $mod+Shift+r reload
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "swaynag -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -198,7 +204,7 @@ bindsym --release Print exec "~/scripts/grimshot --notify copy area"
 bindsym --release $mod+Print exec "~/scripts/grimshot --notify copy window"
 
 bar {
-  status_command CONTRIB_SCRIPT_DIR=~/.i3/i3-blocks-contrib DEFAULT_SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.i3/i3blocks.conf
+  swaybar_command waybar
   position top
   colors {
       separator #dc322f
