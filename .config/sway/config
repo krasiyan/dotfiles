@@ -239,8 +239,8 @@ exec_always kanshi
 exec nm-applet --indicator
 exec blueman-applet
 exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
-exec --no-startup-id gammastep
-exec --no-startup-id gammastep-indicator
+# exec --no-startup-id gammastep
+# exec --no-startup-id gammastep-indicator
 exec_always killall -q notify-osd
 exec_always --no-startup-id mako -c ~/.config/mako/config
 exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
