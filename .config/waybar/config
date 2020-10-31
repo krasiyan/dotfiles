@@ -3,7 +3,7 @@
     "position": "top",
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": [ "custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "network", "memory", "cpu", "temperature", "battery", "clock", "tray"],
+    "modules-right": ["custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "custom/firewall", "network", "memory", "cpu", "temperature", "battery", "clock", "tray"],
     "sway/workspaces": {
         "all-outputs": true,
         "format": "{name}",
@@ -39,6 +39,7 @@
         },
         "on-click": "pavucontrol"
     },
+
     "disk#h": {
         "format": "h {percentage_used}%",
         "path": "/home"
@@ -46,6 +47,13 @@
     "disk#r": {
         "format": "r {percentage_used}%",
         "path": "/"
+    },
+    "custom/firewall": {
+        "exec": "sudo ufw status | grep -Po '(?<=Status: )(.)*'",
+        "format": " {}",
+        "interval": 30,
+        "on-click-right": "sudo gufw",
+        "tooltip": false
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
