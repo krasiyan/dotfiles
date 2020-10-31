@@ -3,11 +3,17 @@
     "position": "top",
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": [ "sway/language", "backlight", "pulseaudio", "disk#h", "disk#r", "network", "memory", "cpu", "temperature", "battery", "clock", "tray"],
+    "modules-right": [ "custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "network", "memory", "cpu", "temperature", "battery", "clock", "tray"],
     "sway/workspaces": {
         "all-outputs": true,
         "format": "{name}",
         "disable-scroll": true
+    },
+    "custom/kbdlayout": {
+        "exec": "swaymsg -t get_inputs | jq 'map(select(has(\"xkb_active_layout_name\")))[0].xkb_active_layout_name' | awk '{print substr($0,2,3)}'",
+        "interval": 10,
+        "format": " {}",
+        "tooltip": false
     },
     "backlight": {
         "format": "{icon} {percent}%",
