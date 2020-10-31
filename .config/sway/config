@@ -191,8 +191,8 @@ bindsym XF86AudioMicMute     exec --no-startup-id "amixer -q sset Capture toggle
 bindsym $mod+z exec $Locker
 
 # brightness
-bindsym XF86MonBrightnessUp exec "brightnessctl s +5% > /dev/null; pkill -RTMIN+12 i3blocks"
-bindsym XF86MonBrightnessDown exec "brightnessctl s 5%- > /dev/null; pkill -RTMIN+12 i3blocks"
+bindsym XF86MonBrightnessUp exec "brightnessctl s +5% > /dev/null"
+bindsym XF86MonBrightnessDown exec "brightnessctl s 5%- > /dev/null"
 
 # keepassxc
 bindsym $mod+x exec keepassxc

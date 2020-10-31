@@ -43,8 +43,9 @@ window#waybar.hidden {
 }
 
 #mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: #b58900;
+    padding: 0px 5px;
+    color: #002b36;
 }
 
 @keyframes blink {
@@ -58,10 +59,14 @@ label:focus {
     background-color: #000000;
 }
 
-label:hover {
-    background-color: red;
-}
-
 #waybar > box:nth-child(2) > box:nth-child(3) > * > label {
   padding: 0 4px;
+}
+
+#cpu.warning, #memory.warning, #battery.warning {
+    color: #b58900;
+}
+
+#cpu.critical, #network.disconnected, #temperature.critical, #battery.critical {
+    color: #d33682;
 }

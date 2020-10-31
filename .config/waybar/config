@@ -6,18 +6,16 @@
     "modules-right": [ "sway/language", "backlight", "pulseaudio", "disk#h", "disk#r", "network", "memory", "cpu", "temperature", "battery", "clock", "tray"],
     "sway/workspaces": {
         "all-outputs": true,
-        "format-icons": {
-            "urgent": ""
-        }
+        "format": "{name}",
+        "disable-scroll": true
     },
-
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": [""]
+        "format-icons": [""],
+        "on-scroll-up": "brightnessctl s +5% > /dev/null",
+        "on-scroll-down": "brightnessctl s 5%- > /dev/null"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -46,47 +44,54 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": " {essid} ({signalStrength}%) {ipaddr}",
-        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-        "format-linked": " {ifname} (No IP)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-linked": " (No IP)",
         "format-disconnected": "⚠ Disconnected ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+    "memory": {
+        "format": " {}%",
+        "states": {
+           "warning": 75,
+           "critical": 85
+        }
+    },
     "cpu": {
         "format": " {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "format": " {}%"
+        "tooltip": true,
+        "states": {
+           "warning": 75,
+           "critical": 85
+        }
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "tooltip": true
     },
     "battery": {
+        "bat": "BAT0",
+        "adapter": "AC",
         "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 35,
+            "critical": 25
         },
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format-discharging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "clock": {
+        "interval": 1,
         "format": "{: %H:%M:%S  %d-%m-%Y wk%V}",
         "tooltip": false,
         "on-click": "gsimplecal"
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 18,
         "spacing": 10
     }
 }
