@@ -19,7 +19,7 @@
 
 (setq awesome-tab-background-color "#002b36")
 (setq awesome-tab-style "slant")
-(setq awesome-tab-height 40)
+;; (setq awesome-tab-height 20)
 
 (awesome-tab-mode t)
 
