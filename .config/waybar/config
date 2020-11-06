@@ -3,7 +3,7 @@
     "position": "top",
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "custom/firewall", "network", "memory", "cpu", "temperature", "battery", "clock", "tray"],
+    "modules-right": ["custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "custom/firewall", "network", "memory", "cpu", "temperature", "battery", "custom/clock", "tray"],
     "sway/workspaces": {
         "all-outputs": true,
         "format": "{name}",
@@ -98,9 +98,9 @@
         "format-alt": "{icon} {time}",
         "format-icons": ["", "", "", "", ""]
     },
-    "clock": {
+    "custom/clock": {
         "interval": 1,
-        "format": "{: %H:%M:%S  %d-%m-%Y wk%V}",
+        "exec": "date '+ %H:%M:%S  %d-%m-%Y wk%V'",
         "tooltip": false,
         "on-click": "gsimplecal"
     },
