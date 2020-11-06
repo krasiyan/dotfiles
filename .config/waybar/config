@@ -3,7 +3,7 @@
     "position": "top",
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "custom/firewall", "network", "memory", "cpu", "temperature", "battery", "custom/clock", "tray"],
+    "modules-right": ["custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "custom/firewall", "network", "memory", "cpu", "temperature", "custom/fan", "battery", "custom/clock", "tray"],
     "sway/workspaces": {
         "all-outputs": true,
         "format": "{name}",
@@ -83,6 +83,12 @@
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""],
         "tooltip": true
+    },
+    "custom/fan": {
+        "exec": "cat /proc/acpi/ibm/fan | awk 'NR==2 {print $2}'",
+        "format": "❋ {}rpm",
+        "interval": 10,
+        "tooltip": false
     },
     "battery": {
         "bat": "BAT0",
