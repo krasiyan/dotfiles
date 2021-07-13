@@ -1,6 +1,6 @@
 profile laptop+samsung {
-    output eDP-1 mode 3840x2160 scale 2.0 position 826,2160
-    output DP-2 mode 3840x2160 scale 1.75 position 700,926
+    output eDP-1 mode 3840x2160 scale 2.0 position 0,1080
+    output DP-2 mode 3840x2160 scale 1.75 position 1920,762
 }
 
 profile laptop {
