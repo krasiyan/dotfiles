@@ -94,7 +94,7 @@ set $workspace9 "9 "
 set $workspace10 "10  "
 
 # move the whole workspace to the next output
-bindsym $mod+m move workspace to output up
+bindsym $mod+m move workspace to output right
 
 # assign default monitors for workspaces
 workspace $workspace3 output DP-3
