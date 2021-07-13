@@ -240,6 +240,12 @@ mode "$mode_system" {
 bindsym $mod+Delete mode "$mode_system"
 
 # startup
+exec swayidle -w \
+         timeout 300 '$Locker' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep '$Locker'
+
 exec_always pkill kanshi
 exec_always kanshi
 exec nm-applet --indicator
