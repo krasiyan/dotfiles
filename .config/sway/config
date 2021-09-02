@@ -130,7 +130,7 @@ assign [instance="chromium"] $workspace1
 assign [instance="emacs"] $workspace2
 assign [app_id="Alacritty"] $workspace3
 assign [app_id="org.gnome.Nautilus"] $workspace5
-assign [instance="spotify"]  $workspace10
+assign [class="Spotify"]  $workspace10
 assign [instance="skype"]  $workspace9
 
 for_window [class="Gsimplecal"] floating enable
@@ -140,6 +140,9 @@ for_window [app_id="waybar" floating] {
     move down 150px
     move left 100px
 }
+
+for_window [class = "Spotify"] move to workspace $workspace10
+
 
 bindsym $mod+Shift+r reload
 # exit i3 (logs you out of your X session)
@@ -250,7 +253,7 @@ exec_always pkill kanshi
 exec_always kanshi
 exec nm-applet --indicator
 exec blueman-applet
-exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
+exec --no-startup-id spotify
 # exec --no-startup-id gammastep
 # exec --no-startup-id gammastep-indicator
 exec_always killall -q notify-osd
