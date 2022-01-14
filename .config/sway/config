@@ -278,3 +278,4 @@ exec --no-startup-id chromium
 exec --no-startup-id emacs --daemon && emacsclient -nc
 exec --no-startup-id alacritty
 exec --no-startup-id /usr/bin/nautilus
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
