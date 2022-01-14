@@ -1,5 +1,6 @@
 set $Locker swaylock --color "#002b36" -e -f
 set $mod Mod4
+set $TRACKBALL_ID 1149:32792:Kensington_Expert_Wireless_TB_Mouse
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
@@ -13,6 +14,16 @@ input "type:keyboard" {
 }
 
 input * xkb_numlock enable
+
+input "1149:32792:Kensington_Expert_Wireless_TB_Mouse" {
+    accel_profile flat
+    scroll_method on_button_down
+    scroll_button 275
+}
+
+# swap the top left and top right trackball buttons (back and middle click)
+bindsym --input-device=$TRACKBALL_ID --whole-window BTN_MIDDLE seat - cursor press BTN_SIDE, seat - cursor release BTN_SIDE
+bindsym --input-device=$TRACKBALL_ID --whole-window BTN_SIDE seat - cursor press BTN_MIDDLE, seat - cursor release BTN_MIDDLE
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
