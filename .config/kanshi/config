@@ -1,7 +1,7 @@
 profile laptop+ext {
     output eDP-1 mode 3840x2160 scale 2.0 position 0,1080
-    output DP-3 mode 3840x2160 scale 1.75 position 1920,720
-    output DP-2 mode 1920x1080 scale 1.0 position 4114,562 transform 90
+    output DP-5 mode 3840x2160 scale 1.75 position 1920,720
+    output DP-4 mode 1920x1080 scale 1.0 position 4114,562 transform 90
 }
 
 profile laptop {
