@@ -1,0 +1,5 @@
+show=drun,dmenu
+allow_images=true
+insensitive=true
+prompt=
+key_expand=Tab

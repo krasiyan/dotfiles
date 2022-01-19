@@ -1,0 +1,117 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 25,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["custom/kbdlayout", "backlight", "pulseaudio", "disk#h", "disk#r", "custom/firewall", "network", "memory", "cpu", "temperature", "custom/fan", "battery", "custom/clock", "tray"],
+    "sway/workspaces": {
+        "all-outputs": true,
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "custom/kbdlayout": {
+        "exec": "swaymsg -t get_inputs | jq 'map(select(has(\"xkb_active_layout_name\")))[0].xkb_active_layout_name' | awk '{print substr($0,2,3)}'",
+        "interval": 10,
+        "format": " {}",
+        "tooltip": false
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [""],
+        "on-scroll-up": "brightnessctl s +5% > /dev/null",
+        "on-scroll-down": "brightnessctl s 5%- > /dev/null"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "disk#h": {
+        "format": "h {percentage_used}%",
+        "path": "/home"
+    },
+    "disk#r": {
+        "format": "r {percentage_used}%",
+        "path": "/"
+    },
+    "custom/firewall": {
+        "exec": "sudo ufw status | grep -Po '(?<=Status: )(.)*'",
+        "format": " {}",
+        "interval": 30,
+        "on-click-right": "sudo gufw",
+        "tooltip": false
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " {essid} ({signalStrength}%) {ipaddr}",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-linked": " (No IP)",
+        "format-disconnected": "⚠ Disconnected ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "memory": {
+        "format": " {}%",
+        "states": {
+           "warning": 75,
+           "critical": 85
+        }
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "states": {
+           "warning": 75,
+           "critical": 85
+        }
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": true
+    },
+    "custom/fan": {
+        "exec": "cat /proc/acpi/ibm/fan | awk 'NR==2 {print $2}'",
+        "format": "❋ {}rpm",
+        "interval": 10,
+        "tooltip": false
+    },
+    "battery": {
+        "bat": "BAT0",
+        "adapter": "AC",
+        "states": {
+            "warning": 35,
+            "critical": 25
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-discharging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "custom/clock": {
+        "interval": 1,
+        "exec": "date '+ %H:%M:%S  %d-%m-%Y wk%V'",
+        "tooltip": false,
+        "on-click": "gsimplecal"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}

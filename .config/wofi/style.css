@@ -1,0 +1,34 @@
+window {
+    background-color: #002b37;
+    font-size: 20px;
+}
+
+#input {
+background-color:  #002b37;
+    color: #ffffff;
+    margin: 5px 0px;
+}
+
+#inner-box {
+    color: #ffffff;
+}
+#text {
+    color: #819396;
+}
+
+#entry:selected {
+    color: #008ed4
+}
+
+#text:selected {
+    color: #ffffff;
+}
+
+/* wofi.opacity: 90 */
+/* wofi.lines: 15 */
+/* wofi.width: 100 */
+/* wofi.padding: 100 */
+/* wofi.bw: 0 */
+/* wofi.font: Consolas 21 */
+/* wofi.eh: 1.2 */
+/* wofi.hide-scrollbar: true */
