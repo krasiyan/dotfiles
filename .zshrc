@@ -63,7 +63,25 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins!
-plugins=(git common-aliases sudo debian ssh-agent web-search extract github zsh-nvm npm docker golang)
+plugins=(
+    ag
+    alias-finder
+    aliases
+    common-aliases
+    debian
+    docker
+    extract
+    git
+    gh
+    github
+    golang
+    npm
+    safe-paste
+    ssh-agent
+    sudo
+    web-search
+    zsh-nvm
+)
 
 # ssh agent setup
 zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" ! -name "known_hosts" ! -name "config" ! -name "*.ppk" ! -name "environment-laptop" -printf "%f\n"`
