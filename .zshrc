@@ -80,6 +80,7 @@ plugins=(
     ssh-agent
     sudo
     web-search
+    ufw
     zsh-nvm
 )
 
@@ -127,4 +128,6 @@ function =
 }
 alias calc="="
 
-[[ -s "/home/krasiyan/.gvm/scripts/gvm" ]] && source "/home/krasiyan/.gvm/scripts/gvm"
+[[ -s "/home/$USER/.gvm/scripts/gvm" ]] && source "/home/$USER/.gvm/scripts/gvm"
+
+path=('/home/$USER/.local/bin', $path)

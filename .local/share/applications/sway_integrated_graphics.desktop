@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Sway (integrated graphics)
+Comment=An i3-compatible Wayland compositor; Renders on the integrated (Intel) GPU
+Exec=env WLR_DRM_DEVICES=/dev/dri/card0 sway
+Type=Application
