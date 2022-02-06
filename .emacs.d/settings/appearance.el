@@ -91,4 +91,6 @@
 
 (setq auto-window-vscroll nil)
 
+(pixel-scroll-precision-mode)
+
 (provide 'appearance)
