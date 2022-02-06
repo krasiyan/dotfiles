@@ -103,12 +103,12 @@ export LC_CTYPE="en_US.UTF-8"
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs -nw'
  else
-   export EDITOR='/usr/bin/emacsclient --alternate-editor emacs'
-   export VISUAL='/usr/bin/emacsclient --alternate-editor emacs'
+   export EDITOR='/usr/local/bin/emacsclient --alternate-editor emacs'
+   export VISUAL='/usr/local/bin/emacsclient --alternate-editor emacs'
  fi
 
 # Aliases
-alias e="/usr/bin/emacsclient -n --alternate-editor emacs"
+alias e="/usr/local/bin/emacsclient -n --alternate-editor emacs"
 alias configemacs="e ~/.emacs.d/init.el"
 alias configzsh="e ~/.zshrc"
 alias configohmyzsh="e ~/.oh-my-zsh"
