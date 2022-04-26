@@ -1,0 +1,9 @@
+configuration {
+
+  font: "Consolas 21";
+  combi-modi: "window,drun,ssh";
+  dpi: 192;
+
+}
+@theme "solarized"
+
