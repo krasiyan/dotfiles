@@ -17,7 +17,7 @@ input "type:keyboard" {
 
 input * xkb_numlock enable
 
-input "1149:32792:Kensington_Expert_Wireless_TB_Mouse" {
+input $TRACKBALL_ID {
     accel_profile flat
     scroll_method on_button_down
     scroll_button 275
@@ -141,7 +141,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # default workspaces
 assign [instance="chromium"] $workspace1
-assign [instance="google-chrome"] $workspace1
+assign [app_id="google-chrome"] $workspace1
 assign [app_id="firefox"] $workspace1
 assign [instance="emacs"] $workspace2
 assign [app_id="emacs"] $workspace2
@@ -266,7 +266,10 @@ exec swayidle -w \
               resume 'swaymsg "output * dpms on"' \
          before-sleep '$Locker'
 
-exec_always pkill kanshi && kanshi
+exec_always {
+  pkill kanshi
+  kanshi
+}
 exec nm-applet --indicator
 exec blueman-applet
 # exec --no-startup-id spotify
