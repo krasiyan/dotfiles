@@ -5,7 +5,7 @@ profile laptop+ext(discrete_graphics) {
 }
 
 profile laptop+ext(hybrid_graphics) {
-    output eDP-1 mode 3840x2160 scale 2.0 position 0,0
+    output eDP-1 mode 1920x1080 scale 1.0 position 0,0
     output DP-5 mode 3840x2160@60.00 scale 2.0 position 1920,0
     output DP-4 mode 1920x1080@60.00 scale 1.0 position 3840,0 transform 90
 }

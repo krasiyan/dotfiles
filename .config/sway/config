@@ -4,7 +4,7 @@ set $TRACKBALL_ID 1149:32792:Kensington_Expert_Wireless_TB_Mouse
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
-output * max_render_time 5
+output eDP-1 mode --custom 1920x1080@60Hz
 
 font pango:Consolas 12
 
