@@ -11,6 +11,9 @@
 ;; quickhelp tooltips
 (company-quickhelp-mode 1)
 
+;; disable tern .tern-port files
+(setq tern-command '("tern" "--no-port-file"))
+
 ;; run tern-mode/company-tern for all *.js files
 (add-hook 'web-mode-hook
           (lambda ()
@@ -27,9 +30,6 @@
 (setq company-tooltip-align-annotations t)
 
 (add-to-list 'company-backends '(company-yasnippet))
-
-;; disable tern .tern-port files
-;; (setq tern-command '("tern" "--no-port-file"))
 
 (defun check-expansion ()
   (save-excursion

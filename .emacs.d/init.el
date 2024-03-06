@@ -155,6 +155,7 @@
      golint                             ; go linter
      company-go                         ; go completion
      projectile                         ; project navigation / fuzzy search
+     tern                               ; javascript code analyizer
      tide                               ; typescript interactive development environment
      prettier-js                        ; prettier code formatting
      )))

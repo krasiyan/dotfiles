@@ -24,6 +24,9 @@
 (setq-default js2-strict-missing-semi-warning nil)
 (setq-default js2-strict-trailing-comma-warning t) ;; jshint does not warn about this now for some reason
 
+;; disable tern .tern-port files
+(setq tern-command '("tern" "--no-port-file"))
+
 ;; turn on flycheck-mode and tern-mode with js2-mode
 (add-hook 'js2-mode-hook (lambda ()
                            (flycheck-mode 1)

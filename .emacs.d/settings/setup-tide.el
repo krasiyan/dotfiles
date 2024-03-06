@@ -13,7 +13,7 @@
 
 (add-hook 'web-mode-hook
           (lambda ()
-            (when (member (file-name-extension buffer-file-name)  '("ts" "tsx"))
+            (when (member (file-name-extension buffer-file-name)  '("ts" "tsx" "js"))
               (setup-tide-mode))))
 
 (provide 'setup-tide)
