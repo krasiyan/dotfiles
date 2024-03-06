@@ -5,7 +5,14 @@ Documents
 Desktop
 Downloads
 www
-.emacs.d/backups
-.emacs.d/autosaves
 .ssh
 .gnupg
+.emacs.d/backups
+.emacs.d/autosaves
+.emacs.d/eln-cache
+.emacs.d/elpa
+.emacs.d/transient
+.emacs.d/projectile-bookmarks.eld
+.emacs.d/company-statistics-cache.el
+.emacs.d/recentf
+.emacs.d/ido.last
