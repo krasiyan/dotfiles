@@ -85,7 +85,7 @@ plugins=(
 )
 
 # ssh agent setup
-zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" ! -name "known_hosts" ! -name "config" ! -name "*.ppk" ! -name "environment-laptop" -printf "%f\n"`
+zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" ! -name "known_hosts" ! -name "config" ! -name "*.ppk" ! -name "environment-laptop" ! -name "environment-pc" -printf "%f\n"`
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,3 +131,4 @@ alias calc="="
 [[ -s "/home/$USER/.gvm/scripts/gvm" ]] && source "/home/$USER/.gvm/scripts/gvm"
 
 path=('/home/$USER/.local/bin', $path)
+fpath+=${ZDOTDIR:-~}/.zsh_functions
