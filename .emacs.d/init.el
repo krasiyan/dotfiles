@@ -152,6 +152,7 @@
      tern                               ; javascript code analyizer
      tide                               ; typescript interactive development environment
      prettier-js                        ; prettier code formatting
+     quelpa                             ; tool to compile and install Emacs Lisp packages locally from local or remote source code
      )))
 
 (condition-case nil
@@ -164,8 +165,12 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+
 ;; Set up appearance
 (require 'appearance)
+
+;; Set up package management
+(require 'setup-quelpa)
 
 ;; Setup extensions
 (require 'setup-neotree)
@@ -205,6 +210,7 @@
 (require 'setup-tide)
 (require 'setup-prettier)
 (require 'setup-spelling)
+(require 'setup-copilot)
 
 ;; Map files to modes
 (require 'mode-mappings)
