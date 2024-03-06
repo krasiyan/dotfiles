@@ -29,6 +29,7 @@ the near future. :)
 - [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 - [`ly`](https://github.com/nullgemm/ly)
 - [`alacritty`](https://github.com/alacritty/alacritty)
+- [`Inconsolata`](https://fonts.google.com/specimen/Inconsolata)
 
 ### sway setup
 
