@@ -25,14 +25,13 @@ the near future. :)
 - [`Zsh`](http://www.zsh.org/)
 - [`editorconfig`](https://github.com/editorconfig/editorconfig-core-c)
 - [`footswitch`](https://github.com/rgerganov/footswitch)
-- [`gvm`](https://github.com/moovweb/gvm)
 - [`keepassxc`](https://keepassxc.org/)
-- [`powerlevel9k`](https://github.com/bhilburn/powerlevel9k) / [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
+- [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 - [`ly`](https://github.com/nullgemm/ly)
+- [`alacritty`](https://github.com/alacritty/alacritty)
 
 ### sway setup
 
-- [`alacritty`](https://github.com/alacritty/alacritty
 - [`gammastep`](https://gitlab.com/chinstrap/gammastep)
 - [`grimshot`](https://github.com/swaywm/sway/blob/master/contrib/grimshot)
 - [`kanshi`](https://github.com/emersion/kanshi)
@@ -50,10 +49,8 @@ the near future. :)
 - [`hsetroot`](https://github.com/himdel/hsetroot)
 - [`i3`](https://github.com/i3/i3)
 - [`i3blocks`](https://github.com/vivien/i3blocks)
-- [`redshift`](https://github.com/jonls/redshift)
 - [`rofi`](https://github.com/DaveDavenport/rofi)
 - [`xdotool`](https://www.semicomplete.com/projects/xdotool/)
-- [`xfce4-screenshooter`](http://goodies.xfce.org/projects/applications/xfce4-screenshooter)
 - [`xkblayout-state`](https://github.com/nonpop/xkblayout-state)
 
 ## i3 vs sway
