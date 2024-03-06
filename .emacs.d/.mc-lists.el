@@ -32,6 +32,7 @@
         my-backward-delete-word
         my-delete-current-line
         my-delete-word
+        pixel-scroll-precision
         sh-assignment
         tab-indent-or-complete
         tide-jump-to-definition

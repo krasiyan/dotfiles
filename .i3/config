@@ -142,6 +142,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class="Chromium"] $workspace1
 assign [class="Emacs"] $workspace2
 assign [class="Xfce4-terminal"] $workspace3
+assign [class="Alacritty"] $workspace3
 assign [class="robo3t"] $workspace4
 assign [class="Nautilus"] $workspace5
 assign [class="VirtualBox Manager"] $workspace6

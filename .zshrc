@@ -27,7 +27,7 @@ if [ -n "$INSIDE_EMACS" ]; then
   print -P "\033AnSiTu %n"
   print -P "\033AnSiTc %d"
 
-    POWERLEVEL9K_MODE='flat'
+  POWERLEVEL9K_MODE='flat'
   POWERLEVEL9K_TIME_FOREGROUND="black"
   POWERLEVEL9K_TIME_BACKGROUND="white"
   POWERLEVEL9K_STATUS_ERROR_FOREGROUND="white"
@@ -103,12 +103,12 @@ export LC_CTYPE="en_US.UTF-8"
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs -nw'
  else
-   export EDITOR='/usr/local/bin/emacsclient --alternate-editor emacs'
-   export VISUAL='/usr/local/bin/emacsclient --alternate-editor emacs'
+   export EDITOR='/usr/bin/emacsclient --alternate-editor emacs'
+   export VISUAL='/usr/bin/emacsclient --alternate-editor emacs'
  fi
 
 # Aliases
-alias e="/usr/local/bin/emacsclient -n --alternate-editor emacs"
+alias e="/usr/bin/emacsclient -n --alternate-editor emacs"
 alias configemacs="e ~/.emacs.d/init.el"
 alias configzsh="e ~/.zshrc"
 alias configohmyzsh="e ~/.oh-my-zsh"
@@ -121,6 +121,8 @@ alias grbim='git rebase -i origin/master'
 alias qrcode='qrencode -o - -t UTF8'
 
 complete -F _complete_alias dotfiles
+compdef dotfiles='git'
+setopt complete_aliases
 
 # bc - An arbitrary precision calculator language
 # Ripped off from https://github.com/arzzen/calc.plugin.zsh
