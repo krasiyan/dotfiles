@@ -5,3 +5,7 @@ Documents
 Desktop
 Downloads
 www
+.emacs.d/backups
+.emacs.d/autosaves
+.ssh
+.gnupg
