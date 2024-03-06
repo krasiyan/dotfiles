@@ -120,6 +120,8 @@ alias ducks="du -hcs -BM * | sort -rn | head"
 alias grbim='git rebase -i origin/master'
 alias qrcode='qrencode -o - -t UTF8'
 
+complete -F _complete_alias dotfiles
+
 # bc - An arbitrary precision calculator language
 # Ripped off from https://github.com/arzzen/calc.plugin.zsh
 function = 
