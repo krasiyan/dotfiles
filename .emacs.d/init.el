@@ -146,13 +146,13 @@
      yaml-mode                          ; yaml editing mode
      json-mode                          ; json editing mode
      go-mode                            ; go editing mode
-     golint                             ; go linter
      company-go                         ; go completion
      projectile                         ; project navigation / fuzzy search
      tern                               ; javascript code analyizer
      tide                               ; typescript interactive development environment
      prettier-js                        ; prettier code formatting
      quelpa                             ; tool to compile and install Emacs Lisp packages locally from local or remote source code
+     lsp-mode                           ; https://emacs-lsp.github.io/lsp-mode/
      )))
 
 (condition-case nil
@@ -203,6 +203,7 @@
 (eval-after-load 'magit '(require 'setup-magit))
 
 ;; Language specific setup files
+(require 'setup-lsp-mode)
 (eval-after-load 'web-mode '(require 'setup-web-mode))
 (eval-after-load 'less-css-mode '(require 'setup-less-css-mode))
 (require 'setup-python-mode)

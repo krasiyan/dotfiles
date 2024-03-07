@@ -1,12 +1,18 @@
-(add-to-list 'load-path (concat (getenv "GOPATH")  "/src/github.com/mdempsky/gocode/emacs-company"))
-(add-to-list 'load-path (concat (getenv "GOPATH")  "/src/golang.org/x/lint/misc/emacs"))
-
-(require 'golint)
 (require 'company)
 (require 'company-go)
 
+(add-hook 'go-mode-hook #'lsp-deferred)
+
+;; Make sure you don't have other gofmt/goimports hooks enabled.
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+(lsp-register-custom-settings
+  '(("gopls.staticcheck" t t)))
+
 (add-hook 'go-mode-hook  (lambda ()
-  (add-hook 'before-save-hook #'gofmt-before-save)
   (set (make-local-variable 'company-backends) '(company-go))
   (company-mode)
   ))

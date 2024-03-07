@@ -47,6 +47,7 @@
         completion-at-point
         create-new-buffer
         cua--prefix-override-handler
+        cua-copy-handler
         cua-copy-region
         cua-cut-region
         electric-pair-delete-pair

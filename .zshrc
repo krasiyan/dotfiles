@@ -136,6 +136,7 @@ function =
 alias calc="="
 
 # Path
-path+=('/home/$USER/.local/bin')
-path+=('/usr/local/go/bin')
+path+=("/home/$USER/.local/bin")
+path+=("/usr/local/go/bin")
+path+=("/home/$USER/go/bin")
 fpath+=${ZDOTDIR:-~}/.zsh_functions
