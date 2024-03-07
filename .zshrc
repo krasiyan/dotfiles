@@ -120,9 +120,12 @@ alias ducks="du -hcs -BM * | sort -rn | head"
 alias grbim='git rebase -i origin/master'
 alias qrcode='qrencode -o - -t UTF8'
 
+# dotfiles alias auto-completion
 complete -F _complete_alias dotfiles
 compdef dotfiles='git'
 setopt complete_aliases
+
+# Functions
 
 # bc - An arbitrary precision calculator language
 # Ripped off from https://github.com/arzzen/calc.plugin.zsh
@@ -132,7 +135,7 @@ function =
 }
 alias calc="="
 
-[[ -s "/home/$USER/.gvm/scripts/gvm" ]] && source "/home/$USER/.gvm/scripts/gvm"
-
-path=('/home/$USER/.local/bin', $path)
+# Path
+path+=('/home/$USER/.local/bin')
+path+=('/usr/local/go/bin')
 fpath+=${ZDOTDIR:-~}/.zsh_functions
