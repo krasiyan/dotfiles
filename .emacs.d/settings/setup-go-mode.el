@@ -15,6 +15,7 @@
 (add-hook 'go-mode-hook  (lambda ()
   (set (make-local-variable 'company-backends) '(company-go))
   (company-mode)
+  (setq tab-width 4)
   ))
 
 (provide 'setup-go-mode)
