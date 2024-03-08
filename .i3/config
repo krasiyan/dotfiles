@@ -271,19 +271,19 @@ bindsym $mod+Shift+p mode "$mode_displays"
 exec --no-startup-id ~/scripts/keyboardlayouts.sh
 exec nm-applet
 exec blueman-applet
-exec --no-startup-id LD_PRELOAD=/usr/lib/libcurl.so.3:~/scripts/spotifywm.so spotify
-exec --no-startup-id redshift-gtk
+# exec --no-startup-id redshift-gtk
 exec --no-startup-id compton --config ~/.config/compton.conf
 exec_always --no-startup-id hsetroot -solid "#073642"
 exec_always killall -q notify-osd
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
-exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
-exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
+# exec --no-startup-id syndaemon -i 0.4 -d -t -K -R
+# exec_always --no-startup-id ~/scripts/apply_synclient_settings.sh
 exec --no-startup-id ~/scripts/xss-lock.sh start
-exec --no-startup-id ~/scripts/kensington_trackball.sh
+# exec --no-startup-id ~/scripts/kensington_trackball.sh
 
 # startup applications
-exec --no-startup-id chromium
+# exec --no-startup-id google-chrome-stable
+exec --no-startup-id firefox-esr
 exec --no-startup-id emacs --daemon && emacsclient -nc
-exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id alacritty
 exec --no-startup-id /usr/bin/nautilus
