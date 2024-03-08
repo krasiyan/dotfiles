@@ -139,4 +139,5 @@ alias calc="="
 path+=("/home/$USER/.local/bin")
 path+=("/usr/local/go/bin")
 path+=("/home/$USER/go/bin")
+path+=("/var/lib/flatpak/exports/bin")
 fpath+=${ZDOTDIR:-~}/.zsh_functions
