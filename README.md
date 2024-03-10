@@ -54,6 +54,7 @@ the near future. :)
 - [`rofi`](https://github.com/DaveDavenport/rofi)
 - [`xdotool`](https://www.semicomplete.com/projects/xdotool/)
 - [`xkblayout-state`](https://github.com/nonpop/xkblayout-state)
+- [`flameshot`](https://flameshot.org/)
 
 ## i3 vs sway
 
