@@ -2,7 +2,7 @@ configuration {
 
   font: "Consolas 21";
   combi-modi: "window,drun,ssh";
-  dpi: 192;
+  dpi: 120;
 
 }
 @theme "solarized"
