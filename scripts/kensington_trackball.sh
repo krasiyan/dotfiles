@@ -11,8 +11,8 @@ xinput set-prop ${TRACKBALL_ID} "libinput Button Scrolling Button" 8
 xinput set-prop ${TRACKBALL_ID} "libinput Scroll Method Enabled" 0, 0, 1
 
 # slow down acceleration
-xinput set-prop ${TRACKBALL_ID} "libinput Accel Speed" 0.3
+#xinput set-prop ${TRACKBALL_ID} "libinput Accel Speed" 0.0
 
 # acceleration: adaptive: disabled, flat: enabled
-xinput set-prop ${TRACKBALL_ID} "libinput Accel Profile Enabled" 0, 1
-xinput set-prop ${TRACKBALL_ID} "libinput Accel Profiles Available" 0, 1
+#xinput set-prop ${TRACKBALL_ID} "libinput Accel Profile Enabled" 0, 1
+#xinput set-prop ${TRACKBALL_ID} "libinput Accel Profiles Available" 0, 1
