@@ -64,7 +64,6 @@ COMPLETION_WAITING_DOTS="true"
 
 # Plugins!
 plugins=(
-    ag
     alias-finder
     aliases
     common-aliases
