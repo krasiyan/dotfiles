@@ -293,3 +293,5 @@ exec --no-startup-id firefox-esr
 exec --no-startup-id emacs --daemon && emacsclient -nc
 exec --no-startup-id alacritty
 exec --no-startup-id /usr/bin/nautilus
+
+exec xrdb -merge ~/.Xresources
