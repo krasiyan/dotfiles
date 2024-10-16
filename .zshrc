@@ -62,6 +62,11 @@ ENABLE_CORRECTION="false"
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Plugins!
 plugins=(
     alias-finder
@@ -75,6 +80,9 @@ plugins=(
     github
     golang
     npm
+    pip
+    pyenv
+    python
     safe-paste
     ssh-agent
     sudo
