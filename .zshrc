@@ -88,7 +88,7 @@ plugins=(
     sudo
     web-search
     ufw
-    zsh-nvm
+    nvm
 )
 
 # ssh agent setup
