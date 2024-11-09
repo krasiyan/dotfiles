@@ -247,4 +247,11 @@ there's a region, all lines that region covers will be duplicated."
 ;; magit status
 (global-set-key (kbd "C-x g") 'magit-status)
 
+
+;; mac specific settings
+(when (eq system-type 'darwin)
+  (setq mac-control-modifier 'control)
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'super))
+
 (provide 'key-bindings)
