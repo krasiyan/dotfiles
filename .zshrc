@@ -5,6 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Homebrew
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_CASK_OPTS=--require-sha
+export NVM_HOMEBREW=$(brew --prefix nvm)
+
 # Colors!
 export TERM="xterm-256color"
 export LANG='en_US.UTF-8'
@@ -110,18 +116,18 @@ export LC_CTYPE="en_US.UTF-8"
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs -nw'
  else
-   export EDITOR='/usr/bin/emacsclient --alternate-editor emacs'
-   export VISUAL='/usr/bin/emacsclient --alternate-editor emacs'
+   export EDITOR='/usr/local/bin/emacsclient --alternate-editor emacs'
+   export VISUAL='/usr/local/bin/emacsclient --alternate-editor emacs'
  fi
 
 # Aliases
-alias e="/usr/bin/emacsclient -n --alternate-editor emacs"
+alias e="/usr/local/bin/emacsclient -n --alternate-editor emacs"
 alias configemacs="e ~/.emacs.d/init.el"
 alias configzsh="e ~/.zshrc"
 alias configohmyzsh="e ~/.oh-my-zsh"
 alias configi3="e ~/.i3"
 alias configssh="e ~/.ssh/config"
-alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
+alias dotfiles='/usr/bin/git --git-dir=/Users/$USER/dotfiles/ --work-tree=/Users/$USER'
 alias cls="clear"
 alias ducks="du -hcs -BM * | sort -rn | head"
 alias grbim='git rebase -i origin/master'
@@ -143,8 +149,8 @@ function =
 alias calc="="
 
 # Path
-path+=("/home/$USER/.local/bin")
+path+=("/Users/$USER/.local/bin")
 path+=("/usr/local/go/bin")
-path+=("/home/$USER/go/bin")
+path+=("/Users/$USER/go/bin")
 path+=("/var/lib/flatpak/exports/bin")
 fpath+=${ZDOTDIR:-~}/.zsh_functions
