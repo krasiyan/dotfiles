@@ -2,6 +2,10 @@
 ;; (set-face-attribute 'default nil :font "Consolas for Powerline 14")
 (setq default-frame-alist '((font . "Inconsolata-14")))
 
+;; no title bar
+(add-to-list 'default-frame-alist '(undecorated-round . t))
+(setq frame-resize-pixelwise t)
+
 ;; Don't beep!
 (setq visible-bell nil)
 (setq ring-bell-function (lambda ()
