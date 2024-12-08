@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "scm.alwaysShowRepositories": true,
+    "redhat.telemetry.enabled": false
+}
