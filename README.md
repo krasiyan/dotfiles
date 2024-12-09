@@ -1,45 +1,37 @@
 # Krasiyan's doftiles
 
-Dotfiles configuration for [sway](https://github.com/swaywm/sway) / [i3](https://github.com/i3/i3),
-[Zsh](http://www.zsh.org/) (with [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh))
-and [Emacs](https://www.gnu.org/software/emacs/)
-(dummy friendly setup with [CUA](https://www.emacswiki.org/emacs/CuaMode)).
-Most of the configs are borrowed from all over the web and I will try give credits to everyone in
-the near future. :)
+Dotfiles configuration for GNU/Linux with either [sway](https://github.com/swaywm/sway) (Wayland)
+or [i3](https://github.com/i3/i3) (X11). Also supporting macOS with
+[AeroSpace](https://github.com/nikitabobko/AeroSpace).
+
+Using [Emacs](https://www.gnu.org/software/emacs/) (with a dummy friendly
+[CUA](https://www.emacswiki.org/emacs/CuaMode) setup) and [Zsh](http://www.zsh.org/) (with [Oh My
+Zsh](https://github.com/robbyrussell/oh-my-zsh)).
 
 # Screenshots
 
-![](http://i.imgur.com/LFm0sFz.png)
+- i3
+  ![](./i3.png)
+
+- macOS
+  ![](./macos.png)
 
 # Setup
 
-## Prerequisites
+## Dependencies
 
 ### Generic
 
-- [`Debian`](https://www.debian.org/)
 - [`Emacs`](https://www.gnu.org/software/emacs/)
-- [`Github Hub`](https://hub.github.com/)
-- [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
-- [`The silver searcher AG`](https://github.com/ggreer/the_silver_searcher)
-- [`Zsh`](http://www.zsh.org/)
-- [`editorconfig`](https://github.com/editorconfig/editorconfig-core-c)
-- [`footswitch`](https://github.com/rgerganov/footswitch)
-- [`keepassxc`](https://keepassxc.org/)
-- [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
-- [`ly`](https://github.com/nullgemm/ly)
 - [`alacritty`](https://github.com/alacritty/alacritty)
+- [`Zsh`](http://www.zsh.org/)
+- [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
+- [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
+- [`The silver searcher AG`](https://github.com/ggreer/the_silver_searcher)
 - [`Inconsolata`](https://fonts.google.com/specimen/Inconsolata)
+- [`ly`](https://github.com/nullgemm/ly)
 
-### sway setup
-
-- [`gammastep`](https://gitlab.com/chinstrap/gammastep)
-- [`grimshot`](https://github.com/swaywm/sway/blob/master/contrib/grimshot)
-- [`kanshi`](https://github.com/emersion/kanshi)
-- [`mako`](https://github.com/emersion/mako)
-- [`sway`](https://github.com/i3/sway)
-- [`waybar`](https://github.com/Alexays/Waybar)
-- [`wofi`](https://github.com/tsujp/wofi)
+### GNU/Linux
 
 ### i3 setup
 
@@ -55,11 +47,30 @@ the near future. :)
 - [`xdotool`](https://www.semicomplete.com/projects/xdotool/)
 - [`xkblayout-state`](https://github.com/nonpop/xkblayout-state)
 - [`flameshot`](https://flameshot.org/)
+- [`gufw`](https://help.ubuntu.com/community/Gufw)
 
-## i3 vs sway
+### sway setup
 
-Initial support for `sway` was added @ [!1](https://github.com/krasiyan/dotfiles/pull/1);
-both `i3` and `sway` are fully configured.
+- [`gammastep`](https://gitlab.com/chinstrap/gammastep)
+- [`grimshot`](https://github.com/swaywm/sway/blob/master/contrib/grimshot)
+- [`kanshi`](https://github.com/emersion/kanshi)
+- [`mako`](https://github.com/emersion/mako)
+- [`sway`](https://github.com/i3/sway)
+- [`waybar`](https://github.com/Alexays/Waybar)
+- [`wofi`](https://github.com/tsujp/wofi)
+
+:information_source: Initial support for `sway` was added @
+[!1](https://github.com/krasiyan/dotfiles/pull/1)
+
+### MacOS
+
+- [`homebrew`](https://brew.sh/)
+- [`AeroSpace`](https://github.com/nikitabobko/AeroSpace)
+- [`Karabiner`](https://github.com/pqrs-org/Karabiner-Elements)
+- [`LuLu`](https://objective-see.org/products/lulu.html)
+
+:information_source: Initial support for `MacOS` was added @
+[!2](https://github.com/krasiyan/dotfiles/pull/2)
 
 ## Cloning
 
@@ -67,3 +78,30 @@ both `i3` and `sway` are fully configured.
 3. `git clone --bare https://github.com/krasiyan/dotfiles.git ~/dotfiles`
 4. `dotfiles checkout`
 5. `dotfiles config --local status.showUntrackedFiles no`
+
+## MacOS setup snippets
+
+- Dump initial macOS defaults and diff them later:
+
+  ```sh
+
+  defaults read > defaults.pre
+
+  # apply custom defaults; make manual settings changes
+
+  defaults read > defaults.post
+
+  git diff --no-index defaults.pre defaults.post
+  ```
+
+- Apply custom [macOS defaults](https://macos-defaults.com/):
+
+  ```sh
+  . ~/scripts/macos_defaults.sh
+  ```
+
+- Update `Brewfile`:
+
+  ```sh
+  cd ~ && brew bundle dump --force
+  ```
