@@ -213,7 +213,7 @@ there's a region, all lines that region covers will be duplicated."
 (global-set-key (kbd "M-s-l") 'enlarge-window-horizontally)
 
 ;; jump to char
-(global-set-key (kbd "M-SPC") 'avy-goto-char)
+(global-set-key (kbd "S-M-SPC") 'avy-goto-char)
 
 ;; go to line
 (global-set-key (kbd "C-;") 'goto-line)
@@ -251,7 +251,7 @@ there's a region, all lines that region covers will be duplicated."
 ;; mac specific settings
 (when (eq system-type 'darwin)
   (setq mac-control-modifier 'control)
-  (setq mac-option-modifier 'meta)
-  (setq mac-command-modifier 'super))
+  (setq mac-option-modifier 'super)
+  (setq mac-command-modifier 'meta))
 
 (provide 'key-bindings)
