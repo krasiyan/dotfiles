@@ -25,3 +25,8 @@ family = "MesloLGS NF"
 [font.offset]
 x = 0
 y = -2
+
+[keyboard]
+bindings= [
+    { key= "Back", mods= "Control", chars= "\u0017" },
+]
