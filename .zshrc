@@ -152,8 +152,13 @@ function =
 alias calc="="
 
 # Path
-path+=("/Users/$USER/.local/bin")
 path+=("/usr/local/go/bin")
-path+=("/Users/$USER/go/bin")
 path+=("/var/lib/flatpak/exports/bin")
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  path+=("/Users/$USER/.local/bin")
+  path+=("/Applications/Visual Studio Code.app/Contents/Resources/app/bin")
+  path+=("/Users/$USER/go/bin")
+fi
+
 fpath+=${ZDOTDIR:-~}/.zsh_functions
