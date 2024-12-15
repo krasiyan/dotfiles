@@ -87,6 +87,7 @@ outer.right =      0
 
 cmd-h = [] # Disable "hide application"
 cmd-alt-h = [] # Disable "hide others"
+cmd-m = [] # Disable "minimize"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
@@ -107,7 +108,6 @@ alt-j = 'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-ar
 alt-k = 'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up'
 alt-l = 'focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right'
 
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-left = 'move left'
 alt-shift-down = 'move down'
@@ -118,7 +118,6 @@ alt-shift-h = 'move left'
 alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
-
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace --auto-back-and-forth 1'
@@ -131,7 +130,6 @@ alt-7 = 'workspace --auto-back-and-forth 7'
 alt-8 = 'workspace --auto-back-and-forth 8'
 alt-9 = 'workspace --auto-back-and-forth 9'
 alt-0 = 'workspace --auto-back-and-forth 10'
-
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -154,11 +152,19 @@ alt-f = 'macos-native-fullscreen'
 
 alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 
-alt-r = 'mode resize'
-
 alt-shift-q = 'close --quit-if-last-window'
 
 alt-shift-r = 'reload-config'
+
+# Application shortcuts
+alt-x = 'exec-and-forget open /Applications/KeePassXC.app'
+
+alt-z = 'exec-and-forget pmset displaysleepnow'
+
+alt-p = 'exec-and-forget open "x-apple.systempreferences:com.apple.preference.displays"'
+
+# Modes
+alt-r = 'mode resize'
 
 [mode.resize.binding]
 h = 'resize width -50'
