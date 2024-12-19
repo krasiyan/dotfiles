@@ -25,3 +25,12 @@ family = "MesloLGS NF"
 [font.offset]
 x = 0
 y = -2
+
+[window]
+decorations = "Buttonless"
+padding = { x = 0, y = 15 }
+
+[keyboard]
+bindings= [
+    { key= "Back", mods= "Control", chars= "\u0017" },
+]
