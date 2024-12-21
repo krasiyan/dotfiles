@@ -5,6 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+if [[ "$(uname)" == "Darwin" ]]; then
+  # Homebrew
+  export HOMEBREW_NO_ANALYTICS=1
+  export HOMEBREW_NO_INSECURE_REDIRECT=1
+  export HOMEBREW_CASK_OPTS=--require-sha
+  export NVM_HOMEBREW=$(brew --prefix nvm)
+fi
+
+
 # Colors!
 export TERM="xterm-256color"
 export LANG='en_US.UTF-8'
@@ -92,7 +101,7 @@ plugins=(
 )
 
 # ssh agent setup
-zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" ! -name "known_hosts" ! -name "config" ! -name "*.ppk" ! -name "environment-laptop" ! -name "environment-pc" -printf "%f\n"`
+zstyle :omz:plugins:ssh-agent identities `find ~/.ssh/ -type f ! -name "*.pub" ! -name "known_hosts" ! -name "config" ! -name "*.ppk" ! -name "environment-*"`
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,18 +119,18 @@ export LC_CTYPE="en_US.UTF-8"
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs -nw'
  else
-   export EDITOR='/usr/bin/emacsclient --alternate-editor emacs'
-   export VISUAL='/usr/bin/emacsclient --alternate-editor emacs'
+   export EDITOR='emacsclient --alternate-editor emacs'
+   export VISUAL='emacsclient --alternate-editor emacs'
  fi
 
 # Aliases
-alias e="/usr/bin/emacsclient -n --alternate-editor emacs"
+alias e="emacsclient -n --alternate-editor emacs"
 alias configemacs="e ~/.emacs.d/init.el"
 alias configzsh="e ~/.zshrc"
 alias configohmyzsh="e ~/.oh-my-zsh"
 alias configi3="e ~/.i3"
 alias configssh="e ~/.ssh/config"
-alias dotfiles='/usr/bin/git --git-dir=/home/$USER/dotfiles/ --work-tree=/home/$USER'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias cls="clear"
 alias ducks="du -hcs -BM * | sort -rn | head"
 alias grbim='git rebase -i origin/master'
@@ -143,8 +152,13 @@ function =
 alias calc="="
 
 # Path
-path+=("/home/$USER/.local/bin")
 path+=("/usr/local/go/bin")
-path+=("/home/$USER/go/bin")
 path+=("/var/lib/flatpak/exports/bin")
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  path+=("/Users/$USER/.local/bin")
+  path+=("/Applications/Visual Studio Code.app/Contents/Resources/app/bin")
+  path+=("/Users/$USER/go/bin")
+fi
+
 fpath+=${ZDOTDIR:-~}/.zsh_functions

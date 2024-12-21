@@ -213,7 +213,7 @@ there's a region, all lines that region covers will be duplicated."
 (global-set-key (kbd "M-s-l") 'enlarge-window-horizontally)
 
 ;; jump to char
-(global-set-key (kbd "M-SPC") 'avy-goto-char)
+(global-set-key (kbd "S-M-SPC") 'avy-goto-char)
 
 ;; go to line
 (global-set-key (kbd "C-;") 'goto-line)
@@ -246,5 +246,12 @@ there's a region, all lines that region covers will be duplicated."
 
 ;; magit status
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
+;; mac specific settings
+(when (eq system-type 'darwin)
+  (setq mac-control-modifier 'control)
+  (setq mac-option-modifier 'super)
+  (setq mac-command-modifier 'meta))
 
 (provide 'key-bindings)

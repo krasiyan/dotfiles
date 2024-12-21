@@ -25,3 +25,22 @@ family = "MesloLGS NF"
 [font.offset]
 x = 0
 y = -2
+
+[window]
+decorations = "Buttonless"
+padding = { x = 0, y = 15 }
+
+[keyboard]
+bindings= [
+    { key= "Back", mods= "Control", chars= "\u0017" },
+    { key= "Back", mods= "Command", chars= "\u0017" },
+
+    { key= "c", mods= "Control|Shift", action= "Copy" },
+    { key= "v", mods= "Control|Shift", action= "Paste" },
+
+    { key= "Space", mods= "Control|Shift", action = "ToggleViMode" },
+    { key= "Space", mods= "Command|Shift", action = "ToggleViMode" },
+
+    { key= "Space", mods= "Control", action = "ToggleNormalSelection" },
+    { key= "Space", mods= "Command", action = "ToggleNormalSelection" },
+]
