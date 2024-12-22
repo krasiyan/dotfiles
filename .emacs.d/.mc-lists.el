@@ -55,6 +55,7 @@
         find-tag
         fiplr-find-file
         ignore
+        isearch-repeat-backward
         js2-mode-show-node
         kmacro-end-or-call-macro
         list-buffers
