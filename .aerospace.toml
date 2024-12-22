@@ -85,7 +85,7 @@ outer.right =      0
 
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
-cmd-h = [] # Disable "hide application"
+# cmd-h = [] # Disable "hide application"; Conflicts with the Emacs M-h binding
 cmd-alt-h = [] # Disable "hide others"
 cmd-m = [] # Disable "minimize"
 
