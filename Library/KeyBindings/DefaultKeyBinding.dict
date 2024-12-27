@@ -1,0 +1,74 @@
+/*
+
+Key Modifiers:
+
+^: Ctrl
+$: Shift
+~: Option (Alt)
+@: Command (Apple)
+#: Numeric Keypad
+
+*/
+
+{
+    "\UF729"   = "moveToBeginningOfLine:";                       /* Home */
+    "\UF72B"   = "moveToEndOfLine:";                             /* End */
+
+    "$\UF729"  = "moveToBeginningOfLineAndModifySelection:";     /* Shift + Home */
+    "$\UF72B"  = "moveToEndOfLineAndModifySelection:";           /* Shift + End */
+
+    "^\UF729"  = "moveToBeginningOfDocument:";                   /* Ctrl  + Home */
+    "^\UF72B"  = "moveToEndOfDocument:";                         /* Ctrl  + End */
+
+    "$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Ctrl  + Shift      + Home */
+    "$@\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Cmd   + Shift      + Home */
+
+    "$^\UF72B" = "moveToEndOfDocumentAndModifySelection:";       /* Ctrl  + Shift      + End */
+    "$@\UF72B" = "moveToEndOfDocumentAndModifySelection:";       /* Cmd   + Shift      + End */
+
+    "^\UF729"  = "moveToBeginningOfDocument:";                   /* Ctrl  + Home */
+    "@\UF729"  = "moveToBeginningOfDocument:";                   /* Cmd   + Home */
+
+    "^\UF72B"  = "moveToEndOfDocument:";                         /* Ctrl  + End */
+    "@\UF72B"  = "moveToEndOfDocument:";                         /* Cmd   + End */
+
+    "^$\UF702" = "moveWordBackwardAndModifySelection:";          /* Ctrl  + Shift      + LeftArrow */
+    "@$\UF702" = "moveWordBackwardAndModifySelection:";          /* Cmd   + Shift      + LeftArrow */
+
+    "^$\UF703" = "moveWordForwardAndModifySelection:";           /* Ctrl  + Shift      + RightArrow */
+    "@$\UF703" = "moveWordForwardAndModifySelection:";           /* Cmd   + Shift      + RightArrow */
+
+    "^\UF702"  = "moveWordBackward:";                            /* Ctrl  + LeftArrow */
+    "@\UF702"  = "moveWordBackward:";                            /* Cmd   + LeftArrow */
+
+    "^\UF703"  = "moveWordForward:";                             /* Ctrl  + RightArrow */
+    "@\UF703"  = "moveWordForward:";                             /* Cmd   + RightArrow */
+
+    "^\U007F"  = "deleteWordBackward:";                          /* Ctrl  + Backspace */
+    "@\U007F"  = "deleteWordBackward:";                          /* Cmd   + Backspace */
+
+    "^\UF728"  = "deleteWordForward:";                           /* Ctrl  + Delete */
+    "@\UF728"  = "deleteWordForward:";                           /* Cmd   + Delete */
+
+
+    "^x"       = "cut:";                                         /* Ctrl  + x */
+    "^c"       = "copy:";                                        /* Ctrl  + c */
+    "^v"       = "paste:";                                       /* Ctrl  + v */
+    "^z"       = "undo:";                                        /* Ctrl  + z */
+    "^y"       = "redo:";                                        /* Ctrl  + y */
+    "^a"       = "selectAll:";                                   /* Ctrl  + a */
+    "^p"       = (printDocument:);                               /* Ctrl  + p */
+    "^s"       = (saveDocument:);                                /* Ctrl  + s */
+
+    "~a"       = ("insertText:", "ä");                           /* Opt   + a */
+    "~u"       = ("insertText:", "ü"); /* TODO: fix */           /* Opt   + u */
+    "~o"       = ("insertText:", "ö");                           /* Opt   + o */
+    "~A"       = ("insertText:", "Ä");                           /* Opt   + A */
+    "~U"       = ("insertText:", "Ü");                           /* Opt   + U */
+    "~O"       = ("insertText:", "Ö");                           /* Opt   + O */
+    "~s"       = ("insertText:", "ß");                           /* Opt   + s */
+
+    "~e"       = ("insertText:", "€");                           /* Opt   + e */
+    "~c"       = ("insertText:", "¢");                           /* Opt   + c */
+    "~n"       = ("insertText:", "№");                           /* Opt   + n */
+}
