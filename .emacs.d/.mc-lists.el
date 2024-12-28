@@ -69,6 +69,7 @@
         next-error
         nxml-insert-xml-declaration
         overwrite-mode
+        pixel-scroll-interpolate-up
         recentf-open-files
         smex
         tabbar-ruler-backward
