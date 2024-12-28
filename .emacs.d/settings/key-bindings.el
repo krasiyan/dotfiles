@@ -9,13 +9,31 @@
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)
 
+;; macOS specific settings
+;; Some of the C-... CUA bindings are duplicated to M-...
+(when (eq system-type 'darwin)
+  (add-hook 'cua-mode-hook (lambda () (define-key cua--cua-keys-keymap (kbd "M-v") nil)))
+  (setq mac-control-modifier 'control)
+  (setq mac-option-modifier 'super)
+  (setq mac-command-modifier 'meta)
+  (setq mac-pass-control-to-system nil)
+  (global-set-key "\M-a" 'mark-whole-buffer)
+  (global-set-key "\M-w" 'kill-this-buffer)
+  (global-set-key "\M-z" 'undo)
+  (global-set-key "\M-y" 'redo)
+  (global-set-key "\M-c" 'cua-copy-region)
+  (global-set-key "\M-v" 'cua-paste)
+  (global-set-key "\M-s" 'save-buffer)
+  (global-set-key "\M-f" 'isearch-forward)
+  (global-set-key "\M-g" 'keyboard-quit)
+  (global-set-key "\M-o" 'ido-find-file))
+
 ;; CUA mode because I'm a noob
 (cua-mode t)
 (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
 (transient-mark-mode 1) ;; No region when it is not highlighted
 (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 (delete-selection-mode) ;; overwrite the selection on paste
-
 
 ;; M-(h-j-k-l) for a Vi like movement
 (global-set-key "\M-h" 'backward-char)
@@ -74,7 +92,6 @@ This command does not push erased text to kill-ring."
 
 ;; rebind displaced movement key bindings
 (global-set-key "\M-p" 'recenter-top-bottom)
-(global-set-key "\M-v" 'downcase-word)
 (global-set-key "\M-b" 'recenter)
 
 ;; Font size
@@ -213,7 +230,7 @@ there's a region, all lines that region covers will be duplicated."
 (global-set-key (kbd "M-s-l") 'enlarge-window-horizontally)
 
 ;; jump to char
-(global-set-key (kbd "M-SPC") 'avy-goto-char)
+(global-set-key (kbd "S-M-SPC") 'avy-goto-char)
 
 ;; go to line
 (global-set-key (kbd "C-;") 'goto-line)
