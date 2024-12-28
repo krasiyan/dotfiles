@@ -2,7 +2,7 @@
 
 ## Partially lifted from https://github.com/vincentbernat/awesome-configuration/blob/master/bin/xss-lock
 me="$(readlink -f "$0")"
-timeout=240
+timeout=360
 
 case "$1" in
     start)
