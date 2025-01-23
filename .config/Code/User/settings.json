@@ -1,6 +1,18 @@
 {
-    "workbench.colorTheme": "Solarized Dark",
-    "editor.multiCursorModifier": "ctrlCmd",
-    "scm.alwaysShowRepositories": true,
-    "redhat.telemetry.enabled": false
+  "workbench.colorTheme": "Solarized Dark",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "scm.alwaysShowRepositories": true,
+  "redhat.telemetry.enabled": false,
+  "workbench.startupEditor": "none",
+  "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "bazel.buildifierFixOnFormat": true
 }
