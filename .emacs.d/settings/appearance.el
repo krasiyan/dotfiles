@@ -1,6 +1,6 @@
 ;; Set custom font
 ;; (set-face-attribute 'default nil :font "Consolas for Powerline 14")
-(setq default-frame-alist '((font . "Inconsolata-14")))
+(setq default-frame-alist '((font . "Inconsolata-15")))
 
 ;; no title bar
 (add-to-list 'default-frame-alist '(undecorated-round . t))
