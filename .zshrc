@@ -80,10 +80,12 @@ eval "$(pyenv init --path)"
 plugins=(
     alias-finder
     aliases
+    bazel
     common-aliases
     debian
     docker
     extract
+    fzf
     git
     gh
     github
