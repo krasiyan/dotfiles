@@ -18,7 +18,7 @@
 (add-hook 'web-mode-hook
           (lambda ()
             (when (string-equal "js" (file-name-extension buffer-file-name))
-              (tern-mode 1)
+              ;; (tern-mode 1)
               ;; company-tern
               ;; (add-to-list 'company-backends '(company-tern :separate company-yasnippet))
               )))
