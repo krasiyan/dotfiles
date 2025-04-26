@@ -81,5 +81,11 @@ defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
 # Show drives on Desktop
 defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "true"
 
+# Disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set a fast key repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 echo "Don't forget to reboot!"
