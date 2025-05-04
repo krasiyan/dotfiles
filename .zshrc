@@ -92,6 +92,8 @@ plugins=(
     golang
     npm
     pip
+    poetry
+    poetry-env
     pyenv
     python
     safe-paste
