@@ -121,14 +121,14 @@ export LC_CTYPE="en_US.UTF-8"
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='emacs -nw'
+   export EDITOR='nano'
  else
-   export EDITOR='emacsclient --alternate-editor emacs'
-   export VISUAL='emacsclient --alternate-editor emacs'
+   export EDITOR='nano'
+   export VISUAL='nano'
  fi
 
 # Aliases
-alias e="emacsclient -n --alternate-editor emacs"
+alias e="nano"
 alias configemacs="e ~/.emacs.d/init.el"
 alias configzsh="e ~/.zshrc"
 alias configohmyzsh="e ~/.oh-my-zsh"
