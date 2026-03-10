@@ -23,34 +23,11 @@ export ZSH=~/.oh-my-zsh
 
 DEFAULT_USER=$USER
 
-# https://github.com/romkatv/powerlevel10k + https://github.com/AravSinghal/ConsolasForPowerline
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-ZLE_RPROMPT_INDENT=0
-POWERLEVEL9K_LEGACY_ICON_SPACING=true
-
 # Allow emacs to track the current directory
 if [ -n "$INSIDE_EMACS" ]; then
   chpwd() { print -P "\033AnSiTc %d" }
   print -P "\033AnSiTu %n"
   print -P "\033AnSiTc %d"
-
-  POWERLEVEL9K_MODE='flat'
-  POWERLEVEL9K_TIME_FOREGROUND="black"
-  POWERLEVEL9K_TIME_BACKGROUND="white"
-  POWERLEVEL9K_STATUS_ERROR_FOREGROUND="white"
-  POWERLEVEL9K_STATUS_ERROR_BACKGROUND="red"
-  POWERLEVEL9K_STATUS_OK_FOREGROUND="white"
-  POWERLEVEL9K_STATUS_OK_BACKGROUND="green"
-  POWERLEVEL9K_NODE_VERSION_FOREGROUND="white"
-  POWERLEVEL9K_NODE_VERSION_BACKGROUND="blue"
-
-  POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
-  POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
-
-  POWERLEVEL9K_CUSTOM_FIX_EMACS_BACKGROUND="green"
-  POWERLEVEL9K_CUSTOM_FIX_EMACS_FOREGROUND="white"
 fi
 
 # _ and - will be interchangeable.
@@ -166,3 +143,5 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+eval "$(starship init zsh)"
