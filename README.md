@@ -20,18 +20,15 @@ Zsh](https://github.com/robbyrussell/oh-my-zsh)).
 
 ## Dependencies
 
-### Generic
+### GNU/Linux
 
 - [`Emacs`](https://www.gnu.org/software/emacs/)
 - [`alacritty`](https://github.com/alacritty/alacritty)
 - [`Zsh`](http://www.zsh.org/)
 - [`Oh My Zsh`](https://github.com/robbyrussell/oh-my-zsh)
-- [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
+- [`starship`](https://github.com/starship/starship)
 - [`The silver searcher AG`](https://github.com/ggreer/the_silver_searcher)
-- [`Inconsolata`](https://fonts.google.com/specimen/Inconsolata)
-- [`ly`](https://github.com/nullgemm/ly)
-
-### GNU/Linux
+- [`Nerd Fonts (MesloLGS NF)`](https://www.nerdfonts.com/)
 
 ### i3 setup
 
@@ -48,6 +45,7 @@ Zsh](https://github.com/robbyrussell/oh-my-zsh)).
 - [`xkblayout-state`](https://github.com/nonpop/xkblayout-state)
 - [`flameshot`](https://flameshot.org/)
 - [`gufw`](https://help.ubuntu.com/community/Gufw)
+- [`ly`](https://github.com/nullgemm/ly)
 
 ### sway setup
 
@@ -66,7 +64,6 @@ Zsh](https://github.com/robbyrussell/oh-my-zsh)).
 
 - [`homebrew`](https://brew.sh/)
 - [`AeroSpace`](https://github.com/nikitabobko/AeroSpace)
-- [`Karabiner`](https://github.com/pqrs-org/Karabiner-Elements)
 - [`LuLu`](https://objective-see.org/products/lulu.html)
 
 :information_source: Initial support for `MacOS` was added @
@@ -75,9 +72,9 @@ Zsh](https://github.com/robbyrussell/oh-my-zsh)).
 ## Cloning
 
 1. `alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'`
-3. `git clone --bare https://github.com/krasiyan/dotfiles.git ~/dotfiles`
-4. `dotfiles checkout`
-5. `dotfiles config --local status.showUntrackedFiles no`
+2. `git clone --bare https://github.com/krasiyan/dotfiles.git ~/dotfiles`
+3. `dotfiles checkout`
+4. `dotfiles config --local status.showUntrackedFiles no`
 
 ## MacOS setup snippets
 
