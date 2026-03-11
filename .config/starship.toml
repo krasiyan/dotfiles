@@ -138,7 +138,7 @@ ignore_base = false
 
 [time]
 disabled = false
-time_format = "%R"
+time_format = "%T"
 style = "bg:white"
 format = '[[  $time ](fg:crust bg:white)]($style)'
 
@@ -160,7 +160,8 @@ format = '[[ in $duration ](fg:crust bg:white)]($style)'
 style = "bg:white"
 disabled = false
 show_notifications = true
-min_time_to_notify = 45000
+min_time_to_notify = 30000
+min_time = 500
 
 [status]
 symbol = "✘ "
