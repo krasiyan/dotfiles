@@ -24,7 +24,7 @@ family = "MesloLGS NF"
 
 [font.offset]
 x = 0
-y = -2
+y = 0
 
 [window]
 decorations = "Buttonless"
@@ -48,7 +48,4 @@ bindings= [
 
     { key = "Space", mods = "Control|Shift", action = "ToggleViMode" },
     { key = "Space", mods = "Command|Shift", action = "ToggleViMode" },
-
-    { key = "Space", mods = "Control", action = "ToggleNormalSelection" },
-    { key = "Space", mods = "Command", action = "ToggleNormalSelection" },
 ]
