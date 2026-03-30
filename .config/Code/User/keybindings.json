@@ -422,5 +422,33 @@
     "key": "cmd+.",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+home",
+    "command": "cursorTop",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+end",
+    "command": "cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+end",
+    "command": "cursorBottomSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+home",
+    "command": "cursorTopSelect",
+    "when": "textInputFocus"
   }
 ]
